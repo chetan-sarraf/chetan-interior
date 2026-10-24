@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mastercks009-ops.github.io/chetan-interiors/sitemap.xml
+Sitemap: https://chetan-sarraf.github.io/chetan-interior/sitemap.xml
