@@ -11,7 +11,7 @@
   <!-- ================= STRICT SEO META TAGS ================= -->
   <title>Chetan Kr. Sarraf | Interior Designer in Birgunj, Nepal</title>
   <meta name="description" content="Chetan Kr. Sarraf is an interior designer & civil engineer in Birgunj, Nepal. Offering 3D renders, space planning, AutoCAD blueprints & BOQ estimation." />
-  <meta name="keywords" content="best interior designer in birgunj, interior designer parsa nepal, civil engineer interior designer, chetan kumar sarraf, scale and spaces private limited, 360 panorama interior nepal" />
+  <meta name="keywords" content="best interior designer in birgunj, interior designer parsa nepal, civil engineer interior designer, chetan kumar sarraf, scale and spaces private limited, nbc 205 2024 calculator nepal, 360 panorama interior nepal" />
   <meta name="author" content="Chetan Kumar Sarraf" />
   <meta name="robots" content="index, follow" />
 
@@ -27,7 +27,7 @@
 
   <!-- Open Graph & Twitter Cards -->
   <meta property="og:title" content="Chetan Kr. Sarraf | Interior Designer in Birgunj, Nepal" />
-  <meta property="og:description" content="Civil engineering accuracy, luxury interior design, 3D realistic rendering, and 360° virtual tours in Birgunj, Nepal." />
+  <meta property="og:description" content="Civil engineering accuracy, luxury interior design, interactive cost calculator, 3D realistic rendering, and 360° virtual tours in Birgunj, Nepal." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://chetan-sarraf.github.io/chetan-interior/" />
   <meta property="og:image" content="https://i.postimg.cc/SRvT1GYp/Modern-Luxuary-Living-room-Project1.jpg" />
@@ -181,10 +181,7 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-    html, body {
-      overflow-x: clip;
-      scroll-behavior: smooth;
-    }
+    html, body { overflow-x: clip; scroll-behavior: smooth; }
     
     body {
       font-family: var(--font-sans);
@@ -205,340 +202,146 @@
     ul { list-style: none; }
     .container { width: 90%; max-width: 1240px; margin: 0 auto; position: relative; z-index: 2; }
 
-    /* Section Background Texture Watermarks */
     .section-with-texture { position: relative; overflow: hidden; }
     .watermark-texture {
-      position: absolute;
-      pointer-events: none;
-      user-select: none;
-      z-index: 1;
-      filter: var(--watermark-filter);
-      opacity: var(--watermark-opacity);
-      transition: var(--transition);
+      position: absolute; pointer-events: none; user-select: none; z-index: 1;
+      filter: var(--watermark-filter); opacity: var(--watermark-opacity); transition: var(--transition);
     }
 
-    /* Typography Scale */
-    h1, h2, h3, .brand-logo {
-      font-family: var(--font-display);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-    }
+    h1, h2, h3, .brand-logo { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; }
 
     .tag-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      background: var(--brand-navy-soft);
-      border: 1px solid var(--border-navy);
-      padding: 0.42rem 1.15rem;
-      border-radius: var(--radius-pill);
-      font-family: var(--font-mono);
-      font-size: 0.74rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-main);
-      margin-bottom: 1.2rem;
+      display: inline-flex; align-items: center; gap: 0.55rem;
+      background: var(--brand-navy-soft); border: 1px solid var(--border-navy);
+      padding: 0.42rem 1.15rem; border-radius: var(--radius-pill); font-family: var(--font-mono);
+      font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--text-main); margin-bottom: 1.2rem;
     }
-    .tag-badge .dot {
-      width: 7px; height: 7px; border-radius: 50%; background: var(--accent-azure);
-    }
+    .tag-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-azure); }
 
     .section-title {
-      font-size: clamp(2.2rem, 5vw, 3.4rem);
-      line-height: 1.1;
-      margin-bottom: 1.2rem;
-      color: var(--text-main);
-      font-weight: 700;
-      letter-spacing: -0.035em;
+      font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.1; margin-bottom: 1.2rem;
+      color: var(--text-main); font-weight: 700; letter-spacing: -0.035em;
     }
     .section-title em {
-      font-style: italic;
-      font-weight: 600;
-      color: var(--brand-navy);
-      text-decoration: underline;
-      text-decoration-color: var(--accent-azure);
-      text-underline-offset: 6px;
+      font-style: italic; font-weight: 600; color: var(--brand-navy);
+      text-decoration: underline; text-decoration-color: var(--accent-azure); text-underline-offset: 6px;
     }
     [data-theme="dark"] .section-title em { color: #ffffff; }
 
     .section-subtitle {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      max-width: 660px;
-      font-weight: 400;
-      line-height: 1.8;
+      font-size: 1.05rem; color: var(--text-muted); max-width: 660px; font-weight: 400; line-height: 1.8;
     }
 
     .section { padding: clamp(4.5rem, 8vw, 7rem) 0; position: relative; }
     .text-center { text-align: center; }
     .text-center .tag-badge { margin-left: auto; margin-right: auto; }
 
-    /* Logo in Header */
-    .brand-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-      font-size: 1.15rem;
-      color: var(--text-main);
-      letter-spacing: -0.02em;
-    }
-    .brand-logo-img {
-      width: 34px; height: 34px; object-fit: contain; display: block;
-    }
+    /* Logo */
+    .brand-logo { display: flex; align-items: center; gap: 0.65rem; font-size: 1.15rem; color: var(--text-main); letter-spacing: -0.02em; }
+    .brand-logo-img { width: 34px; height: 34px; object-fit: contain; display: block; }
     .brand-logo span { color: var(--brand-grey); font-weight: 600; }
 
     /* Navigation Capsule */
     .navbar-capsule {
-      position: fixed;
-      top: 16px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 94%;
-      max-width: 1140px;
-      background: var(--nav-bg);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid var(--border-navy);
-      border-radius: var(--radius-pill);
-      z-index: 9999;
-      padding: 0.55rem 1.2rem;
-      box-shadow: var(--shadow-subtle);
-      transition: var(--transition);
+      position: fixed; top: 16px; left: 50%; transform: translateX(-50%); width: 94%; max-width: 1180px;
+      background: var(--nav-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-navy); border-radius: var(--radius-pill); z-index: 9999;
+      padding: 0.55rem 1.2rem; box-shadow: var(--shadow-subtle); transition: var(--transition);
     }
     .nav-container { display: flex; justify-content: space-between; align-items: center; }
-    .nav-links { display: flex; align-items: center; gap: 0.25rem; }
+    .nav-links { display: flex; align-items: center; gap: 0.2rem; }
     .nav-links a {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      padding: 0.45rem 0.75rem;
-      border-radius: var(--radius-pill);
-      letter-spacing: -0.01em;
-      transition: var(--transition);
+      font-size: 0.78rem; font-weight: 600; color: var(--text-muted); padding: 0.45rem 0.7rem;
+      border-radius: var(--radius-pill); letter-spacing: -0.01em; transition: var(--transition);
     }
     .nav-links a:hover { color: var(--text-main); background: var(--brand-grey-soft); }
-    .nav-links a.active {
-      color: #ffffff;
-      background: var(--brand-navy);
-      font-weight: 600;
-    }
+    .nav-links a.active { color: #ffffff; background: var(--brand-navy); font-weight: 600; }
 
-    /* Theme Switcher Button */
     .theme-toggle-btn {
-      width: 38px; height: 38px;
-      border-radius: 50%;
-      border: 1px solid var(--border-navy);
-      background: var(--bg-surface);
-      color: var(--text-main);
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; font-size: 0.95rem;
-      transition: var(--transition);
-      margin-left: 0.35rem;
+      width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--border-navy);
+      background: var(--bg-surface); color: var(--text-main); display: flex; align-items: center;
+      justify-content: center; cursor: pointer; font-size: 0.95rem; transition: var(--transition); margin-left: 0.35rem;
     }
-    .theme-toggle-btn:hover {
-      transform: scale(1.08);
-      background: var(--brand-navy);
-      color: #ffffff;
-    }
+    .theme-toggle-btn:hover { transform: scale(1.08); background: var(--brand-navy); color: #ffffff; }
 
-    .btn-nav-capsule {
-      background: var(--brand-navy-soft) !important;
-      border: 1px solid var(--border-navy) !important;
-      color: var(--text-main) !important;
-    }
+    .btn-nav-capsule { background: var(--brand-navy-soft) !important; border: 1px solid var(--border-navy) !important; color: var(--text-main) !important; }
     .btn-nav-capsule:hover { background: var(--brand-navy) !important; color: #fff !important; }
     .nav-toggle { display: none; background: none; border: none; font-size: 1.3rem; color: var(--text-main); cursor: pointer; padding: 0.4rem; }
 
     /* Buttons */
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.65rem;
-      padding: 0.9rem 2rem;
-      font-size: 0.86rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      border-radius: var(--radius-pill);
-      cursor: pointer;
-      transition: var(--transition);
-      min-height: 48px;
+      display: inline-flex; align-items: center; gap: 0.65rem; padding: 0.9rem 2rem; font-size: 0.86rem;
+      font-weight: 700; letter-spacing: -0.01em; border-radius: var(--radius-pill); cursor: pointer; transition: var(--transition); min-height: 48px;
     }
-    .btn-primary {
-      background: var(--brand-navy);
-      color: #ffffff;
-      box-shadow: 0 8px 24px rgba(14, 39, 63, 0.25);
-      border: 1px solid transparent;
-    }
-    .btn-primary:hover {
-      background: var(--brand-navy-light);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(14, 39, 63, 0.35);
-    }
-    .btn-outline {
-      border: 1px solid var(--border-navy);
-      color: var(--text-main);
-      background: var(--bg-surface);
-    }
-    .btn-outline:hover {
-      border-color: var(--brand-navy);
-      background: var(--brand-navy-soft);
-      transform: translateY(-2px);
-    }
+    .btn-primary { background: var(--brand-navy); color: #ffffff; box-shadow: 0 8px 24px rgba(14, 39, 63, 0.25); border: 1px solid transparent; }
+    .btn-primary:hover { background: var(--brand-navy-light); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(14, 39, 63, 0.35); }
+    .btn-outline { border: 1px solid var(--border-navy); color: var(--text-main); background: var(--bg-surface); }
+    .btn-outline:hover { border-color: var(--brand-navy); background: var(--brand-navy-soft); transform: translateY(-2px); }
 
-    /* Hero Section */
+    /* Hero */
     .hero-section {
-      min-height: 100vh;
-      min-height: 100dvh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: clamp(7.5rem, 15vw, 10.5rem) 1.5rem 5rem;
-      position: relative;
+      min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; justify-content: center;
+      align-items: center; text-align: center; padding: clamp(7.5rem, 15vw, 10.5rem) 1.5rem 5rem; position: relative;
     }
-    .hero-texture {
-      bottom: -30px;
-      right: -60px;
-      width: 700px;
-      max-width: 80vw;
-    }
+    .hero-texture { bottom: -30px; right: -60px; width: 700px; max-width: 80vw; }
     .hero-content { max-width: 980px; z-index: 2; position: relative; }
-    .hero-title {
-      font-size: clamp(2.7rem, 7vw, 4.8rem);
-      line-height: 1.05;
-      margin-bottom: 1.5rem;
-      color: var(--text-main);
-      font-weight: 800;
-    }
-    .hero-description {
-      font-size: clamp(1rem, 2.5vw, 1.18rem);
-      line-height: 1.85;
-      color: var(--text-muted);
-      margin-bottom: 2.6rem;
-      max-width: 820px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    .hero-title { font-size: clamp(2.7rem, 7vw, 4.8rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--text-main); font-weight: 800; }
+    .hero-description { font-size: clamp(1rem, 2.5vw, 1.18rem); line-height: 1.85; color: var(--text-muted); margin-bottom: 2.6rem; max-width: 820px; margin-left: auto; margin-right: auto; }
     .hero-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
     .hero-trust-bar {
-      margin-top: 4rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1.8rem;
-      color: var(--text-muted);
-      font-size: 0.86rem;
-      border-top: 1px solid var(--border-subtle);
-      padding-top: 1.8rem;
-      flex-wrap: wrap;
+      margin-top: 4rem; display: flex; justify-content: center; align-items: center; gap: 1.8rem;
+      color: var(--text-muted); font-size: 0.86rem; border-top: 1px solid var(--border-subtle); padding-top: 1.8rem; flex-wrap: wrap;
     }
     .hero-trust-bar span { display: flex; align-items: center; gap: 0.5rem; }
     .hero-trust-bar span i { color: var(--accent-azure); }
 
     /* About Section */
     .about-texture { top: 20px; right: -40px; width: 560px; max-width: 60vw; }
-    .grid-about-unboxed {
-      display: grid;
-      grid-template-columns: 1fr 1.25fr;
-      gap: clamp(2.5rem, 5vw, 4.5rem);
-      align-items: center;
-    }
-    .portrait-standalone-wrap {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    .grid-about-unboxed { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(2.5rem, 5vw, 4.5rem); align-items: center; }
+    .portrait-standalone-wrap { position: relative; display: flex; justify-content: center; align-items: center; }
     .portrait-ambient-glow {
-      position: absolute;
-      width: 360px; height: 360px;
-      background: radial-gradient(circle, var(--brand-navy-soft) 0%, rgba(0,0,0,0) 70%);
-      border-radius: 50%;
-      z-index: 1; pointer-events: none;
+      position: absolute; width: 360px; height: 360px; background: radial-gradient(circle, var(--brand-navy-soft) 0%, rgba(0,0,0,0) 70%);
+      border-radius: 50%; z-index: 1; pointer-events: none;
     }
     .portrait-standalone-img {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      max-width: 420px;
-      height: auto;
-      object-fit: cover;
-      display: block;
-      filter: drop-shadow(0 20px 30px rgba(14, 39, 63, 0.2));
-      transition: var(--transition);
+      position: relative; z-index: 2; width: 100%; max-width: 420px; height: auto; object-fit: cover;
+      display: block; filter: drop-shadow(0 20px 30px rgba(14, 39, 63, 0.2)); transition: var(--transition);
     }
-    .portrait-standalone-img:hover { transform: scale(1.02); }
     .portrait-sub-label {
-      position: absolute;
-      bottom: -15px;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-navy);
-      padding: 0.55rem 1.3rem;
-      border-radius: var(--radius-pill);
-      font-family: var(--font-mono);
-      font-size: 0.74rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--text-main);
-      z-index: 3;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      box-shadow: var(--shadow-subtle);
+      position: absolute; bottom: -15px; background: var(--bg-surface); border: 1px solid var(--border-navy);
+      padding: 0.55rem 1.3rem; border-radius: var(--radius-pill); font-family: var(--font-mono); font-size: 0.74rem;
+      letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-main); z-index: 3; display: flex; align-items: center; gap: 0.6rem; box-shadow: var(--shadow-subtle);
     }
     .portrait-sub-label .live-dot { width: 7px; height: 7px; background: #25D366; border-radius: 50%; }
 
     .about-text p { color: var(--text-muted); margin-bottom: 1.25rem; font-size: 1.02rem; }
     .credentials-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin: 1.8rem 0;
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 1.4rem 0;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.8rem 0;
+      border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 1.4rem 0;
     }
     .cred-stat h3 { font-size: clamp(1.8rem, 4vw, 2.3rem); color: var(--text-main); line-height: 1; font-weight: 800; }
     .cred-stat p { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--brand-grey); margin-top: 0.35rem; }
 
     .skills-cluster { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
     .skill-tag {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      padding: 0.4rem 0.9rem;
-      font-size: 0.78rem;
-      border-radius: var(--radius-pill);
-      color: var(--text-main);
-      display: flex; align-items: center; gap: 0.45rem;
+      background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 0.4rem 0.9rem;
+      font-size: 0.78rem; border-radius: var(--radius-pill); color: var(--text-main); display: flex; align-items: center; gap: 0.45rem;
     }
     .skill-tag span { color: var(--accent-azure); font-weight: 700; font-family: var(--font-mono); font-size: 0.72rem; }
 
-    /* Before/After Transformation */
+    /* Before/After */
     .trans-texture { bottom: -60px; left: -60px; width: 600px; max-width: 60vw; }
     .before-after-container {
-      max-width: 980px;
-      margin: 3.5rem auto 0;
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid var(--border-navy);
-      box-shadow: var(--shadow-elevated);
-      background: #000;
-      user-select: none;
-      touch-action: pan-y;
+      max-width: 980px; margin: 3.5rem auto 0; position: relative; border-radius: var(--radius-lg);
+      overflow: hidden; border: 1px solid var(--border-navy); box-shadow: var(--shadow-elevated);
+      background: #000; user-select: none; touch-action: pan-y;
     }
     .ba-image-wrapper { position: relative; width: 100%; height: clamp(280px, 50vw, 520px); overflow: hidden; }
     .ba-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-    .ba-img-overlay {
-      position: absolute; top: 0; left: 0; width: 50%; height: 100%;
-      overflow: hidden; z-index: 2; border-right: 2px solid #ffffff;
-    }
+    .ba-img-overlay { position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden; z-index: 2; border-right: 2px solid #ffffff; }
     .ba-img-overlay img { position: absolute; top: 0; left: 0; width: 980px; height: 100%; max-width: none; object-fit: cover; }
-    @media (max-width: 1024px) {
-      .ba-img-overlay img { width: 100vw; }
-    }
+    @media (max-width: 1024px) { .ba-img-overlay img { width: 100vw; } }
     .ba-slider-range { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 10; touch-action: pan-y; }
     .ba-handle {
       position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
@@ -554,164 +357,105 @@
     .ba-badge-left { left: 16px; }
     .ba-badge-right { right: 16px; }
 
-    /* NPR Budget Calculator */
-    .estimator-texture { top: -30px; right: -40px; width: 500px; }
-    .calculator-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-navy);
-      border-radius: var(--radius-lg);
-      padding: clamp(2rem, 5vw, 4rem);
-      max-width: 920px;
-      margin: 3.5rem auto 0;
-      box-shadow: var(--shadow-subtle);
-      position: relative; z-index: 2;
+    /* ================= UNIFIED CALCULATION & ENGINEERING HUB ================= */
+    .hub-container {
+      max-width: 1040px; margin: 3rem auto 0; background: var(--bg-surface);
+      border: 1px solid var(--border-navy); border-radius: var(--radius-lg);
+      padding: clamp(1.8rem, 4vw, 3.5rem); box-shadow: var(--shadow-elevated); position: relative; z-index: 2;
     }
-    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
-    @media (max-width: 768px) { .calc-grid { grid-template-columns: 1fr; } }
-    .calc-group label {
-      display: block; font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase;
-      color: var(--text-main); letter-spacing: 0.06em; margin-bottom: 0.5rem;
+    .hub-main-toggle {
+      display: flex; justify-content: center; gap: 0.8rem; margin-bottom: 2.5rem; flex-wrap: wrap;
     }
-    .calc-select, .form-group input, .form-group textarea {
-      font-size: 16px !important;
+    .hub-toggle-btn {
+      padding: 0.75rem 1.6rem; border-radius: var(--radius-pill); border: 1px solid var(--border-navy);
+      background: var(--bg-surface-elevated); color: var(--text-main); font-family: var(--font-display);
+      font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: var(--transition);
     }
-    .calc-select {
-      width: 100%; padding: 0.85rem 1rem; background: var(--bg-surface-elevated);
-      border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-main); outline: none;
-    }
-    .calc-range-wrap {
-      grid-column: 1 / -1; background: var(--bg-surface-elevated);
-      padding: 1.4rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);
-    }
-    .calc-range-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; }
-    .calc-range-slider { width: 100%; accent-color: var(--brand-navy); height: 8px; }
-    .calc-result-box {
-      background: var(--brand-navy-soft); border: 1px solid var(--border-navy);
-      border-radius: var(--radius-md); padding: 1.8rem; text-align: center; margin-top: 1.5rem;
-    }
-    .calc-result-label { font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--brand-grey); margin-bottom: 0.4rem; }
-    .calc-result-price {
-      font-family: var(--font-display); font-size: clamp(2.2rem, 6vw, 3.2rem);
-      color: var(--text-main); font-weight: 800; line-height: 1.1; margin-bottom: 1rem;
+    .hub-toggle-btn.active {
+      background: var(--brand-navy); color: #ffffff; border-color: var(--brand-navy);
+      box-shadow: 0 4px 18px rgba(14, 39, 63, 0.25);
     }
 
-    /* Live Material & Labour Rates Table */
-    .rates-table-wrap {
-      margin-top: 3.5rem;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-navy);
-      border-radius: var(--radius-lg);
-      overflow-x: auto;
-      box-shadow: var(--shadow-subtle);
+    .tool-selector-grid {
+      display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 1rem; margin-bottom: 2rem;
       -webkit-overflow-scrolling: touch;
     }
-    .rates-table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 0.92rem;
-      min-width: 620px;
+    .tool-chip {
+      padding: 0.55rem 1.1rem; border-radius: var(--radius-pill); border: 1px solid var(--border-subtle);
+      background: var(--bg-surface-elevated); color: var(--text-muted); font-size: 0.82rem; font-weight: 600;
+      white-space: nowrap; cursor: pointer; transition: var(--transition);
     }
-    .rates-table th {
-      background: var(--brand-navy-soft);
-      padding: 1.2rem 1.5rem;
-      font-family: var(--font-mono);
-      font-size: 0.74rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-main);
-      border-bottom: 1px solid var(--border-navy);
-    }
-    .rates-table td {
-      padding: 1.1rem 1.5rem;
-      border-bottom: 1px solid var(--border-subtle);
-      color: var(--text-muted);
-    }
-    .rates-table tr:hover td {
-      background: var(--brand-navy-soft);
-      color: var(--text-main);
-    }
-    .rate-pill {
-      font-family: var(--font-mono);
-      font-weight: 700;
-      color: var(--accent-azure);
+    .tool-chip.active {
+      background: var(--accent-azure); color: #ffffff; border-color: var(--accent-azure);
     }
 
-    /* Design Journal & Blog Cards */
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      margin-top: 3.5rem;
+    .tool-panel { display: none; }
+    .tool-panel.active { display: block; animation: panelFade 0.35s ease; }
+    @keyframes panelFade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    .calc-box-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media (max-width: 768px) { .calc-box-grid { grid-template-columns: 1fr; } }
+
+    .calc-input-group label {
+      display: block; font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase;
+      color: var(--text-main); letter-spacing: 0.06em; margin-bottom: 0.4rem;
     }
+    .calc-input-group input, .calc-input-group select {
+      width: 100%; padding: 0.85rem 1.1rem; background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-main);
+      font-size: 16px !important; outline: none;
+    }
+    .calc-input-group input:focus, .calc-input-group select:focus {
+      border-color: var(--brand-navy);
+    }
+
+    .calc-output-card {
+      background: var(--brand-navy-soft); border: 1px solid var(--border-navy);
+      border-radius: var(--radius-md); padding: 1.8rem; margin-top: 1.8rem;
+    }
+    .calc-output-title { font-family: var(--font-mono); font-size: 0.76rem; text-transform: uppercase; color: var(--brand-grey); letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+    .calc-output-val { font-family: var(--font-display); font-size: clamp(1.8rem, 5vw, 2.6rem); color: var(--text-main); font-weight: 800; line-height: 1.15; margin-bottom: 0.6rem; }
+    .calc-breakdown-list { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.2rem; }
+
+    /* Rates Table */
+    .rates-table-wrap {
+      margin-top: 3.5rem; background: var(--bg-surface); border: 1px solid var(--border-navy);
+      border-radius: var(--radius-lg); overflow-x: auto; box-shadow: var(--shadow-subtle); -webkit-overflow-scrolling: touch;
+    }
+    .rates-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.92rem; min-width: 620px; }
+    .rates-table th {
+      background: var(--brand-navy-soft); padding: 1.2rem 1.5rem; font-family: var(--font-mono);
+      font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-main);
+      border-bottom: 1px solid var(--border-navy);
+    }
+    .rates-table td { padding: 1.1rem 1.5rem; border-bottom: 1px solid var(--border-subtle); color: var(--text-muted); }
+    .rates-table tr:hover td { background: var(--brand-navy-soft); color: var(--text-main); }
+    .rate-pill { font-family: var(--font-mono); font-weight: 700; color: var(--accent-azure); }
+
+    /* Articles / Blog */
+    .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3.5rem; }
     .article-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      transition: var(--transition);
-      box-shadow: var(--shadow-subtle);
-      display: flex;
-      flex-direction: column;
+      background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
+      overflow: hidden; transition: var(--transition); box-shadow: var(--shadow-subtle); display: flex; flex-direction: column;
     }
-    .article-card:hover {
-      border-color: var(--border-navy);
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-elevated);
-    }
-    .article-img-wrap {
-      width: 100%;
-      height: 240px;
-      overflow: hidden;
-      background: #10141b;
-    }
-    .article-img-wrap img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
-      transition: transform 0.6s ease;
-    }
-    .article-card:hover .article-img-wrap img {
-      transform: scale(1.06);
-    }
-    .article-content {
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      justify-content: space-between;
-    }
+    .article-card:hover { border-color: var(--border-navy); transform: translateY(-5px); box-shadow: var(--shadow-elevated); }
+    .article-img-wrap { width: 100%; height: 240px; overflow: hidden; background: #10141b; }
+    .article-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+    .article-card:hover .article-img-wrap img { transform: scale(1.06); }
+    .article-content { padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
     .article-meta {
-      display: flex;
-      justify-content: space-between;
-      font-family: var(--font-mono);
-      font-size: 0.74rem;
-      color: var(--brand-grey);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.8rem;
+      display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.74rem;
+      color: var(--brand-grey); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem;
     }
-    .article-content h3 {
-      font-size: 1.45rem;
-      color: var(--text-main);
-      margin-bottom: 0.8rem;
-      line-height: 1.25;
-    }
-    .article-content p {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 1.4rem;
-    }
+    .article-content h3 { font-size: 1.45rem; color: var(--text-main); margin-bottom: 0.8rem; line-height: 1.25; }
+    .article-content p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.4rem; }
 
     /* Services & Process */
     .services-texture { bottom: -40px; left: -80px; width: 650px; max-width: 70vw; }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 2rem; margin-top: 3.5rem; }
     .service-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 2.4rem 2rem;
-      transition: var(--transition);
-      display: flex; flex-direction: column; justify-content: space-between;
+      background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
+      padding: 2.4rem 2rem; transition: var(--transition); display: flex; flex-direction: column; justify-content: space-between;
       position: relative; z-index: 2; box-shadow: var(--shadow-subtle);
     }
     .service-card:hover { border-color: var(--border-navy); transform: translateY(-5px); box-shadow: var(--shadow-elevated); }
@@ -726,12 +470,8 @@
     .process-texture { top: -40px; right: -60px; width: 620px; }
     .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 3.5rem; }
     .process-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2.2rem;
-      transition: var(--transition);
-      position: relative; z-index: 2; box-shadow: var(--shadow-subtle);
+      background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
+      padding: 2.2rem; transition: var(--transition); position: relative; z-index: 2; box-shadow: var(--shadow-subtle);
     }
     .process-card:hover { border-color: var(--border-navy); transform: translateY(-4px); }
     .process-step-num {
@@ -758,9 +498,7 @@
       width: 14px; height: 14px; border-radius: 50%; background: var(--brand-navy);
       box-shadow: 0 0 10px rgba(14, 39, 63, 0.4);
     }
-    @media (min-width: 768px) {
-      .timeline-dot { left: calc(-2.8rem - 8px); }
-    }
+    @media (min-width: 768px) { .timeline-dot { left: calc(-2.8rem - 8px); } }
     .timeline-date {
       font-family: var(--font-mono); font-size: 0.76rem; font-weight: 600;
       color: var(--accent-azure); letter-spacing: 0.08em; margin-bottom: 0.4rem; text-transform: uppercase;
@@ -873,19 +611,15 @@
     .form-group input, .form-group textarea {
       width: 100%; padding: 0.9rem 1.1rem; background: var(--bg-surface); border: 1px solid var(--border-subtle);
       color: var(--text-main); font-family: inherit; border-radius: var(--radius-sm); transition: var(--transition);
+      font-size: 16px !important;
     }
     .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--brand-navy); box-shadow: 0 0 10px var(--brand-navy-soft); }
     .btn-block { width: 100%; justify-content: center; margin-top: 0.5rem; }
 
-    /* Floating Dock - iOS Safe Area Support */
+    /* Floating Dock - iOS Safe Area */
     .floating-contact-bar {
-      position: fixed;
-      bottom: calc(20px + env(safe-area-inset-bottom));
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 9999;
+      position: fixed; bottom: calc(20px + env(safe-area-inset-bottom)); right: 20px;
+      display: flex; flex-direction: column; gap: 10px; z-index: 9999;
     }
     .float-btn {
       width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
@@ -934,7 +668,6 @@
     .footer-social-links { display: flex; gap: 1.2rem; align-items: center; }
     .footer-social-links a:hover { color: var(--brand-navy); }
 
-    /* Mobile Responsive */
     @media (max-width: 950px) {
       .grid-about-unboxed, .contact-card { grid-template-columns: 1fr; padding: 2rem; gap: 2.5rem; }
       .nav-toggle { display: block; }
@@ -966,15 +699,13 @@
         <div class="nav-links" id="navLinks">
           <a href="#home" class="nav-item active">Overview</a>
           <a href="#about" class="nav-item">About</a>
-          <a href="#transformation" class="nav-item">Transformation</a>
-          <a href="#estimator" class="nav-item">Estimator</a>
-          <a href="#rates" class="nav-item">Market Rates</a>
+          <a href="#hub" class="nav-item">Studio Hub</a>
+          <a href="#rates" class="nav-item">Rates</a>
           <a href="#articles" class="nav-item">Journal</a>
           <a href="#portfolio" class="nav-item">Works</a>
           <a href="#faq" class="nav-item">FAQs</a>
           <a href="#contact" class="nav-item btn-nav-capsule">Consultation</a>
         </div>
-        <!-- Light / Dark Mode Toggle Button -->
         <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Light/Dark Theme">
           <i class="fa-solid fa-moon"></i>
         </button>
@@ -1030,7 +761,7 @@
         I am <strong>Chetan Kumar Sarraf</strong>, a Civil Engineer &amp; Interior Design Professional. Integrating structural civil engineering knowledge with 3D photorealism, spatial BOQ valuation, and technical drafting under <strong>Scale and Spaces Private Limited</strong>.
       </p>
       <div class="hero-actions">
-        <a href="#estimator" class="btn btn-primary">Calculate Project Cost <i class="fa-solid fa-calculator"></i></a>
+        <a href="#hub" class="btn btn-primary">Studio Calculation Hub <i class="fa-solid fa-calculator"></i></a>
         <a href="#transformation" class="btn btn-outline">See 2D-to-3D Slider</a>
       </div>
       <div class="hero-trust-bar">
@@ -1137,59 +868,372 @@
     </div>
   </section>
 
-  <!-- Instant NPR Cost Estimator -->
-  <section class="section section-with-texture" id="estimator">
+  <!-- ================= UNIFIED CALCULATION & ENGINEERING HUB ================= -->
+  <section class="section section-with-texture" id="hub">
     <img src="https://i.postimg.cc/HJzv3L6V/05t.png" alt="" class="watermark-texture estimator-texture" loading="lazy" />
     <div class="container">
       <div class="section-header text-center">
         <div class="tag-badge">
-          <span class="dot"></span> Transparent Pricing
+          <span class="dot"></span> Engineering &amp; Interior Tools
         </div>
-        <h2 class="section-title">Instant Interior <em>Budget Estimator</em></h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Select your space dimensions and service tier to calculate an instant estimated budget range in Nepali Rupees (NPR).</p>
+        <h2 class="section-title">Studio Calculation &amp; <em>Engineering Hub</em></h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Professional interactive estimation tools for homeowners, contractors, and site supervisors across Birgunj and Nepal.</p>
       </div>
 
-      <div class="calculator-card">
-        <div class="calc-grid">
-          <div class="calc-group">
-            <label for="calcSpace">Select Space Type</label>
-            <select class="calc-select" id="calcSpace">
-              <option value="living">Living Room Suite</option>
-              <option value="bedroom" selected>Master Bedroom</option>
-              <option value="kitchen">Modular Chef Kitchen</option>
-              <option value="bathroom">Luxury Bathroom / Toilet</option>
-              <option value="residence">Full 2BHK/3BHK Home</option>
-              <option value="commercial">Commercial / Office Space</option>
-            </select>
+      <div class="hub-container">
+        <!-- Main Hub Mode Toggle -->
+        <div class="hub-main-toggle">
+          <button class="hub-toggle-btn active" id="btnModeInterior" onclick="switchHubMode('interior')">
+            <i class="fa-solid fa-couch"></i> Interior Design Tools
+          </button>
+          <button class="hub-toggle-btn" id="btnModeCivil" onclick="switchHubMode('civil')">
+            <i class="fa-solid fa-building-columns"></i> Civil &amp; NBC 205:2024 Tools
+          </button>
+        </div>
+
+        <!-- ================= INTERIOR SUITE ================= -->
+        <div id="interiorToolsSuite">
+          <div class="tool-selector-grid">
+            <button class="tool-chip active" onclick="switchSubTool('int-paint')">🎨 Paint &amp; Putty</button>
+            <button class="tool-chip" onclick="switchSubTool('int-ceiling')">💡 False Ceiling &amp; LED</button>
+            <button class="tool-chip" onclick="switchSubTool('int-lighting')">🔆 Room Lux &amp; Downlights</button>
+            <button class="tool-chip" onclick="switchSubTool('int-kitchen')">🍳 Modular Kitchen</button>
+            <button class="tool-chip" onclick="switchSubTool('int-curtain')">🪟 Curtains &amp; Fabric</button>
+            <button class="tool-chip" onclick="switchSubTool('int-ac')">❄️ AC Cooling Tonnage</button>
           </div>
 
-          <div class="calc-group">
-            <label for="calcTier">Project Scope &amp; Tier</label>
-            <select class="calc-select" id="calcTier">
-              <option value="drafting">2D CAD Drafting &amp; MEP Only</option>
-              <option value="renders" selected>3D Renders + 2D AutoCAD Sets</option>
-              <option value="turnkey">Full Turnkey Execution &amp; Supervision</option>
-            </select>
-          </div>
-
-          <div class="calc-range-wrap">
-            <div class="calc-range-header">
-              <label for="calcArea" style="margin-bottom: 0;">Floor Area (Square Feet):</label>
-              <span id="areaDisplay" style="font-family: var(--font-mono); color: var(--accent-azure); font-weight: 700; font-size: 1.1rem;">350 sq.ft</span>
+          <!-- Tool 1: Paint -->
+          <div class="tool-panel active" id="tool-int-paint">
+            <div class="calc-box-grid">
+              <div class="calc-input-group"><label>Room Length (Feet):</label><input type="number" id="paintL" value="14" oninput="calcPaint()" /></div>
+              <div class="calc-input-group"><label>Room Width (Feet):</label><input type="number" id="paintW" value="12" oninput="calcPaint()" /></div>
+              <div class="calc-input-group"><label>Ceiling Height (Feet):</label><input type="number" id="paintH" value="10" oninput="calcPaint()" /></div>
+              <div class="calc-input-group"><label>Doors &amp; Windows Deduction (sq.ft):</label><input type="number" id="paintDed" value="50" oninput="calcPaint()" /></div>
             </div>
-            <input type="range" min="80" max="3500" step="10" value="350" class="calc-range-slider" id="calcArea" />
+            <div class="calc-output-card">
+              <div class="calc-output-title">Estimated Surface &amp; Paint Quantities</div>
+              <div class="calc-output-val" id="paintAreaOut">470 sq.ft</div>
+              <div class="calc-breakdown-list" id="paintBreakdown">
+                Wall Putty (2 Coats): ~24 kg (1 bag) • Primer: ~4.7 Litres • Interior Emulsion (2 Coats): ~8.5 Litres
+              </div>
+              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Interior Wall Paint & Putty Takeoff')">
+                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tool 2: Ceiling -->
+          <div class="tool-panel" id="tool-int-ceiling">
+            <div class="calc-box-grid">
+              <div class="calc-input-group"><label>Room Length (Feet):</label><input type="number" id="ceilL" value="16" oninput="calcCeiling()" /></div>
+              <div class="calc-input-group"><label>Room Width (Feet):</label><input type="number" id="ceilW" value="14" oninput="calcCeiling()" /></div>
+              <div class="calc-input-group">
+                <label>Board Size:</label>
+                <select id="ceilBoardSize" onchange="calcCeiling()">
+                  <option value="24" selected>4ft × 6ft (24 sq.ft)</option>
+                  <option value="32">4ft × 8ft (32 sq.ft)</option>
+                </select>
+              </div>
+              <div class="calc-input-group"><label>Cove Light Perimeter Allowance (%):</label><input type="number" id="ceilCove" value="100" oninput="calcCeiling()" /></div>
+            </div>
+            <div class="calc-output-card">
+              <div class="calc-output-title">False Ceiling Materials &amp; LED Strip Length</div>
+              <div class="calc-output-val" id="ceilBoardsOut">10 Sheets</div>
+              <div class="calc-breakdown-list" id="ceilBreakdown">
+                Ceiling Area: 224 sq.ft • Perimeter L-Channel: ~60 Running ft • LED Strip Light Length: ~60 ft (18.3 meters)
+              </div>
+              <button class="btn btn-primary" onclick="exportToolToWhatsApp('False Ceiling & LED Cove Estimate')">
+                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tool 3: Lighting Lux -->
+          <div class="tool-panel" id="tool-int-lighting">
+            <div class="calc-box-grid">
+              <div class="calc-input-group">
+                <label>Room Function:</label>
+                <select id="luxRoomType" onchange="calcLighting()">
+                  <option value="150">Living Room (150 Lux)</option>
+                  <option value="100">Bedroom (100 Lux)</option>
+                  <option value="300" selected>Kitchen / Cooking (300 Lux)</option>
+                  <option value="400">Study / Home Office (400 Lux)</option>
+                  <option value="150">Bathroom / Vanity (150 Lux)</option>
+                </select>
+              </div>
+              <div class="calc-input-group"><label>Room Floor Area (sq.ft):</label><input type="number" id="luxArea" value="150" oninput="calcLighting()" /></div>
+              <div class="calc-input-group">
+                <label>Downlight Bulb Wattage:</label>
+                <select id="luxWattage" onchange="calcLighting()">
+                  <option value="7">7 Watt LED (~630 Lumens)</option>
+                  <option value="9" selected>9 Watt LED (~810 Lumens)</option>
+                  <option value="12">12 Watt LED (~1080 Lumens)</option>
+                </select>
+              </div>
+            </div>
+            <div class="calc-output-card">
+              <div class="calc-output-title">Recommended Illumination &amp; Fixture Count</div>
+              <div class="calc-output-val" id="luxDownlightsOut">6 Downlights</div>
+              <div class="calc-breakdown-list" id="luxBreakdown">
+                Target Lumens: ~4,180 Lumens • Total Recommended Wattage: ~54W • Balanced, shadow-free spacing.
+              </div>
+              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Room Lighting & Lux Calculation')">
+                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tool 4: Kitchen -->
+          <div class="tool-panel" id="tool-int-kitchen">
+            <div class="calc-box-grid">
+              <div class="calc-input-group">
+                <label>Kitchen Layout:</label>
+                <select id="kitLayout" onchange="calcKitchen()">
+                  <option value="1.0">Straight (Single Wall)</option>
+                  <option value="1.8" selected>L-Shape (Two Walls)</option>
+                  <option value="2.5">U-Shape (Three Walls)</option>
+                  <option value="2.0">Parallel / Galley Counter</option>
+                </select>
+              </div>
+              <div class="calc-input-group"><label>Primary Wall Length (Feet):</label><input type="number" id="kitLength" value="10" oninput="calcKitchen()" /></div>
+            </div>
+            <div class="calc-output-card">
+              <div class="calc-output-title">Modular Kitchen Cabinet &amp; Countertop Estimate</div>
+              <div class="calc-output-val" id="kitRunningOut">18 Running Feet</div>
+              <div class="calc-breakdown-list" id="kitBreakdown">
+                Base Cabinets: 18 Rft • Overhead Cabinets: ~14 Rft • Quartz/Granite Countertop: ~45 sq.ft
+              </div>
+              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Modular Kitchen Layout Plan')">
+                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tool 5: Curtains -->
+          <div class="tool-panel" id="tool-int-curtain">
+            <div class="calc-box-grid">
+              <div class="calc-input-group"><label>Window / Door Width (Inches):</label><input type="number" id="curtW" value="72" oninput="calcCurtains()" /></div>
+              <div class="calc-input-group"><label>Finished Height (Inches):</label><input type="number" id="curtH" value="96" oninput="calcCurtains()" /></div>
+              <div class="calc-input-group">
+                <label>Pleat Fullness Ratio:</label>
+                <select id="curtFullness" onchange="calcCurtains()">
+                  <option value="1.8">Eyelet Pleat (1.8× Fullness)</option>
+                  <option value="2.2" selected>Pinch Pleat (2.2× Fullness)</option>
+                  <option value="2.5">Luxury Box Pleat (2.5× Fullness)</option>
+                </select>
+              </div>
+            </div>
+            <div class="calc-output-card">
+              <div class="calc-output-title">Drapery Fabric Requirement</div>
+              <div class="calc-output-val" id="curtFabricOut">~9.5 Meters</div>
+              <div class="calc-breakdown-list" id="curtBreakdown">
+                Total Flat Width: 158 Inches • Recommended Curtain Track/Rod: 6.5 Feet
+              </div>
+              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Curtain Fabric Estimate')">
+                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tool 6: AC Tonnage -->
+          <div class="tool-panel" id="tool-int-ac">
+            <div class="calc-box-grid">
+              <div class="calc-input-group"><label>Room Area (sq.ft):</label><input type="number" id="acArea" value="180" oninput="calcAC()" /></div>
+              <div class="calc-input-group"><label>Ceiling Height (Feet):</label><input type="number" id="acH" value="10" oninput="calcAC()" /></div>
+              <div class="calc-input-group">
+                <label>Floor Level &amp; Sun Exposure:</label>
+                <select id="acExposure" onchange="calcAC()">
+                  <option value="1.0">Intermediate Floor (Shaded / Moderate)</option>
+                  <option value="1.2" selected>Top Floor with Direct Roof Sun (Birgunj Heat)</option>
+                </select>
+              </div>
+            </div>
+            <div class="calc-output-card">
+              <div class="calc-output-title">Recommended AC Capacity (Terai Climate)</div>
+              <div class="calc-output-val" id="acTonnageOut">1.5 Ton (18,000 BTU)</div>
+              <div class="calc-breakdown-list" id="acBreakdown">
+                Calculated Heat Load: ~17,200 BTU/hr • Guarantees fast cooling during peak Birgunj summer (40°C+).
+              </div>
+              <button class="btn btn-primary" onclick="exportToolToWhatsApp('AC Cooling Tonnage Calculation')">
+                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
           </div>
         </div>
 
-        <div class="calc-result-box">
-          <div class="calc-result-label">Estimated Investment Range (NPR)</div>
-          <div class="calc-result-price" id="calcPrice">Rs. 24,500 – 35,000</div>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem;">
-            *Estimates tailored to standard rates in Birgunj &amp; Parsa. Final quotes confirmed on site.
-          </p>
-          <button type="button" class="btn btn-primary" id="btnSendQuoteWhatsapp">
-            Send This Estimate to WhatsApp <i class="fa-brands fa-whatsapp"></i>
-          </button>
+        <!-- ================= CIVIL & NBC 205:2024 SUITE ================= -->
+        <div id="civilToolsSuite" style="display: none;">
+          <div class="tool-selector-grid">
+            <button class="tool-chip active" onclick="switchSubTool('civ-nbc')">🇳🇵 NBC 205:2024 Detailing</button>
+            <button class="tool-chip" onclick="switchSubTool('civ-land')">📐 Nepal Land Converter</button>
+            <button class="tool-chip" onclick="switchSubTool('civ-brick')">🧱 Brickwork &amp; Mortar</button>
+            <button class="tool-chip" onclick="switchSubTool('civ-rcc')">🏗️ Concrete RCC Mix</button>
+            <button class="tool-chip" onclick="switchSubTool('civ-steel')">🔩 Steel Rebar Weight</button>
+            <button class="tool-chip" onclick="switchSubTool('civ-soil')">⚖️ Soil Bearing (SBC)</button>
+          </div>
+
+          <!-- Tool 1: NBC 205:2024 -->
+          <div class="tool-panel active" id="tool-civ-nbc">
+            <div class="calc-box-grid">
+              <div class="calc-input-group">
+                <label>Select Municipality / District:</label>
+                <select id="nbcCity" onchange="calcNBC()">
+                  <option value="0.35" selected>Parsa - Birgunj Mahanagarpalika (PGA: 0.35)</option>
+                  <option value="0.35">Bara - Kalaiya Upamahanagarpalika (PGA: 0.35)</option>
+                  <option value="0.35">Bara - Jitpur Simara (PGA: 0.35)</option>
+                  <option value="0.35">Kathmandu Mahanagarpalika (PGA: 0.35)</option>
+                  <option value="0.35">Lalitpur Mahanagarpalika (PGA: 0.35)</option>
+                  <option value="0.40">Chitwan - Bharatpur (PGA: 0.40)</option>
+                  <option value="0.35">Kaski - Pokhara Lekhnath (PGA: 0.35)</option>
+                  <option value="0.35">Morang - Biratnagar (PGA: 0.35)</option>
+                </select>
+              </div>
+              <div class="calc-input-group">
+                <label>Building Storey (NBC 205 Scope):</label>
+                <select id="nbcStorey" onchange="calcNBC()">
+                  <option value="2" selected>Two Storey Building (Section 8)</option>
+                  <option value="3">Three Storey Building (Section 9)</option>
+                </select>
+              </div>
+            </div>
+            <div class="calc-output-card">
+              <div class="calc-output-title">NBC 205: 2024 Ready-to-Use Member Schedule</div>
+              <div class="calc-output-val" id="nbcSummaryOut">Column: 350×350 mm</div>
+              <div class="calc-breakdown-list" id="nbcBreakdown">
+                PGA / Seismic Factor Z: 0.35 • Concrete: M20 (1:1.5:3) • Steel: Fe500 TMT • Plinth Beam: 250×355 mm • Floor Beam: 250×355 mm • Slab: 125mm (5") with 8mm @ 150 c/c.
+              </div>
+              <button class="btn btn-primary" onclick="exportToolToWhatsApp('NBC 205:2024 Structural Detailing Query')">
+                Consult on NBC Detailing <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tool 2: Land Converter -->
+          <div class="tool-panel" id="tool-civ-land">
+            <div class="calc-box-grid">
+              <div class="calc-input-group"><label>Bigha:</label><input type="number" id="landBigha" value="0" oninput="calcLandFromTerai()" /></div>
+              <div class="calc-input-group"><label>Kattha:</label><input type="number" id="landKattha" value="10" oninput="calcLandFromTerai()" /></div>
+              <div class="calc-input-group"><label>Dhur:</label><input type="number" id="landDhur" value="0" oninput="calcLandFromTerai()" /></div>
+            </div>
+            <div class="calc-output-card">
+              <div class="calc-output-title">Standard Land Area Conversions</div>
+              <div class="calc-output-val" id="landSqftOut">36,450 sq.ft</div>
+              <div class="calc-breakdown-list" id="landBreakdown">
+                Square Metres: ~3,386 m² • Hill Equivalent: ~5 Ropani 11 Aana • Bigha Equivalent: 0.50 Bigha
+              </div>
+              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Land Measurement & Planning Conversion')">
+                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tool 3: Brickwork -->
+          <div class="tool-panel" id="tool-civ-brick">
+            <div class="calc-box-grid">
+              <div class="calc-input-group"><label>Wall Length (Feet):</label><input type="number" id="brkL" value="20" oninput="calcBrick()" /></div>
+              <div class="calc-input-group"><label>Wall Height (Feet):</label><input type="number" id="brkH" value="10" oninput="calcBrick()" /></div>
+              <div class="calc-input-group">
+                <label>Wall Thickness:</label>
+                <select id="brkThick" onchange="calcBrick()">
+                  <option value="4.5">4.5 Inch (Half Brick Partition)</option>
+                  <option value="9.0" selected>9 Inch (One Brick Main Wall)</option>
+                </select>
+              </div>
+              <div class="calc-input-group">
+                <label>Mortar Ratio:</label>
+                <select id="brkRatio" onchange="calcBrick()">
+                  <option value="4">1:4 Cement Sand Mortar</option>
+                  <option value="6" selected>1:6 Cement Sand Mortar</option>
+                </select>
+              </div>
+            </div>
+            <div class="calc-output-card">
+              <div class="calc-output-title">Brickwork Material Quantities</div>
+              <div class="calc-output-val" id="brkCountOut">~1,840 Bricks</div>
+              <div class="calc-breakdown-list" id="brkBreakdown">
+                Includes 5% breakage • Cement: ~6 Bags (50kg) • Sand: ~38 cu. ft.
+              </div>
+              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Brickwork & Mortar Estimate')">
+                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tool 4: RCC Concrete -->
+          <div class="tool-panel" id="tool-civ-rcc">
+            <div class="calc-box-grid">
+              <div class="calc-input-group"><label>Length (Feet):</label><input type="number" id="rccL" value="20" oninput="calcRCC()" /></div>
+              <div class="calc-input-group"><label>Width (Feet):</label><input type="number" id="rccW" value="15" oninput="calcRCC()" /></div>
+              <div class="calc-input-group"><label>Thickness / Depth (Inches):</label><input type="number" id="rccD" value="5" oninput="calcRCC()" /></div>
+              <div class="calc-input-group">
+                <label>Concrete Grade:</label>
+                <select id="rccGrade" onchange="calcRCC()">
+                  <option value="M15">M15 (1:2:4 Ratio)</option>
+                  <option value="M20" selected>M20 (1:1.5:3 Ratio - NBC Standard)</option>
+                  <option value="M25">M25 (1:1:2 Ratio)</option>
+                </select>
+              </div>
+            </div>
+            <div class="calc-output-card">
+              <div class="calc-output-title">Dry Materials Takeoff (1.54 Factor)</div>
+              <div class="calc-output-val" id="rccCementOut">~24 Bags Cement</div>
+              <div class="calc-breakdown-list" id="rccBreakdown">
+                Wet Volume: 125 cu.ft • Sand Volume: ~52 cu.ft • Aggregate (Gitti): ~104 cu.ft
+              </div>
+              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Concrete RCC Mix Takeoff')">
+                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tool 5: Steel Rebar -->
+          <div class="tool-panel" id="tool-civ-steel">
+            <div class="calc-box-grid">
+              <div class="calc-input-group">
+                <label>Rebar Diameter:</label>
+                <select id="stlDia" onchange="calcSteel()">
+                  <option value="8">8 mm</option>
+                  <option value="10">10 mm</option>
+                  <option value="12" selected>12 mm</option>
+                  <option value="16">16 mm</option>
+                  <option value="20">20 mm</option>
+                  <option value="25">25 mm</option>
+                </select>
+              </div>
+              <div class="calc-input-group"><label>Total Cut Length (Meters):</label><input type="number" id="stlL" value="120" oninput="calcSteel()" /></div>
+            </div>
+            <div class="calc-output-card">
+              <div class="calc-output-title">Rebar Weight &amp; Estimated Cost</div>
+              <div class="calc-output-val" id="stlWeightOut">~106.7 kg</div>
+              <div class="calc-breakdown-list" id="stlBreakdown">
+                Formula: (D²/162) × Length • Standard 12m Bars: ~10 Bars • Estimated Cost (@ Rs. 95/kg): ~Rs. 10,135
+              </div>
+              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Steel Rebar Weight Calculation')">
+                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tool 6: Soil Bearing Capacity (NBC Dropping Weight) -->
+          <div class="tool-panel" id="tool-civ-soil">
+            <div class="calc-box-grid">
+              <div class="calc-input-group">
+                <label>Avg. Brick Impression Depth (d_avg in mm):</label>
+                <input type="number" id="soilDepth" value="14" oninput="calcSoil()" />
+                <span style="font-size: 0.72rem; color: var(--text-dark);">From 4 bricks dropped from 1.5m as per NBC 205 Cl 3.5</span>
+              </div>
+            </div>
+            <div class="calc-output-card">
+              <div class="calc-output-title">NBC 205: 2024 Approximate Soil Bearing Capacity</div>
+              <div class="calc-output-val" id="soilSBCOut">150 kN/m²</div>
+              <div class="calc-breakdown-list" id="soilBreakdown">
+                Soil Classification: Medium • Footing Size for 2-Storey: Corner/Face/Interior: 1.5m × 1.5m (Table 8-2).
+              </div>
+              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Soil Bearing Capacity Assessment')">
+                Consult on Soil &amp; Foundation <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1203,7 +1247,7 @@
           <span class="dot"></span> Market Intelligence
         </div>
         <h2 class="section-title">Birgunj Civil &amp; <em>Interior Rates Index</em></h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Benchmark material and labour daily rates across Parsa &amp; Birgunj. Updated weekly based on local market assessments.</p>
+        <p class="section-subtitle" style="margin: 0 auto;">Benchmark material and labour rates across Parsa &amp; Birgunj. Updated weekly based on local market assessments.</p>
       </div>
 
       <div class="rates-table-wrap">
@@ -1223,56 +1267,56 @@
               <td>Civil</td>
               <td>50 kg Bag</td>
               <td><span class="rate-pill">Rs. 720 – 770</span></td>
-              <td>Oct 2026</td>
+              <td class="auto-date">Oct 2026</td>
             </tr>
             <tr>
               <td><strong>TMT Steel Rebar (Fe 500 Grade)</strong></td>
               <td>Civil</td>
               <td>Per Kg</td>
               <td><span class="rate-pill">Rs. 92 – 98</span></td>
-              <td>Oct 2026</td>
+              <td class="auto-date">Oct 2026</td>
             </tr>
             <tr>
               <td><strong>Local River Sand (Screened)</strong></td>
               <td>Civil</td>
               <td>Per Tipper (250 cu.ft)</td>
               <td><span class="rate-pill">Rs. 18,500 – 21,000</span></td>
-              <td>Oct 2026</td>
+              <td class="auto-date">Oct 2026</td>
             </tr>
             <tr>
               <td><strong>1st Class Red Clay Bricks</strong></td>
               <td>Civil</td>
               <td>Per 1,000 Pcs</td>
               <td><span class="rate-pill">Rs. 15,000 – 17,000</span></td>
-              <td>Oct 2026</td>
+              <td class="auto-date">Oct 2026</td>
             </tr>
             <tr>
               <td><strong>2×2 ft Vitrified Floor Tiles (Kajaria/Somany)</strong></td>
               <td>Finishing</td>
               <td>Per Sq. Ft.</td>
               <td><span class="rate-pill">Rs. 95 – 145</span></td>
-              <td>Oct 2026</td>
+              <td class="auto-date">Oct 2026</td>
             </tr>
             <tr>
               <td><strong>BWP Marine Grade Plywood (18mm)</strong></td>
               <td>Carpentry</td>
               <td>Per Sq. Ft.</td>
               <td><span class="rate-pill">Rs. 115 – 165</span></td>
-              <td>Oct 2026</td>
+              <td class="auto-date">Oct 2026</td>
             </tr>
             <tr>
               <td><strong>Skilled Mason / Carpenter Daily Wage</strong></td>
               <td>Labour</td>
               <td>Per Man-Day</td>
               <td><span class="rate-pill">Rs. 1,000 – 1,200</span></td>
-              <td>Oct 2026</td>
+              <td class="auto-date">Oct 2026</td>
             </tr>
             <tr>
               <td><strong>Electrician / Plumber Daily Wage</strong></td>
               <td>Labour</td>
               <td>Per Man-Day</td>
               <td><span class="rate-pill">Rs. 950 – 1,150</span></td>
-              <td>Oct 2026</td>
+              <td class="auto-date">Oct 2026</td>
             </tr>
           </tbody>
         </table>
@@ -1280,7 +1324,7 @@
     </div>
   </section>
 
-  <!-- ================= DESIGN JOURNAL & BLOG (ARTICLES) ================= -->
+  <!-- ================= DESIGN JOURNAL & BLOG ================= -->
   <section class="section" id="articles">
     <div class="container">
       <div class="section-header text-center">
@@ -1292,7 +1336,7 @@
       </div>
 
       <div class="articles-grid" id="articlesContainer">
-        <!-- Article 1 -->
+        <!-- Article 1: User's Kitchen Article -->
         <article class="article-card">
           <div class="article-img-wrap">
             <img src="https://i.postimg.cc/1XH29vcT/Modular-Kitchen-vs-Carpenters-Kitchen-in-Birgunj.jpg" alt="Modular Kitchen vs Carpenter Kitchen in Birgunj" loading="lazy" />
@@ -1826,7 +1870,7 @@
           </div>
         </div>
 
-        <!-- Dual Route Form (Instant WhatsApp + Email Backup) -->
+        <!-- Dual Route Form -->
         <form class="contact-form" id="dualContactForm">
           <input type="hidden" name="_next" value="https://chetan-sarraf.github.io/chetan-interior/#contact">
           <h3>Request a Quotation</h3>
@@ -1886,7 +1930,7 @@
     </div>
   </footer>
 
-  <!-- ================= JAVASCRIPT ================= -->
+  <!-- ================= JAVASCRIPT & CALCULATOR ENGINES ================= -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Light / Dark Theme Switcher with LocalStorage Memory
@@ -1914,6 +1958,13 @@
           }
         }
       }
+
+      // Dynamic Auto-Date for Market Rates Table (Always current month & year)
+      const now = new Date();
+      const currentMonthYear = now.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+      document.querySelectorAll('.auto-date').forEach(el => {
+        el.textContent = currentMonthYear;
+      });
 
       // Mobile Nav Toggle
       const navToggle = document.getElementById('navToggle');
@@ -1966,54 +2017,6 @@
         });
       }
 
-      // ================= NPR BUDGET CALCULATOR =================
-      const calcSpace = document.getElementById('calcSpace');
-      const calcTier = document.getElementById('calcTier');
-      const calcArea = document.getElementById('calcArea');
-      const areaDisplay = document.getElementById('areaDisplay');
-      const calcPrice = document.getElementById('calcPrice');
-      const btnSendQuoteWhatsapp = document.getElementById('btnSendQuoteWhatsapp');
-
-      function calculateBudget() {
-        const area = parseInt(calcArea.value, 10);
-        areaDisplay.textContent = `${area} sq.ft`;
-
-        const tier = calcTier.value;
-        let minRate = 60, maxRate = 90;
-
-        if (tier === 'drafting') {
-          minRate = 25; maxRate = 40;
-        } else if (tier === 'renders') {
-          minRate = 65; maxRate = 95;
-        } else if (tier === 'turnkey') {
-          minRate = 1600; maxRate = 2500;
-        }
-
-        const minTotal = Math.round(area * minRate);
-        const maxTotal = Math.round(area * maxRate);
-
-        calcPrice.textContent = `Rs. ${minTotal.toLocaleString()} – ${maxTotal.toLocaleString()}`;
-      }
-
-      if (calcArea && calcSpace && calcTier) {
-        calcArea.addEventListener('input', calculateBudget);
-        calcSpace.addEventListener('change', calculateBudget);
-        calcTier.addEventListener('change', calculateBudget);
-        calculateBudget();
-      }
-
-      if (btnSendQuoteWhatsapp) {
-        btnSendQuoteWhatsapp.addEventListener('click', () => {
-          const space = calcSpace.options[calcSpace.selectedIndex].text;
-          const tier = calcTier.options[calcTier.selectedIndex].text;
-          const area = calcArea.value;
-          const price = calcPrice.textContent;
-
-          const msg = `*Interior Budget Estimate - Birgunj Website*%0A%0A*Space Type:* ${encodeURIComponent(space)}%0A*Area:* ${area} sq.ft%0A*Scope Tier:* ${encodeURIComponent(tier)}%0A*Estimated Range:* ${encodeURIComponent(price)}%0A%0AHi Chetan, I generated this estimate on your website and would like to confirm my project details.`;
-          window.open(`https://wa.me/9779766188838?text=${msg}`, '_blank');
-        });
-      }
-
       // ================= CLIENT FAQ ACCORDION =================
       document.querySelectorAll('.faq-item').forEach(item => {
         const question = item.querySelector('.faq-question');
@@ -2031,7 +2034,7 @@
         });
       });
 
-      // ================= SWIPEABLE PORTFOLIO CAROUSEL =================
+      // ================= SWIPEABLE PORTFOLIO CAROUSEL (6 PROJECTS) =================
       const track = document.getElementById('sliderTrack');
       const cards = document.querySelectorAll('.slider-card');
       const prevBtn = document.getElementById('prevSlide');
@@ -2097,7 +2100,7 @@
         updateSliderPosition();
       });
 
-      // Touch events for iPhone/Android
+      // Touch Events for Mobile / iPhone
       viewport.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX;
         isDragging = true;
@@ -2152,32 +2155,252 @@
           const email = document.getElementById('email').value.trim();
           const message = document.getElementById('message').value.trim();
 
-          // 1. Silent Email Backup via FormSubmit
+          // Silent Email Backup via FormSubmit
           fetch("https://formsubmit.co/ajax/master.er.cks@outlook.com", {
             method: "POST",
-            headers: { 
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-            },
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
             body: JSON.stringify({
-              Name: name,
-              Phone: phone,
-              Email: email,
-              ProjectScope: message,
+              Name: name, Phone: phone, Email: email, ProjectScope: message,
               _subject: "New Website Lead (Birgunj Portfolio)"
             })
           }).catch(() => {});
 
-          // 2. Open WhatsApp with prefilled client data
+          // Instant WhatsApp Dispatch
           const whatsappMsg = `*New Interior Inquiry - Birgunj*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Email:* ${encodeURIComponent(email)}%0A*Project Scope:* ${encodeURIComponent(message)}`;
-          const whatsappURL = `https://wa.me/9779766188838?text=${whatsappMsg}`;
-
-          window.open(whatsappURL, '_blank');
+          window.open(`https://wa.me/9779766188838?text=${whatsappMsg}`, '_blank');
 
           contactForm.reset();
         });
       }
+
+      // Initialize all calculation engines
+      calcPaint();
+      calcCeiling();
+      calcLighting();
+      calcKitchen();
+      calcCurtains();
+      calcAC();
+      calcNBC();
+      calcLandFromTerai();
+      calcBrick();
+      calcRCC();
+      calcSteel();
+      calcSoil();
     });
+
+    // ================= HUB SWITCHING LOGIC =================
+    function switchHubMode(mode) {
+      document.getElementById('btnModeInterior').classList.toggle('active', mode === 'interior');
+      document.getElementById('btnModeCivil').classList.toggle('active', mode === 'civil');
+      document.getElementById('interiorToolsSuite').style.display = mode === 'interior' ? 'block' : 'none';
+      document.getElementById('civilToolsSuite').style.display = mode === 'civil' ? 'block' : 'none';
+    }
+
+    function switchSubTool(toolId) {
+      const parent = toolId.startsWith('int-') ? document.getElementById('interiorToolsSuite') : document.getElementById('civilToolsSuite');
+      parent.querySelectorAll('.tool-chip').forEach(c => c.classList.remove('active'));
+      parent.querySelectorAll('.tool-panel').forEach(p => p.classList.remove('active'));
+      
+      const targetPanel = document.getElementById(`tool-${toolId}`);
+      if (targetPanel) targetPanel.classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    // ================= 1-CLICK WHATSAPP EXPORT FUNCTION =================
+    function exportToolToWhatsApp(toolName) {
+      let resultText = "";
+      if (toolName.includes("Paint")) resultText = document.getElementById('paintAreaOut').textContent + " - " + document.getElementById('paintBreakdown').textContent;
+      else if (toolName.includes("Ceiling")) resultText = document.getElementById('ceilBoardsOut').textContent + " - " + document.getElementById('ceilBreakdown').textContent;
+      else if (toolName.includes("Lighting")) resultText = document.getElementById('luxDownlightsOut').textContent + " - " + document.getElementById('luxBreakdown').textContent;
+      else if (toolName.includes("Kitchen")) resultText = document.getElementById('kitRunningOut').textContent + " - " + document.getElementById('kitBreakdown').textContent;
+      else if (toolName.includes("Curtain")) resultText = document.getElementById('curtFabricOut').textContent + " - " + document.getElementById('curtBreakdown').textContent;
+      else if (toolName.includes("AC")) resultText = document.getElementById('acTonnageOut').textContent + " - " + document.getElementById('acBreakdown').textContent;
+      else if (toolName.includes("NBC")) resultText = document.getElementById('nbcSummaryOut').textContent + " - " + document.getElementById('nbcBreakdown').textContent;
+      else if (toolName.includes("Land")) resultText = document.getElementById('landSqftOut').textContent + " - " + document.getElementById('landBreakdown').textContent;
+      else if (toolName.includes("Brick")) resultText = document.getElementById('brkCountOut').textContent + " - " + document.getElementById('brkBreakdown').textContent;
+      else if (toolName.includes("RCC")) resultText = document.getElementById('rccCementOut').textContent + " - " + document.getElementById('rccBreakdown').textContent;
+      else if (toolName.includes("Steel")) resultText = document.getElementById('stlWeightOut').textContent + " - " + document.getElementById('stlBreakdown').textContent;
+      else if (toolName.includes("Soil")) resultText = document.getElementById('soilSBCOut').textContent + " - " + document.getElementById('soilBreakdown').textContent;
+
+      const msg = `*Studio Hub Calculation - ${encodeURIComponent(toolName)}*%0A%0A*Result:* ${encodeURIComponent(resultText)}%0A%0AHi Chetan, I calculated this on your website and would like a formal consultation/quotation.`;
+      window.open(`https://wa.me/9779766188838?text=${msg}`, '_blank');
+    }
+
+    // ================= INTERIOR DESIGN CALCULATION LOGIC =================
+    function calcPaint() {
+      const l = parseFloat(document.getElementById('paintL').value) || 0;
+      const w = parseFloat(document.getElementById('paintW').value) || 0;
+      const h = parseFloat(document.getElementById('paintH').value) || 0;
+      const ded = parseFloat(document.getElementById('paintDed').value) || 0;
+
+      const grossArea = 2 * (l + w) * h;
+      const netArea = Math.max(0, grossArea - ded);
+      document.getElementById('paintAreaOut').textContent = `${Math.round(netArea)} sq.ft`;
+      
+      const puttyKg = Math.round(netArea * 0.05);
+      const primerL = (netArea / 100).toFixed(1);
+      const paintL = (netArea / 55).toFixed(1);
+      document.getElementById('paintBreakdown').textContent = `Wall Putty (2 Coats): ~${puttyKg} kg • Primer: ~${primerL} Litres • Interior Emulsion (2 Coats): ~${paintL} Litres`;
+    }
+
+    function calcCeiling() {
+      const l = parseFloat(document.getElementById('ceilL').value) || 0;
+      const w = parseFloat(document.getElementById('ceilW').value) || 0;
+      const boardSize = parseFloat(document.getElementById('ceilBoardSize').value) || 24;
+      
+      const area = l * w;
+      const boards = Math.ceil((area * 1.1) / boardSize);
+      const perimeter = Math.round(2 * (l + w));
+      document.getElementById('ceilBoardsOut').textContent = `${boards} Sheets`;
+      document.getElementById('ceilBreakdown').textContent = `Ceiling Area: ${area} sq.ft • Perimeter L-Channel: ~${perimeter} Running ft • LED Cove Strip Light: ~${perimeter} ft (${(perimeter * 0.3048).toFixed(1)}m)`;
+    }
+
+    function calcLighting() {
+      const lux = parseFloat(document.getElementById('luxRoomType').value) || 150;
+      const areaSqft = parseFloat(document.getElementById('luxArea').value) || 0;
+      const watt = parseFloat(document.getElementById('luxWattage').value) || 9;
+
+      const areaSqm = areaSqft * 0.092903;
+      const lumensNeeded = Math.round(lux * areaSqm);
+      const lumensPerBulb = watt === 7 ? 630 : (watt === 9 ? 810 : 1080);
+      const count = Math.ceil(lumensNeeded / lumensPerBulb);
+
+      document.getElementById('luxDownlightsOut').textContent = `${count} Downlights`;
+      document.getElementById('luxBreakdown').textContent = `Target Lumens: ~${lumensNeeded.toLocaleString()} Lm • Total Power: ~${count * watt}W • Recessed downlight spacing: ~4-5 ft c/c.`;
+    }
+
+    function calcKitchen() {
+      const factor = parseFloat(document.getElementById('kitLayout').value) || 1.8;
+      const len = parseFloat(document.getElementById('kitLength').value) || 0;
+      const rft = Math.round(len * factor);
+      const topSqft = Math.round(rft * 2.2);
+
+      document.getElementById('kitRunningOut').textContent = `${rft} Running Feet`;
+      document.getElementById('kitBreakdown').textContent = `Base Cabinets: ${rft} Rft • Overhead Cabinets: ~${Math.round(rft * 0.8)} Rft • Countertop Quartz/Granite: ~${topSqft} sq.ft (Sink cutout allowance included)`;
+    }
+
+    function calcCurtains() {
+      const w = parseFloat(document.getElementById('curtW').value) || 0;
+      const h = parseFloat(document.getElementById('curtH').value) || 0;
+      const fullness = parseFloat(document.getElementById('curtFullness').value) || 2.2;
+
+      const totalFabricW = w * fullness;
+      const drops = Math.ceil(totalFabricW / 48);
+      const cutLenMeters = (h + 12) * 0.0254;
+      const totalMeters = (drops * cutLenMeters).toFixed(1);
+
+      document.getElementById('curtFabricOut').textContent = `~${totalMeters} Meters`;
+      document.getElementById('curtBreakdown').textContent = `Finished Width: ${w} Inches • Pleated Fullness: ${(totalFabricW/12).toFixed(1)} ft • Track Length: ${(w/12).toFixed(1)} ft`;
+    }
+
+    function calcAC() {
+      const area = parseFloat(document.getElementById('acArea').value) || 0;
+      const height = parseFloat(document.getElementById('acH').value) || 10;
+      const factor = parseFloat(document.getElementById('acExposure').value) || 1.0;
+
+      const volume = area * height;
+      const btu = volume * 6 * factor;
+      let tons = (btu / 12000).toFixed(1);
+      let tonLabel = "1.0 Ton (12,000 BTU)";
+      if (tons > 1.2 && tons <= 1.7) tonLabel = "1.5 Ton (18,000 BTU)";
+      else if (tons > 1.7) tonLabel = "2.0 Ton (24,000 BTU)";
+
+      document.getElementById('acTonnageOut').textContent = tonLabel;
+      document.getElementById('acBreakdown').textContent = `Calculated Cooling Load: ~${Math.round(btu).toLocaleString()} BTU/hr • Tailored to peak Terai heat (40°C+ summer).`;
+    }
+
+    // ================= CIVIL & NBC 205:2024 CALCULATION LOGIC =================
+    function calcNBC() {
+      const pga = parseFloat(document.getElementById('nbcCity').value) || 0.35;
+      const storey = parseInt(document.getElementById('nbcStorey').value, 10) || 2;
+
+      if (storey === 2) {
+        document.getElementById('nbcSummaryOut').textContent = "Column: 350×350 mm | Beam: 250×355 mm";
+        document.getElementById('nbcBreakdown').textContent = `Seismic Factor Z: ${pga} • Plinth Beam: 250×355mm (3-12Ø Top & Bottom) • Footing Size (SBC 150): 1.5×1.5m (12Ø @ 150 c/c) • Slab: 125mm with 8Ø @ 150 c/c (NBC 205 Table 8-2).`;
+      } else {
+        document.getElementById('nbcSummaryOut').textContent = "Column: 400×400 mm | Beam: 250×380 mm";
+        document.getElementById('nbcBreakdown').textContent = `Seismic Factor Z: ${pga} • Plinth Beam: 250×355mm • First Floor Beam: 250×380mm • Footing Size (SBC 150): 1.9×1.9m (12Ø @ 100 c/c) • Staircase Waist Slab: 150mm (NBC 205 Table 9-2).`;
+      }
+    }
+
+    function calcLandFromTerai() {
+      const bigha = parseFloat(document.getElementById('landBigha').value) || 0;
+      const kattha = parseFloat(document.getElementById('landKattha').value) || 0;
+      const dhur = parseFloat(document.getElementById('landDhur').value) || 0;
+
+      const totalDhur = (bigha * 400) + (kattha * 20) + dhur;
+      const sqft = totalDhur * 182.25;
+      const sqm = sqft * 0.092903;
+      const ropani = (sqft / 5476).toFixed(2);
+
+      document.getElementById('landSqftOut').textContent = `${Math.round(sqft).toLocaleString()} sq.ft`;
+      document.getElementById('landBreakdown').textContent = `Square Metres: ~${Math.round(sqm).toLocaleString()} m² • Hill Equivalent: ~${ropani} Ropani • Total Dhur: ${totalDhur}`;
+    }
+
+    function calcBrick() {
+      const l = parseFloat(document.getElementById('brkL').value) || 0;
+      const h = parseFloat(document.getElementById('brkH').value) || 0;
+      const thick = parseFloat(document.getElementById('brkThick').value) || 9;
+      const ratio = parseInt(document.getElementById('brkRatio').value, 10) || 6;
+
+      const volCuft = l * h * (thick / 12);
+      const brickMultiplier = thick === 4.5 ? 4.6 : 9.2;
+      const count = Math.ceil(l * h * brickMultiplier * 1.05);
+
+      const dryMortar = volCuft * 0.30;
+      const cementBags = (dryMortar / (1 + ratio)) * (1 / 1.25);
+      const sandCuft = (dryMortar / (1 + ratio)) * ratio;
+
+      document.getElementById('brkCountOut').textContent = `~${count.toLocaleString()} Bricks`;
+      document.getElementById('brkBreakdown').textContent = `Includes 5% breakage allowance • OPC/PPC Cement: ~${cementBags.toFixed(1)} Bags (50kg) • River Sand: ~${Math.round(sandCuft)} cu. ft.`;
+    }
+
+    function calcRCC() {
+      const l = parseFloat(document.getElementById('rccL').value) || 0;
+      const w = parseFloat(document.getElementById('rccW').value) || 0;
+      const dInches = parseFloat(document.getElementById('rccD').value) || 0;
+      const grade = document.getElementById('rccGrade').value;
+
+      const wetVol = l * w * (dInches / 12);
+      const dryVol = wetVol * 1.54;
+
+      let cPart = 1, sPart = 1.5, aPart = 3;
+      if (grade === 'M15') { cPart = 1; sPart = 2; aPart = 4; }
+      else if (grade === 'M25') { cPart = 1; sPart = 1; aPart = 2; }
+      
+      const sum = cPart + sPart + aPart;
+      const cementBags = ((dryVol * (cPart / sum)) / 1.25).toFixed(1);
+      const sandCuft = Math.round(dryVol * (sPart / sum));
+      const gittiCuft = Math.round(dryVol * (aPart / sum));
+
+      document.getElementById('rccCementOut').textContent = `~${cementBags} Bags Cement`;
+      document.getElementById('rccBreakdown').textContent = `Wet Volume: ${Math.round(wetVol)} cu.ft (Dry: ${Math.round(dryVol)} cu.ft) • Sand: ~${sandCuft} cu.ft • Aggregate (Gitti): ~${gittiCuft} cu.ft`;
+    }
+
+    function calcSteel() {
+      const dia = parseFloat(document.getElementById('stlDia').value) || 12;
+      const len = parseFloat(document.getElementById('stlL').value) || 0;
+
+      const weight = ((dia * dia) / 162) * len;
+      const bars12m = Math.ceil(len / 12);
+      const cost = Math.round(weight * 95);
+
+      document.getElementById('stlWeightOut').textContent = `~${weight.toFixed(1)} kg`;
+      document.getElementById('stlBreakdown').textContent = `Standard 12m Bars: ~${bars12m} Bars • Quintals: ${(weight/100).toFixed(2)} Qnt • Estimated Cost (@ Rs. 95/kg): ~Rs. ${cost.toLocaleString()}`;
+    }
+
+    function calcSoil() {
+      const d = parseFloat(document.getElementById('soilDepth').value) || 14;
+      let sbc = 150, soilType = "Medium Soil";
+
+      if (d <= 12) { sbc = 200; soilType = "Hard / Dense Soil"; }
+      else if (d <= 17) { sbc = 150; soilType = "Medium Compacted Soil"; }
+      else if (d <= 20) { sbc = 125; soilType = "Soft Soil"; }
+      else { sbc = 100; soilType = "Weak Soil (Gravel packing required)"; }
+
+      document.getElementById('soilSBCOut').textContent = `${sbc} kN/m²`;
+      document.getElementById('soilBreakdown').textContent = `Soil Type: ${soilType} • Minimum exploration depth: 1.5m • Compliant with NBC 205: 2024 Table 3-2.`;
+    }
 
     // Lightbox modal logic
     function openModal(title, category, desc, imgSrc, attribution) {
