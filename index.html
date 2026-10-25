@@ -11,7 +11,7 @@
   <!-- ================= STRICT SEO META TAGS ================= -->
   <title>Chetan Kr. Sarraf | Interior Designer in Birgunj, Nepal</title>
   <meta name="description" content="Chetan Kr. Sarraf is an interior designer & civil engineer in Birgunj, Nepal. Offering 3D renders, space planning, AutoCAD blueprints & BOQ estimation." />
-  <meta name="keywords" content="best interior designer in birgunj, interior designer parsa nepal, civil engineer interior designer, chetan kumar sarraf, scale and spaces private limited, nbc 205 2024 calculator nepal, 360 panorama interior nepal" />
+  <meta name="keywords" content="best interior designer in birgunj, interior designer parsa nepal, civil engineer interior designer, chetan kumar sarraf, scale and spaces private limited, boq estimator nepal, 360 panorama interior nepal" />
   <meta name="author" content="Chetan Kumar Sarraf" />
   <meta name="robots" content="index, follow" />
 
@@ -27,7 +27,7 @@
 
   <!-- Open Graph & Twitter Cards -->
   <meta property="og:title" content="Chetan Kr. Sarraf | Interior Designer in Birgunj, Nepal" />
-  <meta property="og:description" content="Civil engineering accuracy, luxury interior design, interactive cost calculator, 3D realistic rendering, and 360° virtual tours in Birgunj, Nepal." />
+  <meta property="og:description" content="Civil engineering accuracy, luxury interior design, interactive room BOQ calculator, 3D realistic rendering, and 360° virtual tours in Birgunj, Nepal." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://chetan-sarraf.github.io/chetan-interior/" />
   <meta property="og:image" content="https://i.postimg.cc/SRvT1GYp/Modern-Luxuary-Living-room-Project1.jpg" />
@@ -80,7 +80,7 @@
         "name": "How much does interior design cost per sq. ft. in Birgunj, Nepal?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Interior design in Birgunj typically ranges from Rs. 25–40 per sq. ft. for 2D AutoCAD planning, Rs. 60–100 per sq. ft. for complete 3D realistic rendering, and Rs. 1,600–2,800 per sq. ft. for full turnkey execution including carpentry, electrical, and finishes."
+          "text": "Interior design in Birgunj typically ranges from Rs. 25–45 per sq. ft. for 2D AutoCAD planning & MEP, Rs. 65–110 per sq. ft. for complete 3D realistic rendering, and Rs. 1,600–2,800 per sq. ft. for full turnkey execution including carpentry, electrical, and finishes."
         }
       },
       {
@@ -244,7 +244,7 @@
 
     /* Navigation Capsule */
     .navbar-capsule {
-      position: fixed; top: 16px; left: 50%; transform: translateX(-50%); width: 94%; max-width: 1180px;
+      position: fixed; top: 16px; left: 50%; transform: translateX(-50%); width: 94%; max-width: 1200px;
       background: var(--nav-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       border: 1px solid var(--border-navy); border-radius: var(--radius-pill); z-index: 9999;
       padding: 0.55rem 1.2rem; box-shadow: var(--shadow-subtle); transition: var(--transition);
@@ -252,7 +252,7 @@
     .nav-container { display: flex; justify-content: space-between; align-items: center; }
     .nav-links { display: flex; align-items: center; gap: 0.2rem; }
     .nav-links a {
-      font-size: 0.78rem; font-weight: 600; color: var(--text-muted); padding: 0.45rem 0.7rem;
+      font-size: 0.78rem; font-weight: 600; color: var(--text-muted); padding: 0.45rem 0.65rem;
       border-radius: var(--radius-pill); letter-spacing: -0.01em; transition: var(--transition);
     }
     .nav-links a:hover { color: var(--text-main); background: var(--brand-grey-soft); }
@@ -357,6 +357,50 @@
     .ba-badge-left { left: 16px; }
     .ba-badge-right { right: 16px; }
 
+    /* ================= ROOM & PROJECT BOQ TOOLKIT ================= */
+    .boq-toolkit-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-navy);
+      border-radius: var(--radius-lg);
+      padding: clamp(2rem, 5vw, 4rem);
+      max-width: 980px;
+      margin: 3.5rem auto 0;
+      box-shadow: var(--shadow-elevated);
+      position: relative;
+      z-index: 2;
+    }
+    .boq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+    @media (max-width: 768px) { .boq-grid { grid-template-columns: 1fr; } }
+    .boq-group label {
+      display: block; font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase;
+      color: var(--text-main); letter-spacing: 0.06em; margin-bottom: 0.5rem;
+    }
+    .boq-select {
+      width: 100%; padding: 0.9rem 1.1rem; background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-main);
+      font-size: 16px !important; outline: none;
+    }
+    .boq-range-wrap {
+      grid-column: 1 / -1; background: var(--bg-surface-elevated);
+      padding: 1.5rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);
+    }
+    .boq-range-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; }
+    .boq-range-slider { width: 100%; accent-color: var(--brand-navy); height: 8px; }
+    
+    .boq-breakdown-card {
+      background: var(--brand-navy-soft); border: 1px solid var(--border-navy);
+      border-radius: var(--radius-md); padding: 2rem; margin-top: 1.8rem;
+    }
+    .boq-total-price {
+      font-family: var(--font-display); font-size: clamp(2.2rem, 6vw, 3.4rem);
+      color: var(--text-main); font-weight: 800; line-height: 1.1; margin-bottom: 1rem;
+    }
+    .boq-itemized-list {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; font-size: 0.9rem;
+      color: var(--text-muted); border-top: 1px solid var(--border-navy); padding-top: 1.2rem; margin-bottom: 1.4rem;
+    }
+    @media (max-width: 600px) { .boq-itemized-list { grid-template-columns: 1fr; } }
+
     /* ================= UNIFIED CALCULATION & ENGINEERING HUB ================= */
     .hub-container {
       max-width: 1040px; margin: 3rem auto 0; background: var(--bg-surface);
@@ -385,9 +429,7 @@
       background: var(--bg-surface-elevated); color: var(--text-muted); font-size: 0.82rem; font-weight: 600;
       white-space: nowrap; cursor: pointer; transition: var(--transition);
     }
-    .tool-chip.active {
-      background: var(--accent-azure); color: #ffffff; border-color: var(--accent-azure);
-    }
+    .tool-chip.active { background: var(--accent-azure); color: #ffffff; border-color: var(--accent-azure); }
 
     .tool-panel { display: none; }
     .tool-panel.active { display: block; animation: panelFade 0.35s ease; }
@@ -395,7 +437,6 @@
 
     .calc-box-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
     @media (max-width: 768px) { .calc-box-grid { grid-template-columns: 1fr; } }
-
     .calc-input-group label {
       display: block; font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase;
       color: var(--text-main); letter-spacing: 0.06em; margin-bottom: 0.4rem;
@@ -405,19 +446,17 @@
       border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-main);
       font-size: 16px !important; outline: none;
     }
-    .calc-input-group input:focus, .calc-input-group select:focus {
-      border-color: var(--brand-navy);
-    }
-
+    
+    /* Clean Calculation Output Card Without Button */
     .calc-output-card {
       background: var(--brand-navy-soft); border: 1px solid var(--border-navy);
       border-radius: var(--radius-md); padding: 1.8rem; margin-top: 1.8rem;
     }
     .calc-output-title { font-family: var(--font-mono); font-size: 0.76rem; text-transform: uppercase; color: var(--brand-grey); letter-spacing: 0.08em; margin-bottom: 0.5rem; }
     .calc-output-val { font-family: var(--font-display); font-size: clamp(1.8rem, 5vw, 2.6rem); color: var(--text-main); font-weight: 800; line-height: 1.15; margin-bottom: 0.6rem; }
-    .calc-breakdown-list { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.2rem; }
+    .calc-breakdown-list { font-size: 0.92rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 0; }
 
-    /* Rates Table */
+    /* Live Rates Table */
     .rates-table-wrap {
       margin-top: 3.5rem; background: var(--bg-surface); border: 1px solid var(--border-navy);
       border-radius: var(--radius-lg); overflow-x: auto; box-shadow: var(--shadow-subtle); -webkit-overflow-scrolling: touch;
@@ -432,7 +471,34 @@
     .rates-table tr:hover td { background: var(--brand-navy-soft); color: var(--text-main); }
     .rate-pill { font-family: var(--font-mono); font-weight: 700; color: var(--accent-azure); }
 
-    /* Articles / Blog */
+    /* Dynamic Showcase & Social Hub (Tab 3 from Sheet) */
+    .showcase-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem; margin-top: 3.5rem;
+    }
+    .showcase-card {
+      background: var(--bg-surface); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-subtle);
+      transition: var(--transition); display: flex; flex-direction: column;
+    }
+    .showcase-card:hover { border-color: var(--border-navy); transform: translateY(-5px); box-shadow: var(--shadow-elevated); }
+    .showcase-img-wrap { width: 100%; height: 260px; overflow: hidden; position: relative; background: #121620; }
+    .showcase-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+    .showcase-card:hover .showcase-img-wrap img { transform: scale(1.06); }
+    .platform-badge {
+      position: absolute; top: 14px; left: 14px; padding: 0.35rem 0.85rem; border-radius: var(--radius-pill);
+      font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      color: #ffffff; display: inline-flex; align-items: center; gap: 0.4rem; box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    .badge-instagram { background: linear-gradient(135deg, #E1306C, #833AB4); }
+    .badge-tiktok { background: #000000; border: 1px solid #00f2fe; }
+    .badge-facebook { background: #1877F2; }
+    .badge-project { background: var(--brand-navy); }
+    .showcase-body { padding: 1.8rem; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
+    .showcase-body h3 { font-size: 1.4rem; color: var(--text-main); margin-bottom: 0.6rem; }
+    .showcase-body p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.2rem; }
+
+    /* Articles / Blog (Tab 1 from Sheet) */
     .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3.5rem; }
     .article-card {
       background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
@@ -668,6 +734,7 @@
     .footer-social-links { display: flex; gap: 1.2rem; align-items: center; }
     .footer-social-links a:hover { color: var(--brand-navy); }
 
+    /* Mobile Responsive */
     @media (max-width: 950px) {
       .grid-about-unboxed, .contact-card { grid-template-columns: 1fr; padding: 2rem; gap: 2.5rem; }
       .nav-toggle { display: block; }
@@ -699,10 +766,12 @@
         <div class="nav-links" id="navLinks">
           <a href="#home" class="nav-item active">Overview</a>
           <a href="#about" class="nav-item">About</a>
+          <a href="#boq-toolkit" class="nav-item">BOQ Toolkit</a>
           <a href="#hub" class="nav-item">Studio Hub</a>
+          <a href="#showcase" class="nav-item">Live Works</a>
           <a href="#rates" class="nav-item">Rates</a>
           <a href="#articles" class="nav-item">Journal</a>
-          <a href="#portfolio" class="nav-item">Works</a>
+          <a href="#portfolio" class="nav-item">Portfolio</a>
           <a href="#faq" class="nav-item">FAQs</a>
           <a href="#contact" class="nav-item btn-nav-capsule">Consultation</a>
         </div>
@@ -761,13 +830,13 @@
         I am <strong>Chetan Kumar Sarraf</strong>, a Civil Engineer &amp; Interior Design Professional. Integrating structural civil engineering knowledge with 3D photorealism, spatial BOQ valuation, and technical drafting under <strong>Scale and Spaces Private Limited</strong>.
       </p>
       <div class="hero-actions">
-        <a href="#hub" class="btn btn-primary">Studio Calculation Hub <i class="fa-solid fa-calculator"></i></a>
-        <a href="#transformation" class="btn btn-outline">See 2D-to-3D Slider</a>
+        <a href="#boq-toolkit" class="btn btn-primary">Room BOQ Toolkit <i class="fa-solid fa-calculator"></i></a>
+        <a href="#hub" class="btn btn-outline">Studio Engineering Hub</a>
       </div>
       <div class="hero-trust-bar">
         <span><i class="fa-solid fa-location-dot"></i> Birgunj, Parsa, Nepal</span>
-        <span><i class="fa-solid fa-compass-drafting"></i> AutoCAD Blueprints</span>
-        <span><i class="fa-solid fa-calculator"></i> BOQ Valuation</span>
+        <span><i class="fa-solid fa-compass-drafting"></i> 2D AutoCAD &amp; MEP</span>
+        <span><i class="fa-solid fa-calculator"></i> Live BOQ Estimation</span>
         <span><i class="fa-solid fa-vr-cardboard"></i> 360° VR Tours</span>
       </div>
     </div>
@@ -835,6 +904,71 @@
     </div>
   </section>
 
+  <!-- ================= RESTORED ROOM & PROJECT BOQ ESTIMATOR TOOLKIT ================= -->
+  <section class="section section-with-texture" id="boq-toolkit">
+    <img src="https://i.postimg.cc/HJzv3L6V/05t.png" alt="" class="watermark-texture estimator-texture" loading="lazy" />
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="tag-badge">
+          <span class="dot"></span> Full Project Estimator
+        </div>
+        <h2 class="section-title">Room &amp; Project <em>BOQ Toolkit</em></h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Select your specific room, 2D architectural &amp; MEP drafting requirements, or complete 3D &amp; Turnkey execution to get an accurate itemized estimate.</p>
+      </div>
+
+      <div class="boq-toolkit-card">
+        <div class="boq-grid">
+          <div class="boq-group">
+            <label for="boqRoom">Select Room / Space Type:</label>
+            <select class="boq-select" id="boqRoom" onchange="calculateFullBOQ()">
+              <option value="living">Living Room Suite</option>
+              <option value="bedroom" selected>Master Bedroom Suite</option>
+              <option value="kitchen">Modular Chef Kitchen &amp; Dining</option>
+              <option value="bathroom">Luxury Spa Bathroom / Toilet</option>
+              <option value="home">Full Residence (2BHK / 3BHK Flat)</option>
+              <option value="office">Commercial Office / Workspace</option>
+            </select>
+          </div>
+
+          <div class="boq-group">
+            <label for="boqScope">Project Scope &amp; Deliverables Tier:</label>
+            <select class="boq-select" id="boqScope" onchange="calculateFullBOQ()">
+              <option value="tier1">Tier 1: 2D Space Planning, Architectural Layout &amp; Full MEP/Sanitary Drawings (Rs. 25–45/sq.ft)</option>
+              <option value="tier2" selected>Tier 2: 3D Realistic Renders, 360° VR &amp; Complete 2D Working Blueprints (Rs. 65–110/sq.ft)</option>
+              <option value="tier3">Tier 3: Turnkey Execution (Civil, False Ceiling, Electrical, Carpentry, Finishing) (Rs. 1,600–2,800/sq.ft)</option>
+            </select>
+          </div>
+
+          <div class="boq-range-wrap">
+            <div class="boq-range-header">
+              <label for="boqArea" style="margin-bottom: 0;">Floor Area (Square Feet):</label>
+              <span id="boqAreaDisplay" style="font-family: var(--font-mono); color: var(--accent-azure); font-weight: 700; font-size: 1.15rem;">350 sq.ft</span>
+            </div>
+            <input type="range" min="80" max="4000" step="10" value="350" class="boq-range-slider" id="boqArea" oninput="calculateFullBOQ()" />
+          </div>
+        </div>
+
+        <div class="boq-breakdown-card">
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; color: var(--brand-grey); letter-spacing: 0.08em; margin-bottom: 0.4rem;">
+            Calculated Investment Range (NPR)
+          </div>
+          <div class="boq-total-price" id="boqPriceOut">Rs. 24,500 – 38,500</div>
+          
+          <div class="boq-itemized-list">
+            <div><i class="fa-solid fa-check" style="color: var(--accent-azure); margin-right: 0.4rem;"></i> <strong>Architectural Planning:</strong> <span id="boqPlanFee">Included</span></div>
+            <div><i class="fa-solid fa-check" style="color: var(--accent-azure); margin-right: 0.4rem;"></i> <strong>3D Visualization &amp; 360°:</strong> <span id="boq3DFee">Included</span></div>
+            <div><i class="fa-solid fa-check" style="color: var(--accent-azure); margin-right: 0.4rem;"></i> <strong>Electrical &amp; MEP Sets:</strong> <span id="boqMEPFee">Included</span></div>
+            <div><i class="fa-solid fa-check" style="color: var(--accent-azure); margin-right: 0.4rem;"></i> <strong>BOQ Cost Control:</strong> <span id="boqBOQFee">Included</span></div>
+          </div>
+
+          <button type="button" class="btn btn-primary" id="btnExportFullBOQ" onclick="exportFullBOQToWhatsApp()">
+            Send Itemized BOQ to WhatsApp <i class="fa-brands fa-whatsapp"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Before & After Transformation Slider -->
   <section class="section section-with-texture" id="transformation">
     <img src="https://i.postimg.cc/xk5pgd6L/04t.png" alt="" class="watermark-texture trans-texture" loading="lazy" />
@@ -868,7 +1002,7 @@
     </div>
   </section>
 
-  <!-- ================= UNIFIED CALCULATION & ENGINEERING HUB ================= -->
+  <!-- ================= UNIFIED CALCULATION & ENGINEERING HUB (CLEANED - NO WHATSAPP BUTTONS) ================= -->
   <section class="section section-with-texture" id="hub">
     <img src="https://i.postimg.cc/HJzv3L6V/05t.png" alt="" class="watermark-texture estimator-texture" loading="lazy" />
     <div class="container">
@@ -916,9 +1050,6 @@
               <div class="calc-breakdown-list" id="paintBreakdown">
                 Wall Putty (2 Coats): ~24 kg (1 bag) • Primer: ~4.7 Litres • Interior Emulsion (2 Coats): ~8.5 Litres
               </div>
-              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Interior Wall Paint & Putty Takeoff')">
-                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
-              </button>
             </div>
           </div>
 
@@ -942,9 +1073,6 @@
               <div class="calc-breakdown-list" id="ceilBreakdown">
                 Ceiling Area: 224 sq.ft • Perimeter L-Channel: ~60 Running ft • LED Strip Light Length: ~60 ft (18.3 meters)
               </div>
-              <button class="btn btn-primary" onclick="exportToolToWhatsApp('False Ceiling & LED Cove Estimate')">
-                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
-              </button>
             </div>
           </div>
 
@@ -977,9 +1105,6 @@
               <div class="calc-breakdown-list" id="luxBreakdown">
                 Target Lumens: ~4,180 Lumens • Total Recommended Wattage: ~54W • Balanced, shadow-free spacing.
               </div>
-              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Room Lighting & Lux Calculation')">
-                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
-              </button>
             </div>
           </div>
 
@@ -1001,11 +1126,8 @@
               <div class="calc-output-title">Modular Kitchen Cabinet &amp; Countertop Estimate</div>
               <div class="calc-output-val" id="kitRunningOut">18 Running Feet</div>
               <div class="calc-breakdown-list" id="kitBreakdown">
-                Base Cabinets: 18 Rft • Overhead Cabinets: ~14 Rft • Quartz/Granite Countertop: ~45 sq.ft
+                Base Cabinets: 18 Rft • Overhead Cabinets: ~14 Rft • Countertop Quartz/Granite: ~45 sq.ft
               </div>
-              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Modular Kitchen Layout Plan')">
-                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
-              </button>
             </div>
           </div>
 
@@ -1029,9 +1151,6 @@
               <div class="calc-breakdown-list" id="curtBreakdown">
                 Total Flat Width: 158 Inches • Recommended Curtain Track/Rod: 6.5 Feet
               </div>
-              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Curtain Fabric Estimate')">
-                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
-              </button>
             </div>
           </div>
 
@@ -1052,11 +1171,8 @@
               <div class="calc-output-title">Recommended AC Capacity (Terai Climate)</div>
               <div class="calc-output-val" id="acTonnageOut">1.5 Ton (18,000 BTU)</div>
               <div class="calc-breakdown-list" id="acBreakdown">
-                Calculated Heat Load: ~17,200 BTU/hr • Guarantees fast cooling during peak Birgunj summer (40°C+).
+                Calculated Heat Load: ~17,200 BTU/hr • Fast cooling during peak Birgunj summer (40°C+).
               </div>
-              <button class="btn btn-primary" onclick="exportToolToWhatsApp('AC Cooling Tonnage Calculation')">
-                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
-              </button>
             </div>
           </div>
         </div>
@@ -1100,11 +1216,8 @@
               <div class="calc-output-title">NBC 205: 2024 Ready-to-Use Member Schedule</div>
               <div class="calc-output-val" id="nbcSummaryOut">Column: 350×350 mm</div>
               <div class="calc-breakdown-list" id="nbcBreakdown">
-                PGA / Seismic Factor Z: 0.35 • Concrete: M20 (1:1.5:3) • Steel: Fe500 TMT • Plinth Beam: 250×355 mm • Floor Beam: 250×355 mm • Slab: 125mm (5") with 8mm @ 150 c/c.
+                PGA / Seismic Factor Z: 0.35 • Concrete: M20 (1:1.5:3) • Steel: Fe500 TMT • Plinth Beam: 250×355mm (3-12Ø Top &amp; Bottom) • Footing Size (SBC 150): 1.5×1.5m (12Ø @ 150 c/c) • Slab: 125mm with 8Ø @ 150 c/c (NBC 205 Table 8-2).
               </div>
-              <button class="btn btn-primary" onclick="exportToolToWhatsApp('NBC 205:2024 Structural Detailing Query')">
-                Consult on NBC Detailing <i class="fa-brands fa-whatsapp"></i>
-              </button>
             </div>
           </div>
 
@@ -1121,9 +1234,6 @@
               <div class="calc-breakdown-list" id="landBreakdown">
                 Square Metres: ~3,386 m² • Hill Equivalent: ~5 Ropani 11 Aana • Bigha Equivalent: 0.50 Bigha
               </div>
-              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Land Measurement & Planning Conversion')">
-                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
-              </button>
             </div>
           </div>
 
@@ -1151,11 +1261,8 @@
               <div class="calc-output-title">Brickwork Material Quantities</div>
               <div class="calc-output-val" id="brkCountOut">~1,840 Bricks</div>
               <div class="calc-breakdown-list" id="brkBreakdown">
-                Includes 5% breakage • Cement: ~6 Bags (50kg) • Sand: ~38 cu. ft.
+                Includes 5% breakage allowance • OPC/PPC Cement: ~6 Bags (50kg) • River Sand: ~38 cu. ft.
               </div>
-              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Brickwork & Mortar Estimate')">
-                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
-              </button>
             </div>
           </div>
 
@@ -1180,9 +1287,6 @@
               <div class="calc-breakdown-list" id="rccBreakdown">
                 Wet Volume: 125 cu.ft • Sand Volume: ~52 cu.ft • Aggregate (Gitti): ~104 cu.ft
               </div>
-              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Concrete RCC Mix Takeoff')">
-                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
-              </button>
             </div>
           </div>
 
@@ -1208,9 +1312,6 @@
               <div class="calc-breakdown-list" id="stlBreakdown">
                 Formula: (D²/162) × Length • Standard 12m Bars: ~10 Bars • Estimated Cost (@ Rs. 95/kg): ~Rs. 10,135
               </div>
-              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Steel Rebar Weight Calculation')">
-                Export to WhatsApp <i class="fa-brands fa-whatsapp"></i>
-              </button>
             </div>
           </div>
 
@@ -1229,9 +1330,6 @@
               <div class="calc-breakdown-list" id="soilBreakdown">
                 Soil Classification: Medium • Footing Size for 2-Storey: Corner/Face/Interior: 1.5m × 1.5m (Table 8-2).
               </div>
-              <button class="btn btn-primary" onclick="exportToolToWhatsApp('Soil Bearing Capacity Assessment')">
-                Consult on Soil &amp; Foundation <i class="fa-brands fa-whatsapp"></i>
-              </button>
             </div>
           </div>
         </div>
@@ -1239,7 +1337,73 @@
     </div>
   </section>
 
-  <!-- ================= LIVE BIRGUNJ MATERIAL & LABOUR RATES ================= -->
+  <!-- ================= DYNAMIC SHOWCASE & SOCIAL HUB (FROM GOOGLE SHEET TAB 3) ================= -->
+  <section class="section" id="showcase">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="tag-badge">
+          <span class="dot"></span> Live Social &amp; Completed Works
+        </div>
+        <h2 class="section-title">Site Updates, <em>Reels &amp; 360° Tours</em></h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Live feed of our recent on-site progress, Instagram walkthrough reels, and interactive 360° virtual spaces.</p>
+      </div>
+
+      <div class="showcase-grid" id="showcaseContainer">
+        <!-- Card 1: Instagram Reel -->
+        <article class="showcase-card">
+          <div class="showcase-img-wrap">
+            <img src="https://i.postimg.cc/ryKvxdrN/Bedroom-render-Project2-1.png" alt="Bedroom 3D Walkthrough Reel" loading="lazy" />
+            <span class="platform-badge badge-instagram"><i class="fa-brands fa-instagram"></i> Instagram</span>
+          </div>
+          <div class="showcase-body">
+            <div>
+              <h3>Luxury Master Suite Lighting Reel</h3>
+              <p>On-site walkthrough showing cove backlighting, customized wardrobe joinery, and acoustics in Birgunj.</p>
+            </div>
+            <a href="https://www.instagram.com/p/DNaXj1fhOpp3EUiDHgaH7RXXu6JHOoyh26gNSA0/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; justify-content: center;">
+              Watch Reel on Instagram <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2: Facebook 360 -->
+        <article class="showcase-card">
+          <div class="showcase-img-wrap">
+            <img src="https://i.postimg.cc/SRvT1GYp/Modern-Luxuary-Living-room-Project1.jpg" alt="Living Room 360 Tour" loading="lazy" />
+            <span class="platform-badge badge-facebook"><i class="fa-solid fa-vr-cardboard"></i> Facebook 360°</span>
+          </div>
+          <div class="showcase-body">
+            <div>
+              <h3>Living Room 360° Virtual Tour</h3>
+              <p>Rotate in full 360-degree virtual reality to explore seating arrangements and custom marble flooring.</p>
+            </div>
+            <a href="https://www.facebook.com/share/p/1eLsUXc1ms/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              Launch 360° Tour <i class="fa-solid fa-rotate"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3: Commercial Project -->
+        <article class="showcase-card">
+          <div class="showcase-img-wrap">
+            <img src="https://i.postimg.cc/jn7G8bwV/Resturant-Office-Interior.png" alt="Hospitality Restaurant Interior" loading="lazy" />
+            <span class="platform-badge badge-project"><i class="fa-solid fa-building"></i> Commercial</span>
+          </div>
+          <div class="showcase-body">
+            <div>
+              <h3>Hospitality Dining &amp; Lounge</h3>
+              <p>Acoustic ceiling baffles, pendant zoning, and durable high-traffic materials executed under Scale &amp; Spaces.</p>
+            </div>
+            <a href="#contact" class="btn btn-outline" style="width: 100%; justify-content: center;">
+              Inquire Commercial Scope <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LIVE BIRGUNJ MATERIAL & LABOUR RATES (TAB 2) ================= -->
   <section class="section" id="rates">
     <div class="container">
       <div class="section-header text-center">
@@ -1261,7 +1425,7 @@
               <th>Last Updated</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="ratesTableBody">
             <tr>
               <td><strong>OPC Cement (Shivam / Hetauda)</strong></td>
               <td>Civil</td>
@@ -1324,7 +1488,7 @@
     </div>
   </section>
 
-  <!-- ================= DESIGN JOURNAL & BLOG ================= -->
+  <!-- ================= DESIGN JOURNAL & BLOG (TAB 1) ================= -->
   <section class="section" id="articles">
     <div class="container">
       <div class="section-header text-center">
@@ -1336,7 +1500,7 @@
       </div>
 
       <div class="articles-grid" id="articlesContainer">
-        <!-- Article 1: User's Kitchen Article -->
+        <!-- Article 1: Your Kitchen Planning Article -->
         <article class="article-card">
           <div class="article-img-wrap">
             <img src="https://i.postimg.cc/1XH29vcT/Modular-Kitchen-vs-Carpenters-Kitchen-in-Birgunj.jpg" alt="Modular Kitchen vs Carpenter Kitchen in Birgunj" loading="lazy" />
@@ -1345,7 +1509,7 @@
             <div>
               <div class="article-meta">
                 <span>Kitchen Planning</span>
-                <span>Oct 2026</span>
+                <span class="auto-date">Oct 2026</span>
               </div>
               <h3>Modular Kitchen vs Carpenter Kitchen in Birgunj</h3>
               <p>Discover the true cost difference and durability of factory-made modular cabinets versus on-site carpentry in Nepal. When designing in the Terai region, moisture resistance and termite protection are critical factors.</p>
@@ -1693,7 +1857,7 @@
             <i class="fa-solid fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            <p>Our pricing is completely transparent. For 2D space planning &amp; AutoCAD drafting, rates start at Rs. 25–40 per sq. ft. For full 3D photorealistic visualization and material palettes, rates range between Rs. 60–100 per sq. ft. Complete turnkey execution (including false ceilings, carpentry, electrical, and flooring) ranges between Rs. 1,600–2,800 per sq. ft., depending on whether you choose standard, premium, or luxury finishes.</p>
+            <p>Our pricing is completely transparent. For 2D space planning &amp; AutoCAD drafting, rates start at Rs. 25–45 per sq. ft. For full 3D photorealistic visualization and material palettes, rates range between Rs. 65–110 per sq. ft. Complete turnkey execution (including false ceilings, carpentry, electrical, and flooring) ranges between Rs. 1,600–2,800 per sq. ft., depending on whether you choose standard, premium, or luxury finishes.</p>
           </div>
         </div>
 
@@ -1737,86 +1901,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Social & 360 Section -->
-  <section class="section social-showcase-section" id="social">
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="tag-badge">
-          <span class="dot"></span> Interactive Media
-        </div>
-        <h2 class="section-title">Live Instagram &amp; <em>Facebook 360° Tours</em></h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Experience full 360-degree panoramic virtual reality room tours and ongoing interior design progress.</p>
-      </div>
-
-      <div class="social-grid">
-        <div class="social-card">
-          <div>
-            <div class="social-card-header">
-              <i class="fa-brands fa-instagram"></i>
-              <div>
-                <h3>Instagram Design Post</h3>
-                <span>@master.cks009</span>
-              </div>
-            </div>
-            <p>Explore recent 3D interior design compositions, spatial textures, and architectural lighting studies.</p>
-          </div>
-          <a href="https://www.instagram.com/p/DNo3r2jI-aOxMW7X4gDjt0lpw8kucm3k0sdlz40/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; justify-content: center;">
-            View On Instagram <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
-
-        <div class="social-card">
-          <div>
-            <div class="social-card-header">
-              <i class="fa-brands fa-instagram"></i>
-              <div>
-                <h3>Interior Reel &amp; Workflow</h3>
-                <span>@master.cks009</span>
-              </div>
-            </div>
-            <p>Walkthrough animations and rendering progressions created with Enscape, D5, and SketchUp.</p>
-          </div>
-          <a href="https://www.instagram.com/p/DNaXj1fhOpp3EUiDHgaH7RXXu6JHOoyh26gNSA0/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; justify-content: center;">
-            View On Instagram <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
-
-        <div class="social-card">
-          <div>
-            <div class="social-card-header">
-              <i class="fa-solid fa-vr-cardboard"></i>
-              <div>
-                <h3>Facebook 360° Panorama</h3>
-                <span>Interactive Virtual Room</span>
-              </div>
-            </div>
-            <p>Rotate and experience the full 360-degree spatial environment directly on Facebook.</p>
-          </div>
-          <a href="https://www.facebook.com/share/p/1eLsUXc1ms/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; justify-content: center;">
-            Launch 360° Tour <i class="fa-solid fa-rotate"></i>
-          </a>
-        </div>
-
-        <div class="social-card">
-          <div>
-            <div class="social-card-header">
-              <i class="fa-brands fa-facebook-f"></i>
-              <div>
-                <h3>Facebook Design Feature</h3>
-                <span>Chetan Kr. Sarraf</span>
-              </div>
-            </div>
-            <p>Detailed client presentation showcasing construction details, drawings, and finished renders.</p>
-          </div>
-          <a href="https://www.facebook.com/share/p/19hrxKzbjJ/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; justify-content: center;">
-            View Project Post <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -1890,7 +1974,7 @@
             <label for="message">Project Scope or Dimensions</label>
             <textarea id="message" rows="4" placeholder="Describe room dimensions, drafting needs, or 3D render ideas..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-block">
+          <button type="submit" class="btn btn-navy btn-block">
             Send Inquiry (Instant WhatsApp &amp; Email) <i class="fa-brands fa-whatsapp"></i>
           </button>
         </form>
@@ -1930,8 +2014,12 @@
     </div>
   </footer>
 
-  <!-- ================= JAVASCRIPT & CALCULATOR ENGINES ================= -->
+  <!-- ================= JAVASCRIPT & ENGINES ================= -->
   <script>
+    // ================= DYNAMIC GOOGLE SHEET LIVE-SYNC CONNECTOR =================
+    // PASTE YOUR GOOGLE SHEET ID BELOW (The string between /d/ and /edit in your Google Sheet link)
+    const GOOGLE_SHEET_ID = ""; // e.g. "1ABCdefGhIjklmNoPqRstUvwXyz"
+
     document.addEventListener('DOMContentLoaded', () => {
       // Light / Dark Theme Switcher with LocalStorage Memory
       const themeToggle = document.getElementById('themeToggle');
@@ -1959,7 +2047,7 @@
         }
       }
 
-      // Dynamic Auto-Date for Market Rates Table (Always current month & year)
+      // Dynamic Auto-Date for Market Rates & Articles
       const now = new Date();
       const currentMonthYear = now.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
       document.querySelectorAll('.auto-date').forEach(el => {
@@ -2004,7 +2092,7 @@
       const yearEl = document.getElementById('year');
       if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-      // ================= INTERACTIVE BEFORE/AFTER SLIDER =================
+      // Before/After Slider Range
       const baOverlay = document.getElementById('baOverlay');
       const baHandle = document.getElementById('baHandle');
       const baRange = document.getElementById('baRange');
@@ -2017,7 +2105,7 @@
         });
       }
 
-      // ================= CLIENT FAQ ACCORDION =================
+      // FAQ Accordion
       document.querySelectorAll('.faq-item').forEach(item => {
         const question = item.querySelector('.faq-question');
         question.addEventListener('click', () => {
@@ -2034,7 +2122,7 @@
         });
       });
 
-      // ================= SWIPEABLE PORTFOLIO CAROUSEL (6 PROJECTS) =================
+      // Portfolio Carousel Slider
       const track = document.getElementById('sliderTrack');
       const cards = document.querySelectorAll('.slider-card');
       const prevBtn = document.getElementById('prevSlide');
@@ -2100,7 +2188,6 @@
         updateSliderPosition();
       });
 
-      // Touch Events for Mobile / iPhone
       viewport.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX;
         isDragging = true;
@@ -2144,7 +2231,7 @@
       renderDots();
       updateSliderPosition();
 
-      // ================= DUAL ROUTE CONTACT FORM =================
+      // Dual Route Contact Form
       const contactForm = document.getElementById('dualContactForm');
       if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -2173,7 +2260,8 @@
         });
       }
 
-      // Initialize all calculation engines
+      // Initialize Full BOQ Toolkit & Hub Engines
+      calculateFullBOQ();
       calcPaint();
       calcCeiling();
       calcLighting();
@@ -2186,7 +2274,49 @@
       calcRCC();
       calcSteel();
       calcSoil();
+
+      // Load Google Sheets if ID is present
+      if (GOOGLE_SHEET_ID && GOOGLE_SHEET_ID !== "") {
+        loadGoogleSheetLiveSync(GOOGLE_SHEET_ID);
+      }
     });
+
+    // ================= FULL ROOM & PROJECT BOQ CALCULATION ENGINE =================
+    function calculateFullBOQ() {
+      const room = document.getElementById('boqRoom').value;
+      const scope = document.getElementById('boqScope').value;
+      const area = parseInt(document.getElementById('boqArea').value, 10) || 350;
+      document.getElementById('boqAreaDisplay').textContent = `${area} sq.ft`;
+
+      let minRate = 65, maxRate = 110;
+      if (scope === 'tier1') {
+        minRate = 25; maxRate = 45;
+        document.getElementById('boq3DFee').textContent = 'Optional Add-on';
+      } else if (scope === 'tier2') {
+        minRate = 65; maxRate = 110;
+        document.getElementById('boq3DFee').textContent = 'Full HD & 360° VR Included';
+      } else if (scope === 'tier3') {
+        minRate = 1600; maxRate = 2800;
+        document.getElementById('boq3DFee').textContent = 'Full Turnkey Execution';
+      }
+
+      const totalMin = Math.round(area * minRate);
+      const totalMax = Math.round(area * maxRate);
+
+      document.getElementById('boqPriceOut').textContent = `Rs. ${totalMin.toLocaleString()} – ${totalMax.toLocaleString()}`;
+    }
+
+    function exportFullBOQToWhatsApp() {
+      const roomSelect = document.getElementById('boqRoom');
+      const room = roomSelect.options[roomSelect.selectedIndex].text;
+      const scopeSelect = document.getElementById('boqScope');
+      const scope = scopeSelect.options[scopeSelect.selectedIndex].text;
+      const area = document.getElementById('boqArea').value;
+      const price = document.getElementById('boqPriceOut').textContent;
+
+      const msg = `*Room & Project BOQ Estimate - Birgunj Website*%0A%0A*Room / Space:* ${encodeURIComponent(room)}%0A*Floor Area:* ${area} sq.ft%0A*Scope Package:* ${encodeURIComponent(scope)}%0A*Estimated Investment:* ${encodeURIComponent(price)}%0A%0AHi Chetan, I generated this BOQ on your website and would like to confirm my project requirements.`;
+      window.open(`https://wa.me/9779766188838?text=${msg}`, '_blank');
+    }
 
     // ================= HUB SWITCHING LOGIC =================
     function switchHubMode(mode) {
@@ -2206,27 +2336,7 @@
       event.target.classList.add('active');
     }
 
-    // ================= 1-CLICK WHATSAPP EXPORT FUNCTION =================
-    function exportToolToWhatsApp(toolName) {
-      let resultText = "";
-      if (toolName.includes("Paint")) resultText = document.getElementById('paintAreaOut').textContent + " - " + document.getElementById('paintBreakdown').textContent;
-      else if (toolName.includes("Ceiling")) resultText = document.getElementById('ceilBoardsOut').textContent + " - " + document.getElementById('ceilBreakdown').textContent;
-      else if (toolName.includes("Lighting")) resultText = document.getElementById('luxDownlightsOut').textContent + " - " + document.getElementById('luxBreakdown').textContent;
-      else if (toolName.includes("Kitchen")) resultText = document.getElementById('kitRunningOut').textContent + " - " + document.getElementById('kitBreakdown').textContent;
-      else if (toolName.includes("Curtain")) resultText = document.getElementById('curtFabricOut').textContent + " - " + document.getElementById('curtBreakdown').textContent;
-      else if (toolName.includes("AC")) resultText = document.getElementById('acTonnageOut').textContent + " - " + document.getElementById('acBreakdown').textContent;
-      else if (toolName.includes("NBC")) resultText = document.getElementById('nbcSummaryOut').textContent + " - " + document.getElementById('nbcBreakdown').textContent;
-      else if (toolName.includes("Land")) resultText = document.getElementById('landSqftOut').textContent + " - " + document.getElementById('landBreakdown').textContent;
-      else if (toolName.includes("Brick")) resultText = document.getElementById('brkCountOut').textContent + " - " + document.getElementById('brkBreakdown').textContent;
-      else if (toolName.includes("RCC")) resultText = document.getElementById('rccCementOut').textContent + " - " + document.getElementById('rccBreakdown').textContent;
-      else if (toolName.includes("Steel")) resultText = document.getElementById('stlWeightOut').textContent + " - " + document.getElementById('stlBreakdown').textContent;
-      else if (toolName.includes("Soil")) resultText = document.getElementById('soilSBCOut').textContent + " - " + document.getElementById('soilBreakdown').textContent;
-
-      const msg = `*Studio Hub Calculation - ${encodeURIComponent(toolName)}*%0A%0A*Result:* ${encodeURIComponent(resultText)}%0A%0AHi Chetan, I calculated this on your website and would like a formal consultation/quotation.`;
-      window.open(`https://wa.me/9779766188838?text=${msg}`, '_blank');
-    }
-
-    // ================= INTERIOR DESIGN CALCULATION LOGIC =================
+    // ================= INTERIOR DESIGN TOOL LOGIC =================
     function calcPaint() {
       const l = parseFloat(document.getElementById('paintL').value) || 0;
       const w = parseFloat(document.getElementById('paintW').value) || 0;
@@ -2252,7 +2362,7 @@
       const boards = Math.ceil((area * 1.1) / boardSize);
       const perimeter = Math.round(2 * (l + w));
       document.getElementById('ceilBoardsOut').textContent = `${boards} Sheets`;
-      document.getElementById('ceilBreakdown').textContent = `Ceiling Area: ${area} sq.ft • Perimeter L-Channel: ~${perimeter} Running ft • LED Cove Strip Light: ~${perimeter} ft (${(perimeter * 0.3048).toFixed(1)}m)`;
+      document.getElementById('ceilBreakdown').textContent = `Ceiling Area: ${area} sq.ft • Perimeter L-Channel: ~${perimeter} Running ft • LED Strip Light: ~${perimeter} ft (${(perimeter * 0.3048).toFixed(1)}m)`;
     }
 
     function calcLighting() {
@@ -2276,7 +2386,7 @@
       const topSqft = Math.round(rft * 2.2);
 
       document.getElementById('kitRunningOut').textContent = `${rft} Running Feet`;
-      document.getElementById('kitBreakdown').textContent = `Base Cabinets: ${rft} Rft • Overhead Cabinets: ~${Math.round(rft * 0.8)} Rft • Countertop Quartz/Granite: ~${topSqft} sq.ft (Sink cutout allowance included)`;
+      document.getElementById('kitBreakdown').textContent = `Base Cabinets: ${rft} Rft • Overhead Cabinets: ~${Math.round(rft * 0.8)} Rft • Countertop Quartz/Granite: ~${topSqft} sq.ft`;
     }
 
     function calcCurtains() {
@@ -2306,7 +2416,7 @@
       else if (tons > 1.7) tonLabel = "2.0 Ton (24,000 BTU)";
 
       document.getElementById('acTonnageOut').textContent = tonLabel;
-      document.getElementById('acBreakdown').textContent = `Calculated Cooling Load: ~${Math.round(btu).toLocaleString()} BTU/hr • Tailored to peak Terai heat (40°C+ summer).`;
+      document.getElementById('acBreakdown').textContent = `Calculated Cooling Load: ~${Math.round(btu).toLocaleString()} BTU/hr • Fast cooling during peak Birgunj summer (40°C+).`;
     }
 
     // ================= CIVIL & NBC 205:2024 CALCULATION LOGIC =================
@@ -2402,7 +2512,113 @@
       document.getElementById('soilBreakdown').textContent = `Soil Type: ${soilType} • Minimum exploration depth: 1.5m • Compliant with NBC 205: 2024 Table 3-2.`;
     }
 
-    // Lightbox modal logic
+    // ================= GOOGLE SHEETS LIVE SYNC FETCH ENGINE =================
+    async function loadGoogleSheetLiveSync(sheetId) {
+      try {
+        // Fetch Tab 2: Rates
+        const ratesUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&sheet=Rates`;
+        const resRates = await fetch(ratesUrl);
+        const textRates = await resRates.text();
+        const jsonRates = JSON.parse(textRates.substring(textRates.indexOf("{"), textRates.lastIndexOf("}") + 1));
+        
+        if (jsonRates && jsonRates.table && jsonRates.table.rows.length > 0) {
+          const tbody = document.getElementById('ratesTableBody');
+          tbody.innerHTML = '';
+          jsonRates.table.rows.forEach(r => {
+            const item = r.c[0]?.v || '';
+            const cat = r.c[1]?.v || '';
+            const unit = r.c[2]?.v || '';
+            const price = r.c[3]?.v || '';
+            const date = r.c[4]?.v || currentMonthYear;
+            if (item) {
+              const tr = document.createElement('tr');
+              tr.innerHTML = `<td><strong>${item}</strong></td><td>${cat}</td><td>${unit}</td><td><span class="rate-pill">${price}</span></td><td>${date}</td>`;
+              tbody.appendChild(tr);
+            }
+          });
+        }
+
+        // Fetch Tab 1: Articles
+        const articlesUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&sheet=Articles`;
+        const resArticles = await fetch(articlesUrl);
+        const textArticles = await resArticles.text();
+        const jsonArticles = JSON.parse(textArticles.substring(textArticles.indexOf("{"), textArticles.lastIndexOf("}") + 1));
+        
+        if (jsonArticles && jsonArticles.table && jsonArticles.table.rows.length > 0) {
+          const container = document.getElementById('articlesContainer');
+          container.innerHTML = '';
+          jsonArticles.table.rows.forEach(r => {
+            const title = r.c[0]?.v || '';
+            const date = r.c[1]?.v || currentMonthYear;
+            const cat = r.c[2]?.v || '';
+            const img = r.c[3]?.v || '';
+            const summary = r.c[4]?.v || '';
+            if (title) {
+              const card = document.createElement('article');
+              card.className = 'article-card';
+              card.innerHTML = `
+                <div class="article-img-wrap"><img src="${img}" alt="${title}" loading="lazy" /></div>
+                <div class="article-content">
+                  <div>
+                    <div class="article-meta"><span>${cat}</span><span>${date}</span></div>
+                    <h3>${title}</h3>
+                    <p>${summary}</p>
+                  </div>
+                  <a href="https://wa.me/9779766188838?text=Hi%20Chetan,%20I%20read%20your%20article%20'${encodeURIComponent(title)}'%20and%20want%20to%20consult." target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; justify-content: center;">
+                    Consult on this Topic <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                </div>`;
+              container.appendChild(card);
+            }
+          });
+        }
+
+        // Fetch Tab 3: Showcase
+        const showcaseUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&sheet=Showcase`;
+        const resShowcase = await fetch(showcaseUrl);
+        const textShowcase = await resShowcase.text();
+        const jsonShowcase = JSON.parse(textShowcase.substring(textShowcase.indexOf("{"), textShowcase.lastIndexOf("}") + 1));
+        
+        if (jsonShowcase && jsonShowcase.table && jsonShowcase.table.rows.length > 0) {
+          const container = document.getElementById('showcaseContainer');
+          container.innerHTML = '';
+          jsonShowcase.table.rows.forEach(r => {
+            const title = r.c[0]?.v || '';
+            const platform = (r.c[1]?.v || 'Project').toLowerCase();
+            const cat = r.c[2]?.v || '';
+            const img = r.c[3]?.v || '';
+            const link = r.c[4]?.v || '#contact';
+            const desc = r.c[5]?.v || '';
+            
+            let badgeClass = 'badge-project', icon = 'fa-solid fa-building', btnText = 'View Details';
+            if (platform.includes('instagram')) { badgeClass = 'badge-instagram'; icon = 'fa-brands fa-instagram'; btnText = 'Watch on Instagram'; }
+            else if (platform.includes('tiktok')) { badgeClass = 'badge-tiktok'; icon = 'fa-brands fa-tiktok'; btnText = 'Watch on TikTok'; }
+            else if (platform.includes('facebook')) { badgeClass = 'badge-facebook'; icon = 'fa-solid fa-vr-cardboard'; btnText = 'Launch 360° Tour'; }
+
+            if (title) {
+              const card = document.createElement('article');
+              card.className = 'showcase-card';
+              card.innerHTML = `
+                <div class="showcase-img-wrap">
+                  <img src="${img}" alt="${title}" loading="lazy" />
+                  <span class="platform-badge ${badgeClass}"><i class="${icon}"></i> ${platform}</span>
+                </div>
+                <div class="showcase-body">
+                  <div><h3>${title}</h3><p>${desc}</p></div>
+                  <a href="${link}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; justify-content: center;">
+                    ${btnText} <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>`;
+              container.appendChild(card);
+            }
+          });
+        }
+      } catch (err) {
+        console.log("Using built-in local data fallback.");
+      }
+    }
+
+    // Modal
     function openModal(title, category, desc, imgSrc, attribution) {
       document.getElementById('modalTitle').textContent = title;
       document.getElementById('modalCategory').textContent = category;
