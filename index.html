@@ -10,7 +10,7 @@
 
   <!-- ================= STRICT SEO META TAGS ================= -->
   <title>Chetan Kr. Sarraf | Interior Designer in Birgunj, Nepal</title>
-  <meta name="description" content="Chetan Kr. Sarraf is an interior designer & civil engineer in Birgunj, Nepal. Offering 3D renders, space planning, AutoCAD blueprints & BOQ estimation." />
+  <meta name="description" content="Chetan Kr. Sarraf is the best interior designer &amp; civil engineer in Birgunj, Nepal. Offering 3D renders, space planning, AutoCAD blueprints &amp; BOQ estimation." />
   <meta name="keywords" content="best interior designer in birgunj, interior designer parsa nepal, civil engineer interior designer, chetan kumar sarraf, scale and spaces private limited, nbc 205 2024 calculator nepal, 360 panorama interior nepal" />
   <meta name="author" content="Chetan Kumar Sarraf" />
   <meta name="robots" content="index, follow" />
@@ -113,7 +113,7 @@
 
   <!-- Google Fonts: Syne + Plus Jakarta Sans + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
   
   <!-- Font Awesome Icons -->
@@ -274,8 +274,12 @@
       display: inline-flex; align-items: center; gap: 0.65rem; padding: 0.9rem 2rem; font-size: 0.86rem;
       font-weight: 700; letter-spacing: -0.01em; border-radius: var(--radius-pill); cursor: pointer; transition: var(--transition); min-height: 48px;
     }
-    .btn-primary { background: var(--brand-navy); color: #ffffff; box-shadow: 0 8px 24px rgba(14, 39, 63, 0.25); border: 1px solid transparent; }
-    .btn-primary:hover { background: var(--brand-navy-light); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(14, 39, 63, 0.35); }
+    .btn-primary, .btn-navy {
+      background: var(--brand-navy); color: #ffffff; box-shadow: 0 8px 24px rgba(14, 39, 63, 0.25); border: 1px solid transparent;
+    }
+    .btn-primary:hover, .btn-navy:hover {
+      background: var(--brand-navy-light); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(14, 39, 63, 0.35);
+    }
     .btn-outline { border: 1px solid var(--border-navy); color: var(--text-main); background: var(--bg-surface); }
     .btn-outline:hover { border-color: var(--brand-navy); background: var(--brand-navy-soft); transform: translateY(-2px); }
 
@@ -284,7 +288,7 @@
       min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; justify-content: center;
       align-items: center; text-align: center; padding: clamp(7.5rem, 15vw, 10.5rem) 1.5rem 5rem; position: relative;
     }
-    .hero-texture { bottom: -30px; right: -60px; width: 700px; max-width: 80vw; }
+    .hero-texture { bottom: -30px; right: -60px; width: 700px; height: 700px; max-width: 80vw; }
     .hero-content { max-width: 980px; z-index: 2; position: relative; }
     .hero-title { font-size: clamp(2.7rem, 7vw, 4.8rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--text-main); font-weight: 800; }
     .hero-description { font-size: clamp(1rem, 2.5vw, 1.18rem); line-height: 1.85; color: var(--text-muted); margin-bottom: 2.6rem; max-width: 820px; margin-left: auto; margin-right: auto; }
@@ -297,7 +301,7 @@
     .hero-trust-bar span i { color: var(--accent-azure); }
 
     /* About Section */
-    .about-texture { top: 20px; right: -40px; width: 560px; max-width: 60vw; }
+    .about-texture { top: 20px; right: -40px; width: 560px; height: 560px; max-width: 60vw; }
     .grid-about-unboxed { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(2.5rem, 5vw, 4.5rem); align-items: center; }
     .portrait-standalone-wrap { position: relative; display: flex; justify-content: center; align-items: center; }
     .portrait-ambient-glow {
@@ -320,7 +324,9 @@
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.8rem 0;
       border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 1.4rem 0;
     }
-    .cred-stat h3 { font-size: clamp(1.8rem, 4vw, 2.3rem); color: var(--text-main); line-height: 1; font-weight: 800; }
+    .cred-num {
+      font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.3rem); color: var(--text-main); line-height: 1; font-weight: 800;
+    }
     .cred-stat p { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--brand-grey); margin-top: 0.35rem; }
 
     .skills-cluster { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
@@ -330,8 +336,8 @@
     }
     .skill-tag span { color: var(--accent-azure); font-weight: 700; font-family: var(--font-mono); font-size: 0.72rem; }
 
-    /* Before/After */
-    .trans-texture { bottom: -60px; left: -60px; width: 600px; max-width: 60vw; }
+    /* Before/After with Clip-Path (Eliminates image misalignment) */
+    .trans-texture { bottom: -60px; left: -60px; width: 600px; height: 600px; max-width: 60vw; }
     .before-after-container {
       max-width: 980px; margin: 3.5rem auto 0; position: relative; border-radius: var(--radius-lg);
       overflow: hidden; border: 1px solid var(--border-navy); box-shadow: var(--shadow-elevated);
@@ -339,9 +345,11 @@
     }
     .ba-image-wrapper { position: relative; width: 100%; height: clamp(280px, 50vw, 520px); overflow: hidden; }
     .ba-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-    .ba-img-overlay { position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden; z-index: 2; border-right: 2px solid #ffffff; }
-    .ba-img-overlay img { position: absolute; top: 0; left: 0; width: 980px; height: 100%; max-width: none; object-fit: cover; }
-    @media (max-width: 1024px) { .ba-img-overlay img { width: 100vw; } }
+    .ba-img-overlay {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 2;
+      border-right: 2px solid #ffffff; clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    }
+    .ba-img-overlay img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
     .ba-slider-range { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 10; touch-action: pan-y; }
     .ba-handle {
       position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
@@ -424,7 +432,9 @@
       background: var(--bg-surface-elevated); color: var(--text-muted); font-size: 0.8rem; font-weight: 600;
       white-space: nowrap; cursor: pointer; transition: var(--transition);
     }
-    .tool-chip.active { background: var(--accent-azure); color: #ffffff; border-color: var(--accent-azure); }
+    .tool-chip.active {
+      background: var(--accent-azure); color: #ffffff; border-color: var(--accent-azure);
+    }
 
     .tool-panel { display: none; }
     .tool-panel.active { display: block; animation: panelFade 0.35s ease; }
@@ -490,7 +500,7 @@
     .badge-facebook { background: #1877F2; }
     .badge-project { background: var(--brand-navy); }
     .showcase-body { padding: 1.8rem; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
-    .showcase-body h3 { font-size: 1.4rem; color: var(--text-main); margin-bottom: 0.6rem; }
+    .item-title { font-family: var(--font-display); font-size: 1.4rem; color: var(--text-main); margin-bottom: 0.6rem; font-weight: 700; }
     .showcase-body p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.2rem; }
 
     /* Articles / Blog */
@@ -508,11 +518,11 @@
       display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.74rem;
       color: var(--brand-grey); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem;
     }
-    .article-content h3 { font-size: 1.45rem; color: var(--text-main); margin-bottom: 0.8rem; line-height: 1.25; }
+    .article-content .item-title { font-size: 1.45rem; color: var(--text-main); margin-bottom: 0.8rem; line-height: 1.25; }
     .article-content p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.4rem; }
 
     /* Services & Process */
-    .services-texture { bottom: -40px; left: -80px; width: 650px; max-width: 70vw; }
+    .services-texture { bottom: -40px; left: -80px; width: 650px; height: 650px; max-width: 70vw; }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 2rem; margin-top: 3.5rem; }
     .service-card {
       background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
@@ -521,14 +531,14 @@
     }
     .service-card:hover { border-color: var(--border-navy); transform: translateY(-5px); box-shadow: var(--shadow-elevated); }
     .service-num { font-family: var(--font-mono); font-size: 0.78rem; color: var(--brand-grey); letter-spacing: 0.12em; margin-bottom: 1.2rem; }
-    .service-card h3 { font-size: 1.6rem; color: var(--text-main); margin-bottom: 1rem; }
+    .service-card .item-title { font-size: 1.6rem; color: var(--text-main); margin-bottom: 1rem; }
     .service-card p { color: var(--text-muted); font-size: 0.94rem; line-height: 1.7; margin-bottom: 1.5rem; }
     .service-features { list-style: none; border-top: 1px solid var(--border-subtle); padding-top: 1.2rem; }
     .service-features li { font-size: 0.84rem; color: var(--text-muted); margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem; }
     .service-features li i { color: var(--accent-azure); font-size: 0.75rem; }
 
     .process-section { background: var(--bg-surface-elevated); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
-    .process-texture { top: -40px; right: -60px; width: 620px; }
+    .process-texture { top: -40px; right: -60px; width: 620px; height: 620px; }
     .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 3.5rem; }
     .process-card {
       background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
@@ -540,7 +550,7 @@
       color: #ffffff; font-family: var(--font-mono); font-weight: 700; font-size: 1rem;
       display: flex; align-items: center; justify-content: center; margin-bottom: 1.3rem;
     }
-    .process-card h3 { font-size: 1.3rem; color: var(--text-main); margin-bottom: 0.8rem; }
+    .process-card .item-title { font-size: 1.3rem; color: var(--text-main); margin-bottom: 0.8rem; }
     .process-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
 
     /* Timeline */
@@ -564,14 +574,14 @@
       font-family: var(--font-mono); font-size: 0.76rem; font-weight: 600;
       color: var(--accent-azure); letter-spacing: 0.08em; margin-bottom: 0.4rem; text-transform: uppercase;
     }
-    .timeline-content h3 { font-size: 1.6rem; color: var(--text-main); margin-bottom: 0.2rem; }
+    .timeline-content .item-title { font-size: 1.6rem; color: var(--text-main); margin-bottom: 0.2rem; }
     .timeline-role { display: inline-block; font-style: italic; color: var(--brand-grey); margin-bottom: 1rem; font-size: 0.92rem; }
     .timeline-content ul { list-style: disc; margin-left: 1.25rem; color: var(--text-muted); font-size: 0.92rem; }
     .timeline-content li { margin-bottom: 0.45rem; }
 
     /* Portfolio Carousel */
     .slider-section { background: var(--bg-surface-elevated); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
-    .slider-texture { top: 20px; left: -100px; width: 800px; max-width: 90vw; }
+    .slider-texture { top: 20px; left: -100px; width: 800px; height: 800px; max-width: 90vw; }
     .slider-controls-top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.2rem; flex-wrap: wrap; gap: 1.5rem; }
     .slider-buttons { display: flex; gap: 0.8rem; }
     .slide-arrow-btn {
@@ -605,7 +615,7 @@
     .slider-card:hover .slide-overlay { opacity: 1; }
     .slide-desc { padding: 1.8rem; }
     .slide-tag { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-azure); font-weight: 600; }
-    .slide-desc h3 { font-size: 1.35rem; color: var(--text-main); margin: 0.35rem 0 0.55rem; font-weight: 700; }
+    .slide-desc .item-title { font-size: 1.35rem; color: var(--text-main); margin: 0.35rem 0 0.55rem; font-weight: 700; }
     .slide-desc p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.9rem; line-height: 1.6; }
     .attribution-tag {
       font-size: 0.72rem; color: var(--brand-navy); background: var(--brand-navy-soft);
@@ -646,7 +656,7 @@
     .method-item span { display: block; font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--brand-grey); }
     .method-item a, .method-item p { font-size: 1rem; color: var(--text-main); margin-bottom: 0; font-weight: 500; }
     .contact-form { background: var(--bg-surface-elevated); padding: clamp(1.8rem, 4vw, 2.8rem); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); }
-    .contact-form h3 { font-size: 1.55rem; color: var(--text-main); margin-bottom: 1.2rem; }
+    .contact-form .form-title { font-family: var(--font-display); font-size: 1.55rem; color: var(--text-main); margin-bottom: 1.2rem; font-weight: 700; }
     .form-group { margin-bottom: 1.2rem; }
     .form-group label {
       display: block; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em;
@@ -703,7 +713,7 @@
     }
     .modal-dialog img { width: 100%; max-height: 520px; object-fit: contain; background: #07090c; display: block; }
     .modal-details { padding: 2rem; }
-    .modal-details h3 { font-size: 1.65rem; color: var(--text-main); margin: 0.35rem 0 0.7rem; font-weight: 700; }
+    .modal-details .modal-title { font-family: var(--font-display); font-size: 1.65rem; color: var(--text-main); margin: 0.35rem 0 0.7rem; font-weight: 700; }
     .modal-details p { color: var(--text-muted); font-size: 0.94rem; line-height: 1.7; }
 
     /* Footer */
@@ -798,14 +808,14 @@
 
   <!-- Hero Section -->
   <header class="hero-section section-with-texture" id="home">
-    <img src="https://i.postimg.cc/Y4RD8Sd9/08t.png" alt="" class="watermark-texture hero-texture" loading="lazy" />
+    <img src="https://i.postimg.cc/Y4RD8Sd9/08t.png" alt="Architectural line background pattern" class="watermark-texture hero-texture" width="700" height="700" loading="lazy" />
     <div class="hero-content">
       <div class="tag-badge">
         <span class="dot"></span> Civil Engineering &amp; Interior Architecture
       </div>
       <h1 class="hero-title">Best Interior Designer in <em>Birgunj, Nepal</em></h1>
       <p class="hero-description">
-        I am <strong>Chetan Kumar Sarraf</strong>, a Civil Engineer &amp; Interior Design Professional. Integrating structural civil engineering knowledge with 3D photorealism, spatial BOQ valuation, and technical drafting under <strong>Scale and Spaces Private Limited</strong>.
+        If you are looking for the <strong>best interior designer in Birgunj, Nepal</strong>, I am <strong>Chetan Kumar Sarraf</strong>, a qualified Civil Engineer &amp; Interior Design Professional. Integrating structural civil engineering accuracy with 3D photorealism, spatial BOQ valuation, and technical drafting under <strong>Scale and Spaces Private Limited</strong>, I provide premium interior design services tailored for residential and commercial spaces across Birgunj, Parsa, and Nepal.
       </p>
       <div class="hero-actions">
         <a href="#boq-toolkit" class="btn btn-primary">Room BOQ Toolkit <i class="fa-solid fa-calculator"></i></a>
@@ -822,7 +832,7 @@
 
   <!-- About Section -->
   <section class="section about-section section-with-texture" id="about">
-    <img src="https://i.postimg.cc/PLyVKqSW/02t.png" alt="" class="watermark-texture about-texture" loading="lazy" />
+    <img src="https://i.postimg.cc/PLyVKqSW/02t.png" alt="Architectural drafting watermark" class="watermark-texture about-texture" width="560" height="560" loading="lazy" />
     <div class="container grid-about-unboxed">
       
       <div class="portrait-standalone-wrap">
@@ -843,7 +853,7 @@
         </div>
         <h2 class="section-title">Where Engineering Rigor Harmonizes with <em>Interior Luxury</em></h2>
         <p>
-          I am a diversified professional who integrates structural Civil Engineering expertise with sophisticated interior design and 3D architectural visualization. 
+          Recognized by homeowners seeking the <strong>best interior designer in Birgunj, Nepal</strong>, I am a diversified professional who integrates structural Civil Engineering expertise with sophisticated interior architecture and 3D visualization.
         </p>
         <p>
           Holding an academic background in <strong>Civil Engineering</strong> from Tri-juddha Secondary School, Birgunj, I specialize in preparing constructible technical blueprints, conducting accurate Bill of Quantities (BOQ) cost controls, and delivering immersive architectural visualizations that balance the client’s vision with structural integrity and budget.
@@ -851,15 +861,15 @@
 
         <div class="credentials-row">
           <div class="cred-stat">
-            <h3>2+</h3>
+            <div class="cred-num">2+</div>
             <p>Years On-Site &amp; Studio</p>
           </div>
           <div class="cred-stat">
-            <h3>100%</h3>
+            <div class="cred-num">100%</div>
             <p>Constructible Blueprints</p>
           </div>
           <div class="cred-stat">
-            <h3>3.30</h3>
+            <div class="cred-num">3.30</div>
             <p>Civil Engineering GPA</p>
           </div>
         </div>
@@ -884,7 +894,7 @@
 
   <!-- ================= ROOM & PROJECT BOQ ESTIMATOR TOOLKIT ================= -->
   <section class="section section-with-texture" id="boq-toolkit">
-    <img src="https://i.postimg.cc/HJzv3L6V/05t.png" alt="" class="watermark-texture estimator-texture" loading="lazy" />
+    <img src="https://i.postimg.cc/HJzv3L6V/05t.png" alt="Blueprint geometric texture" class="watermark-texture estimator-texture" width="600" height="600" loading="lazy" />
     <div class="container">
       <div class="section-header text-center">
         <div class="tag-badge">
@@ -949,7 +959,7 @@
 
   <!-- Before & After Transformation Slider -->
   <section class="section section-with-texture" id="transformation">
-    <img src="https://i.postimg.cc/xk5pgd6L/04t.png" alt="" class="watermark-texture trans-texture" loading="lazy" />
+    <img src="https://i.postimg.cc/xk5pgd6L/04t.png" alt="Architectural line pattern" class="watermark-texture trans-texture" width="600" height="600" loading="lazy" />
     <div class="container">
       <div class="section-header text-center">
         <div class="tag-badge">
@@ -961,10 +971,10 @@
 
       <div class="before-after-container" id="baContainer">
         <div class="ba-image-wrapper">
-          <img src="https://i.postimg.cc/ryKvxdrN/Bedroom-render-Project2-1.png" alt="Finished 3D Master Bedroom Render" class="ba-img" loading="lazy" />
+          <img src="https://i.postimg.cc/ryKvxdrN/Bedroom-render-Project2-1.png" alt="Finished 3D Master Bedroom Render" class="ba-img" width="980" height="520" loading="lazy" />
           
           <div class="ba-img-overlay" id="baOverlay">
-            <img src="https://i.postimg.cc/jjb8122k/Bedroom-Layout-Project2.png" alt="2D AutoCAD Bedroom Layout Plan" loading="lazy" />
+            <img src="https://i.postimg.cc/jjb8122k/Bedroom-Layout-Project2.png" alt="2D AutoCAD Bedroom Layout Plan" width="980" height="520" loading="lazy" />
           </div>
 
           <div class="ba-handle" id="baHandle">
@@ -980,9 +990,9 @@
     </div>
   </section>
 
-  <!-- ================= UNIFIED CALCULATION & ENGINEERING HUB (3 CATEGORIES) ================= -->
+  <!-- ================= UNIFIED CALCULATION & ENGINEERING HUB ================= -->
   <section class="section section-with-texture" id="hub">
-    <img src="https://i.postimg.cc/HJzv3L6V/05t.png" alt="" class="watermark-texture estimator-texture" loading="lazy" />
+    <img src="https://i.postimg.cc/HJzv3L6V/05t.png" alt="Technical watermark texture" class="watermark-texture estimator-texture" width="600" height="600" loading="lazy" />
     <div class="container">
       <div class="section-header text-center">
         <div class="tag-badge">
@@ -1009,12 +1019,12 @@
         <!-- ================= 1. INTERIOR DESIGN TOOLS ================= -->
         <div id="interiorToolsSuite">
           <div class="tool-selector-grid">
-            <button class="tool-chip active" onclick="switchSubTool('int-paint')">🎨 Paint &amp; Putty</button>
-            <button class="tool-chip" onclick="switchSubTool('int-ceiling')">💡 False Ceiling &amp; LED</button>
-            <button class="tool-chip" onclick="switchSubTool('int-lighting')">🔆 Room Lux &amp; Downlights</button>
-            <button class="tool-chip" onclick="switchSubTool('int-kitchen')">🍳 Modular Kitchen</button>
-            <button class="tool-chip" onclick="switchSubTool('int-curtain')">🪟 Curtains &amp; Fabric</button>
-            <button class="tool-chip" onclick="switchSubTool('int-ac')">❄️ AC Cooling Tonnage</button>
+            <button class="tool-chip active" onclick="switchSubTool(this, 'int-paint')">🎨 Paint &amp; Putty</button>
+            <button class="tool-chip" onclick="switchSubTool(this, 'int-ceiling')">💡 False Ceiling &amp; LED</button>
+            <button class="tool-chip" onclick="switchSubTool(this, 'int-lighting')">🔆 Room Lux &amp; Downlights</button>
+            <button class="tool-chip" onclick="switchSubTool(this, 'int-kitchen')">🍳 Modular Kitchen</button>
+            <button class="tool-chip" onclick="switchSubTool(this, 'int-curtain')">🪟 Curtains &amp; Fabric</button>
+            <button class="tool-chip" onclick="switchSubTool(this, 'int-ac')">❄️ AC Cooling Tonnage</button>
           </div>
 
           <!-- Tool: Paint -->
@@ -1161,15 +1171,15 @@
         <!-- ================= 2. CIVIL & ESTIMATION TOOLS ================= -->
         <div id="civilToolsSuite" style="display: none;">
           <div class="tool-selector-grid">
-            <button class="tool-chip active" onclick="switchSubTool('civ-plinth')">📐 Allowable Plinth &amp; BHK</button>
-            <button class="tool-chip" onclick="switchSubTool('civ-brick')">🧱 Advanced Brickwork</button>
-            <button class="tool-chip" onclick="switchSubTool('civ-cost')">🏠 Nepal Building Cost</button>
-            <button class="tool-chip" onclick="switchSubTool('civ-rcc')">🏗️ Concrete RCC Mix</button>
-            <button class="tool-chip" onclick="switchSubTool('civ-steel')">🔩 Rebar &amp; Stirrup Length</button>
-            <button class="tool-chip" onclick="switchSubTool('civ-land')">🗺️ Nepal Land &amp; Trace</button>
+            <button class="tool-chip active" onclick="switchSubTool(this, 'civ-plinth')">📐 Allowable Plinth &amp; BHK</button>
+            <button class="tool-chip" onclick="switchSubTool(this, 'civ-brick')">🧱 Advanced Brickwork</button>
+            <button class="tool-chip" onclick="switchSubTool(this, 'civ-cost')">🏠 Nepal Building Cost</button>
+            <button class="tool-chip" onclick="switchSubTool(this, 'civ-rcc')">🏗️ Concrete RCC Mix</button>
+            <button class="tool-chip" onclick="switchSubTool(this, 'civ-steel')">🔩 Rebar &amp; Stirrup Length</button>
+            <button class="tool-chip" onclick="switchSubTool(this, 'civ-land')">🗺️ Nepal Land &amp; Trace</button>
           </div>
 
-          <!-- Sub-Tool: Plinth Area & Road Widening Calculator (From Civil Concept Screenshot) -->
+          <!-- Sub-Tool: Plinth Area & Road Widening Calculator -->
           <div class="tool-panel active" id="tool-civ-plinth">
             <div class="calc-box-grid">
               <div class="calc-input-group">
@@ -1314,7 +1324,7 @@
               <div class="calc-output-title">Actual Ground Distance &amp; Kattha Equivalent</div>
               <div class="calc-output-val" id="traceGroundOut">60.0 Meters (196.8 Feet)</div>
               <div class="calc-breakdown-list" id="traceBreakdown">
-                1 cm on map = 12 meters on ground. High precision for Lalpurja demarcation.
+                Scale 1:1200 ➔ 1 cm on Lalpurja map equals 12 meters on ground. High precision for Lalpurja demarcation.
               </div>
             </div>
           </div>
@@ -1323,11 +1333,11 @@
         <!-- ================= 3. NBC 205 (2081) & MUNICIPAL SUITE ================= -->
         <div id="nbcToolsSuite" style="display: none;">
           <div class="tool-selector-grid">
-            <button class="tool-chip active" onclick="switchSubTool('nbc-pga')">🇳🇵 753 Local Units PGA (NBC 2024)</button>
-            <button class="tool-chip" onclick="switchSubTool('nbc-detailing')">📋 Member Detailing Schedules</button>
-            <button class="tool-chip" onclick="switchSubTool('nbc-soil')">⚖️ Soil Bearing (Dropping Brick)</button>
-            <button class="tool-chip" onclick="switchSubTool('nbc-far')">🏢 Municipal FAR &amp; BCR</button>
-            <button class="tool-chip" onclick="switchSubTool('nbc-septic')">🚰 Septic Tank &amp; Soak Pit</button>
+            <button class="tool-chip active" onclick="switchSubTool(this, 'nbc-pga')">🇳🇵 753 Local Units PGA (NBC 2024)</button>
+            <button class="tool-chip" onclick="switchSubTool(this, 'nbc-detailing')">📋 Member Detailing Schedules</button>
+            <button class="tool-chip" onclick="switchSubTool(this, 'nbc-soil')">⚖️ Soil Bearing (Dropping Brick)</button>
+            <button class="tool-chip" onclick="switchSubTool(this, 'nbc-far')">🏢 Municipal FAR &amp; BCR</button>
+            <button class="tool-chip" onclick="switchSubTool(this, 'nbc-septic')">🚰 Septic Tank &amp; Soak Pit</button>
           </div>
 
           <!-- NBC Tool: PGA Lookup -->
@@ -1382,7 +1392,7 @@
               <div class="calc-output-title">NBC 205: 2024 Member Dimension &amp; Rebar Schedule</div>
               <div class="calc-output-val" id="detailSummaryOut">Column: 350×350 mm | Footing: 1.5×1.5 m</div>
               <div class="calc-breakdown-list" id="detailBreakdown">
-                Column Rebars: 4-16Ø + 4-12Ø (Fe500) • Plinth Beam: 250×355 mm (3-12Ø Top &amp; Bottom) • Floor Beam: 250×355 mm • Slab: 125mm with 8Ø @ 150 c/c.
+                Column Rebars: 4-16Ø + 4-12Ø Fe500 • Plinth Beam: 250×355 mm • Stirrups: 8Ø @ 75/125 c/c • Slab: 125mm with 8Ø @ 150 c/c (NBC 205 Section 8).
               </div>
             </div>
           </div>
@@ -1439,7 +1449,7 @@
     </div>
   </section>
 
-  <!-- ================= DYNAMIC SHOWCASE & SOCIAL HUB (FROM GOOGLE SHEET TAB 3) ================= -->
+  <!-- ================= DYNAMIC SHOWCASE & SOCIAL HUB ================= -->
   <section class="section" id="showcase">
     <div class="container">
       <div class="section-header text-center">
@@ -1454,12 +1464,12 @@
         <!-- Card 1: Instagram Reel -->
         <article class="showcase-card">
           <div class="showcase-img-wrap">
-            <img src="https://i.postimg.cc/ryKvxdrN/Bedroom-render-Project2-1.png" alt="Bedroom 3D Walkthrough Reel" loading="lazy" />
+            <img src="https://i.postimg.cc/ryKvxdrN/Bedroom-render-Project2-1.png" alt="Bedroom 3D Walkthrough Reel" width="400" height="260" loading="lazy" />
             <span class="platform-badge badge-instagram"><i class="fa-brands fa-instagram"></i> Instagram</span>
           </div>
           <div class="showcase-body">
             <div>
-              <h3>Luxury Master Suite Lighting Reel</h3>
+              <div class="item-title">Luxury Master Suite Lighting Reel</div>
               <p>On-site walkthrough showing cove backlighting, customized wardrobe joinery, and acoustics in Birgunj.</p>
             </div>
             <a href="https://www.instagram.com/p/DNaXj1fhOpp3EUiDHgaH7RXXu6JHOoyh26gNSA0/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; justify-content: center;">
@@ -1471,12 +1481,12 @@
         <!-- Card 2: Facebook 360 -->
         <article class="showcase-card">
           <div class="showcase-img-wrap">
-            <img src="https://i.postimg.cc/SRvT1GYp/Modern-Luxuary-Living-room-Project1.jpg" alt="Living Room 360 Tour" loading="lazy" />
+            <img src="https://i.postimg.cc/SRvT1GYp/Modern-Luxuary-Living-room-Project1.jpg" alt="Living Room 360 Tour" width="400" height="260" loading="lazy" />
             <span class="platform-badge badge-facebook"><i class="fa-solid fa-vr-cardboard"></i> Facebook 360°</span>
           </div>
           <div class="showcase-body">
             <div>
-              <h3>Living Room 360° Virtual Tour</h3>
+              <div class="item-title">Living Room 360° Virtual Tour</div>
               <p>Rotate in full 360-degree virtual reality to explore seating arrangements and custom marble flooring.</p>
             </div>
             <a href="https://www.facebook.com/share/p/1eLsUXc1ms/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; justify-content: center;">
@@ -1488,12 +1498,12 @@
         <!-- Card 3: Commercial Project -->
         <article class="showcase-card">
           <div class="showcase-img-wrap">
-            <img src="https://i.postimg.cc/jn7G8bwV/Resturant-Office-Interior.png" alt="Hospitality Restaurant Interior" loading="lazy" />
+            <img src="https://i.postimg.cc/jn7G8bwV/Resturant-Office-Interior.png" alt="Hospitality Restaurant Interior" width="400" height="260" loading="lazy" />
             <span class="platform-badge badge-project"><i class="fa-solid fa-building"></i> Commercial</span>
           </div>
           <div class="showcase-body">
             <div>
-              <h3>Hospitality Dining &amp; Lounge</h3>
+              <div class="item-title">Hospitality Dining &amp; Lounge</div>
               <p>Acoustic ceiling baffles, pendant zoning, and durable high-traffic materials executed under Scale &amp; Spaces.</p>
             </div>
             <a href="#contact" class="btn btn-outline" style="width: 100%; justify-content: center;">
@@ -1505,7 +1515,7 @@
     </div>
   </section>
 
-  <!-- ================= LIVE BIRGUNJ MATERIAL & LABOUR RATES (TAB 2) ================= -->
+  <!-- ================= LIVE BIRGUNJ MATERIAL & LABOUR RATES ================= -->
   <section class="section" id="rates">
     <div class="container">
       <div class="section-header text-center">
@@ -1590,7 +1600,7 @@
     </div>
   </section>
 
-  <!-- ================= DESIGN JOURNAL & BLOG (TAB 1) ================= -->
+  <!-- ================= DESIGN JOURNAL & BLOG ================= -->
   <section class="section" id="articles">
     <div class="container">
       <div class="section-header text-center">
@@ -1598,14 +1608,14 @@
           <span class="dot"></span> Design Journal &amp; Field Notes
         </div>
         <h2 class="section-title">Insights for <em>Homeowners in Nepal</em></h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Practical building guidance, cost-control tips, and material comparisons from our active projects.</p>
+        <p class="section-subtitle" style="margin: 0 auto;">Practical building guidance, cost-control tips, and material comparisons from our active projects in Birgunj and Parsa.</p>
       </div>
 
       <div class="articles-grid" id="articlesContainer">
-        <!-- Article 1: Your Kitchen Planning Article -->
+        <!-- Article 1: Kitchen Planning -->
         <article class="article-card">
           <div class="article-img-wrap">
-            <img src="https://i.postimg.cc/1XH29vcT/Modular-Kitchen-vs-Carpenters-Kitchen-in-Birgunj.jpg" alt="Modular Kitchen vs Carpenter Kitchen in Birgunj" loading="lazy" />
+            <img src="https://i.postimg.cc/1XH29vcT/Modular-Kitchen-vs-Carpenters-Kitchen-in-Birgunj.jpg" alt="Modular Kitchen vs Carpenter Kitchen in Birgunj" width="400" height="240" loading="lazy" />
           </div>
           <div class="article-content">
             <div>
@@ -1613,7 +1623,7 @@
                 <span>Kitchen Planning</span>
                 <span class="auto-date">Oct 2026</span>
               </div>
-              <h3>Modular Kitchen vs Carpenter Kitchen in Birgunj</h3>
+              <div class="item-title">Modular Kitchen vs Carpenter Kitchen in Birgunj</div>
               <p>Discover the true cost difference and durability of factory-made modular cabinets versus on-site carpentry in Nepal. When designing in the Terai region, moisture resistance and termite protection are critical factors.</p>
             </div>
             <a href="https://wa.me/9779766188838?text=Hi%20Chetan,%20I%20read%20your%20article%20about%20Modular%20Kitchens%20vs%20Carpenter%20Kitchens%20and%20would%20like%20guidance%20for%20my%20home." target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; justify-content: center;">
@@ -1627,21 +1637,21 @@
 
   <!-- 4 Core Services -->
   <section class="section section-with-texture" id="services">
-    <img src="https://i.postimg.cc/cKhkTJFM/01t.png" alt="" class="watermark-texture services-texture" loading="lazy" />
+    <img src="https://i.postimg.cc/cKhkTJFM/01t.png" alt="Engineering services watermark" class="watermark-texture services-texture" width="650" height="650" loading="lazy" />
     <div class="container">
       <div class="section-header text-center">
         <div class="tag-badge">
           <span class="dot"></span> Design &amp; Civil Capabilities
         </div>
         <h2 class="section-title">Comprehensive Interior &amp; <em>Engineering Services</em></h2>
-        <p class="section-subtitle" style="margin: 0 auto;">From luxury residential dwellings to corporate workspaces and technical engineering blueprints.</p>
+        <p class="section-subtitle" style="margin: 0 auto;">Trusted as the best interior designer in Birgunj, Nepal, offering complete solutions from luxury residential dwellings to corporate workspaces and technical engineering blueprints.</p>
       </div>
 
       <div class="services-grid">
         <div class="service-card">
           <div>
             <div class="service-num">01 / RESIDENTIAL</div>
-            <h3>Residential Interior Architecture</h3>
+            <div class="item-title">Residential Interior Architecture</div>
             <p>The civil structure may build the house, but my design transforms it into a sanctuary. Custom living rooms, master bedroom suites, modular chef kitchens, and spa bathrooms designed for lifestyle, natural lighting, and comfort.</p>
           </div>
           <ul class="service-features">
@@ -1654,7 +1664,7 @@
         <div class="service-card">
           <div>
             <div class="service-num">02 / COMMERCIAL</div>
-            <h3>Commercial &amp; Retail Spaces</h3>
+            <div class="item-title">Commercial &amp; Retail Spaces</div>
             <p>Designing high-traffic commercial environments across Birgunj and Nepal that captivate visitors and reinforce brand identity. Tailored retail outlets, cafes, restaurants, and experiential storefronts built for engagement.</p>
           </div>
           <ul class="service-features">
@@ -1667,7 +1677,7 @@
         <div class="service-card">
           <div>
             <div class="service-num">03 / CORPORATE</div>
-            <h3>Office &amp; Workspace Design</h3>
+            <div class="item-title">Office &amp; Workspace Design</div>
             <p>An intelligently planned office interior fosters productivity, creative collaboration, and talent retention. Creating ergonomic workstation layouts, acoustic boardrooms, and executive director suites.</p>
           </div>
           <ul class="service-features">
@@ -1680,7 +1690,7 @@
         <div class="service-card">
           <div>
             <div class="service-num">04 / CIVIL &amp; DRAFTING</div>
-            <h3>AutoCAD Blueprints &amp; BOQ Costing</h3>
+            <div class="item-title">AutoCAD Blueprints &amp; BOQ Costing</div>
             <p>Leveraging my civil engineering foundation to deliver contractor-ready 2D technical drawing sets. Ensuring plumbing, electrical schematics, false ceilings, and structural valuations avoid site errors and budget overruns.</p>
           </div>
           <ul class="service-features">
@@ -1695,7 +1705,7 @@
 
   <!-- 4-Step Process -->
   <section class="section process-section section-with-texture" id="process">
-    <img src="https://i.postimg.cc/67cbzQMZ/03t.png" alt="" class="watermark-texture process-texture" loading="lazy" />
+    <img src="https://i.postimg.cc/67cbzQMZ/03t.png" alt="Engineering workflow pattern" class="watermark-texture process-texture" width="620" height="620" loading="lazy" />
     <div class="container">
       <div class="section-header text-center">
         <div class="tag-badge">
@@ -1708,25 +1718,25 @@
       <div class="process-grid">
         <div class="process-card">
           <div class="process-step-num">01</div>
-          <h3>Site Survey &amp; Requirement Analysis</h3>
+          <div class="item-title">Site Survey &amp; Requirement Analysis</div>
           <p>We meet to discuss your functional requirements, aesthetic preferences, and budget limits. I inspect the site in Birgunj/Parsa, taking structural measurements and evaluating daylight and spatial flow.</p>
         </div>
 
         <div class="process-card">
           <div class="process-step-num">02</div>
-          <h3>Space Planning &amp; Concept Sketches</h3>
+          <div class="item-title">Space Planning &amp; Concept Sketches</div>
           <p>Brainstorming multiple space alternatives. I present at least three distinct conceptual sketches for every zone, coordinating with you to evaluate trade-offs and arrive at the optimal functional scheme.</p>
         </div>
 
         <div class="process-card">
           <div class="process-step-num">03</div>
-          <h3>3D Realistic Renders &amp; 360° VR</h3>
+          <div class="item-title">3D Realistic Renders &amp; 360° VR</div>
           <p>Translating the approved concept into photorealistic 3D interior renders using SketchUp, Enscape, and V-Ray. Experience your completed space through 360° virtual tours before a single brick is laid on site.</p>
         </div>
 
         <div class="process-card">
           <div class="process-step-num">04</div>
-          <h3>BOQ, Technical Sets &amp; Site Supervision</h3>
+          <div class="item-title">BOQ, Technical Sets &amp; Site Supervision</div>
           <p>Preparing contractor-ready AutoCAD execution drawings (electrical, plumbing, carpentry, false ceiling) alongside a strict Bill of Quantities (BOQ) to guarantee on-site quality without budget inflation.</p>
         </div>
       </div>
@@ -1749,7 +1759,7 @@
           <div class="timeline-dot"></div>
           <div class="timeline-date">2025 – PRESENT</div>
           <div class="timeline-content">
-            <h3>Scale And Spaces Private Limited</h3>
+            <div class="item-title">Scale And Spaces Private Limited</div>
             <span class="timeline-role">Interior Designer &amp; Planner</span>
             <ul>
               <li><strong>Drafting:</strong> Developed comprehensive spatial design and architectural plan drawings of residential and commercial buildings.</li>
@@ -1764,7 +1774,7 @@
           <div class="timeline-dot"></div>
           <div class="timeline-date">2025 – PRESENT</div>
           <div class="timeline-content">
-            <h3>Asian Civil Engineering Consultancy</h3>
+            <div class="item-title">Asian Civil Engineering Consultancy</div>
             <span class="timeline-role">Estimator and Valuator</span>
             <ul>
               <li><strong>Costing:</strong> Formulated material volume estimates and comprehensive costing for building construction.</li>
@@ -1778,7 +1788,7 @@
           <div class="timeline-dot"></div>
           <div class="timeline-date">2019 – 2022 (GRADUATED 2023)</div>
           <div class="timeline-content">
-            <h3>Diploma in Civil Engineering (+2 Technical)</h3>
+            <div class="item-title">Diploma in Civil Engineering (+2 Technical)</div>
             <span class="timeline-role">Tri-juddha Mahabir Prasad Raghubir Ram Secondary School | Birgunj, Nepal • GPA: 3.30</span>
             <p>Specialized coursework in structural reinforced concrete (RCC), mechanics of structures, fluid dynamics, and construction management. Completed comprehensive construction field On-the-Job Training (OJT).</p>
           </div>
@@ -1787,9 +1797,9 @@
     </div>
   </section>
 
-  <!-- Portfolio Section (With All 6 Projects) -->
+  <!-- Portfolio Section -->
   <section class="section slider-section section-with-texture" id="portfolio">
-    <img src="https://i.postimg.cc/d76Nn050/07t.png" alt="" class="watermark-texture slider-texture" loading="lazy" />
+    <img src="https://i.postimg.cc/d76Nn050/07t.png" alt="Portfolio blueprint texture" class="watermark-texture slider-texture" width="800" height="800" loading="lazy" />
     <div class="container">
       
       <div class="slider-controls-top">
@@ -1814,120 +1824,84 @@
         <div class="slider-track" id="sliderTrack">
 
           <!-- 1: Living Room -->
-          <article class="slider-card" onclick="openModal(
-            'Modern Luxury Living Room Design', 
-            'Residential Interior', 
-            'Bespoke luxury living room design conceptualized with fluted wooden panelling, warm cove LED coving, imported glossy tile flooring, modern low-profile seating, and balanced ambient lighting.', 
-            'https://i.postimg.cc/SRvT1GYp/Modern-Luxuary-Living-room-Project1.jpg',
-            'Scale and Spaces Private Limited'
-          )">
+          <article class="slider-card" onclick="openModal('Modern Luxury Living Room Design', 'Residential Interior', 'Bespoke luxury living room design conceptualized with fluted wooden panelling, warm cove LED coving, imported glossy tile flooring, modern low-profile seating, and balanced ambient lighting.', 'https://i.postimg.cc/SRvT1GYp/Modern-Luxuary-Living-room-Project1.jpg', 'Scale and Spaces Private Limited')">
             <div class="slide-img-box">
-              <img src="https://i.postimg.cc/SRvT1GYp/Modern-Luxuary-Living-room-Project1.jpg" alt="Modern Luxury Living Room Design" loading="lazy" />
+              <img src="https://i.postimg.cc/SRvT1GYp/Modern-Luxuary-Living-room-Project1.jpg" alt="Modern Luxury Living Room Design" width="400" height="280" loading="lazy" />
               <div class="slide-overlay"><span>View High-Res</span></div>
             </div>
             <div class="slide-desc">
               <span class="slide-tag">RESIDENTIAL LIVING | 3D RENDER</span>
-              <h3>Modern Luxury Living Room</h3>
+              <div class="item-title">Modern Luxury Living Room</div>
               <p>Space-planned with custom wall panelling, ambient warm LED coving, and luxury marble flooring.</p>
               <span class="attribution-tag"><i class="fa-solid fa-building"></i> Scale and Spaces Private Limited</span>
             </div>
           </article>
 
           <!-- 2: Master Bedroom -->
-          <article class="slider-card" onclick="openModal(
-            'Modern Master Bedroom 3D Visualization', 
-            'Master Suite & 3D Render', 
-            'Photorealistic 3D interior render showcasing warm textured headboard accents, floating bedside consoles, custom ceiling treatment, and tranquil atmospheric lighting.', 
-            'https://i.postimg.cc/ryKvxdrN/Bedroom-render-Project2-1.png',
-            'Scale and Spaces Private Limited'
-          )">
+          <article class="slider-card" onclick="openModal('Modern Master Bedroom 3D Visualization', 'Master Suite & 3D Render', 'Photorealistic 3D interior render showcasing warm textured headboard accents, floating bedside consoles, custom ceiling treatment, and tranquil atmospheric lighting.', 'https://i.postimg.cc/ryKvxdrN/Bedroom-render-Project2-1.png', 'Scale and Spaces Private Limited')">
             <div class="slide-img-box">
-              <img src="https://i.postimg.cc/ryKvxdrN/Bedroom-render-Project2-1.png" alt="Modern Bedroom Design" loading="lazy" />
+              <img src="https://i.postimg.cc/ryKvxdrN/Bedroom-render-Project2-1.png" alt="Modern Bedroom Design" width="400" height="280" loading="lazy" />
               <div class="slide-overlay"><span>View High-Res</span></div>
             </div>
             <div class="slide-desc">
               <span class="slide-tag">MASTER BEDROOM | 3D RENDER</span>
-              <h3>Modern Master Bedroom Design</h3>
+              <div class="item-title">Modern Master Bedroom Design</div>
               <p>Textured feature headboard, floating bedside storage, and layered architectural lighting.</p>
               <span class="attribution-tag"><i class="fa-solid fa-building"></i> Scale and Spaces Private Limited</span>
             </div>
           </article>
 
           <!-- 3: 2D Blueprint Layout -->
-          <article class="slider-card" onclick="openModal(
-            'Modern Bedroom 2D Architectural Layout', 
-            'Technical Drafting & Planning', 
-            'Precision technical AutoCAD layout plan displaying dimensional clearances, bed ergonomics, wardrobe joinery placement, and functional circulation pathways.', 
-            'https://i.postimg.cc/jjb8122k/Bedroom-Layout-Project2.png',
-            'Scale and Spaces Private Limited'
-          )">
+          <article class="slider-card" onclick="openModal('Modern Bedroom 2D Architectural Layout', 'Technical Drafting & Planning', 'Precision technical AutoCAD layout plan displaying dimensional clearances, bed ergonomics, wardrobe joinery placement, and functional circulation pathways.', 'https://i.postimg.cc/jjb8122k/Bedroom-Layout-Project2.png', 'Scale and Spaces Private Limited')">
             <div class="slide-img-box">
-              <img src="https://i.postimg.cc/jjb8122k/Bedroom-Layout-Project2.png" alt="Modern Bedroom Layout Plan" loading="lazy" />
+              <img src="https://i.postimg.cc/jjb8122k/Bedroom-Layout-Project2.png" alt="Modern Bedroom Layout Plan" width="400" height="280" loading="lazy" />
               <div class="slide-overlay"><span>View Blueprint</span></div>
             </div>
             <div class="slide-desc">
               <span class="slide-tag">AUTOCAD DWG | 2D DRAFTING</span>
-              <h3>Bedroom Architectural Layout</h3>
+              <div class="item-title">Bedroom Architectural Layout</div>
               <p>Comprehensive AutoCAD spatial layout highlighting furniture dimensions and ergonomic flow.</p>
               <span class="attribution-tag"><i class="fa-solid fa-building"></i> Scale and Spaces Private Limited</span>
             </div>
           </article>
 
           <!-- 4: Bathroom -->
-          <article class="slider-card" onclick="openModal(
-            'Modern Luxury Bathroom & Toilet Design', 
-            'Sanitary & Wet Area Design', 
-            'Contemporary wet/dry zoning engineered with concealed sanitary plumbing, floating vanity counter, backlit mirror, and premium textured wall tile cladding.', 
-            'https://i.postimg.cc/BbKYyK5W/Modern-Toilet-Bathroom-Project3.png',
-            'Scale and Spaces Private Limited'
-          )">
+          <article class="slider-card" onclick="openModal('Modern Luxury Bathroom & Toilet Design', 'Sanitary & Wet Area Design', 'Contemporary wet/dry zoning engineered with concealed sanitary plumbing, floating vanity counter, backlit mirror, and premium textured wall tile cladding.', 'https://i.postimg.cc/BbKYyK5W/Modern-Toilet-Bathroom-Project3.png', 'Scale and Spaces Private Limited')">
             <div class="slide-img-box">
-              <img src="https://i.postimg.cc/BbKYyK5W/Modern-Toilet-Bathroom-Project3.png" alt="Modern Bathroom Design" loading="lazy" />
+              <img src="https://i.postimg.cc/BbKYyK5W/Modern-Toilet-Bathroom-Project3.png" alt="Modern Bathroom Design" width="400" height="280" loading="lazy" />
               <div class="slide-overlay"><span>View High-Res</span></div>
             </div>
             <div class="slide-desc">
               <span class="slide-tag">SANITARY &amp; BATHROOM | 3D RENDER</span>
-              <h3>Modern Bathroom &amp; Toilet</h3>
+              <div class="item-title">Modern Bathroom &amp; Toilet</div>
               <p>Wet/dry zoning with concealed plumbing lines, custom floating vanity, and ambient lighting.</p>
               <span class="attribution-tag"><i class="fa-solid fa-building"></i> Scale and Spaces Private Limited</span>
             </div>
           </article>
 
           <!-- 5: Restaurant Interior -->
-          <article class="slider-card" onclick="openModal(
-            'Restaurant & Hospitality Commercial Interior', 
-            'Commercial & Dining', 
-            'Acoustically planned dining environment with customized booths, ambient pendant zoning, high-traffic surface materials, and open circulation.', 
-            'https://i.postimg.cc/jn7G8bwV/Resturant-Office-Interior.png',
-            'Scale and Spaces Private Limited'
-          )">
+          <article class="slider-card" onclick="openModal('Restaurant & Hospitality Commercial Interior', 'Commercial & Dining', 'Acoustically planned dining environment with customized booths, ambient pendant zoning, high-traffic surface materials, and open circulation.', 'https://i.postimg.cc/jn7G8bwV/Resturant-Office-Interior.png', 'Scale and Spaces Private Limited')">
             <div class="slide-img-box">
-              <img src="https://i.postimg.cc/jn7G8bwV/Resturant-Office-Interior.png" alt="Restaurant Interior Design" loading="lazy" />
+              <img src="https://i.postimg.cc/jn7G8bwV/Resturant-Office-Interior.png" alt="Restaurant Interior Design" width="400" height="280" loading="lazy" />
               <div class="slide-overlay"><span>View High-Res</span></div>
             </div>
             <div class="slide-desc">
               <span class="slide-tag">COMMERCIAL | RESTAURANT INTERIOR</span>
-              <h3>Hospitality &amp; Dining Interior</h3>
+              <div class="item-title">Hospitality &amp; Dining Interior</div>
               <p>Ergonomic table spacing, acoustic ceiling elements, and customized commercial lighting.</p>
               <span class="attribution-tag"><i class="fa-solid fa-building"></i> Scale and Spaces Private Limited</span>
             </div>
           </article>
 
           <!-- 6: School Office Interior -->
-          <article class="slider-card" onclick="openModal(
-            'School & Institutional Administration Office', 
-            'Institutional & Corporate', 
-            'Functional administrative space planned with organized filing cabinetry, executive staff stations, acoustic partition panels, and natural illumination.', 
-            'https://i.postimg.cc/dZyzWYkP/School-Office-Interior.png',
-            'Scale and Spaces Private Limited'
-          )">
+          <article class="slider-card" onclick="openModal('School & Institutional Administration Office', 'Institutional & Corporate', 'Functional administrative space planned with organized filing cabinetry, executive staff stations, acoustic partition panels, and natural illumination.', 'https://i.postimg.cc/dZyzWYkP/School-Office-Interior.png', 'Scale and Spaces Private Limited')">
             <div class="slide-img-box">
-              <img src="https://i.postimg.cc/dZyzWYkP/School-Office-Interior.png" alt="School Office Interior" loading="lazy" />
+              <img src="https://i.postimg.cc/dZyzWYkP/School-Office-Interior.png" alt="School Office Interior" width="400" height="280" loading="lazy" />
               <div class="slide-overlay"><span>View High-Res</span></div>
             </div>
             <div class="slide-desc">
               <span class="slide-tag">INSTITUTIONAL | OFFICE INTERIOR</span>
-              <h3>School Administrative Workspace</h3>
+              <div class="item-title">School Administrative Workspace</div>
               <p>Zoned executive layout with integrated storage cabinetry and durable contract finishes.</p>
               <span class="attribution-tag"><i class="fa-solid fa-building"></i> Scale and Spaces Private Limited</span>
             </div>
@@ -2056,10 +2030,9 @@
           </div>
         </div>
 
-        <!-- Dual Route Form -->
         <form class="contact-form" id="dualContactForm">
-          <input type="hidden" name="_next" value="https://chetan-sarraf.github.io/chetan-interior/#contact">
-          <h3>Request a Quotation</h3>
+          <input type="hidden" name="_next" value="https://chetan-sarraf.github.io/chetan-interior/#contact" />
+          <div class="form-title">Request a Quotation</div>
           <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" id="name" placeholder="John Doe" required />
@@ -2076,9 +2049,10 @@
             <label for="message">Project Scope or Dimensions</label>
             <textarea id="message" rows="4" placeholder="Describe room dimensions, drafting needs, or 3D render ideas..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-navy btn-block">
+          <button type="submit" class="btn btn-primary btn-block">
             Send Inquiry (Instant WhatsApp &amp; Email) <i class="fa-brands fa-whatsapp"></i>
           </button>
+          <div id="formStatus" style="margin-top:1rem;font-size:0.88rem;color:var(--accent-azure);display:none;"></div>
         </form>
       </div>
     </div>
@@ -2091,26 +2065,26 @@
       <button class="modal-close" onclick="closeModal()">&times;</button>
       <img src="https://i.postimg.cc/SRvT1GYp/Modern-Luxuary-Living-room-Project1.jpg" id="modalImg" alt="Project Preview" width="960" height="530" />
       <div class="modal-details">
-        <span id="modalCategory" class="slide-tag"></span>
-        <h3 id="modalTitle"></h3>
-        <p id="modalDesc"></p>
-        <span id="modalAttribution" class="attribution-tag" style="margin-top: 0.6rem;"></span>
+        <span id="modalCategory" class="slide-tag">Architecture</span>
+        <div class="modal-title" id="modalTitle" role="heading" aria-level="3">Project Architectural Visualization</div>
+        <p id="modalDesc">Detailed spatial design and 3D photorealistic rendering.</p>
+        <span id="modalAttribution" class="attribution-tag" style="margin-top: 0.6rem;">Scale and Spaces Private Limited</span>
       </div>
     </div>
   </div>
 
-  <!-- Footer with Direct Favicon PNG -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
       <div style="display: flex; align-items: center; gap: 0.8rem;">
-        <img src="https://i.postimg.cc/k5x1yj6h/Favicon-01.png" alt="Chetan Interiors Logo" style="width: 32px; height: 32px; object-fit: contain;" />
+        <img src="https://i.postimg.cc/k5x1yj6h/Favicon-01.png" alt="Chetan Interiors Logo" width="32" height="32" style="width: 32px; height: 32px; object-fit: contain;" />
         <p>&copy; <span id="year"></span> <strong>Chetan Kumar Sarraf</strong>. Civil Engineer &amp; Interior Designer. Birgunj, Nepal.</p>
       </div>
       <div class="footer-social-links">
-        <a href="https://www.instagram.com/master.cks009/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
-        <a href="https://www.facebook.com/chetan.sarraf.3/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-        <a href="https://np.linkedin.com/in/chetansarraf" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
-        <a href="https://wa.me/9779766188838" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://www.instagram.com/master.cks009/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <a href="https://www.facebook.com/chetan.sarraf.3/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+        <a href="https://np.linkedin.com/in/chetansarraf" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+        <a href="https://wa.me/9779766188838" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
         <a href="#home">Back to top <i class="fa-solid fa-arrow-up"></i></a>
       </div>
     </div>
@@ -2118,8 +2092,11 @@
 
   <!-- ================= JAVASCRIPT & ENGINES ================= -->
   <script>
-    // ================= DYNAMIC GOOGLE SHEET LIVE-SYNC CONNECTOR =================
     const GOOGLE_SHEET_ID = "1cQ724gHkaWJCNc5n6b6-qtCgNw6y41YB8ZgQDgTgGO4";
+    const currentMonthYear = new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    let isSliderDragging = false;
+    let sliderStartX = 0;
+    let sliderDragDistance = 0;
 
     document.addEventListener('DOMContentLoaded', () => {
       // Light / Dark Theme Switcher with LocalStorage Memory
@@ -2149,8 +2126,6 @@
       }
 
       // Dynamic Auto-Date for Market Rates & Articles
-      const now = new Date();
-      const currentMonthYear = now.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
       document.querySelectorAll('.auto-date').forEach(el => {
         el.textContent = currentMonthYear;
       });
@@ -2201,7 +2176,7 @@
       if (baRange && baOverlay && baHandle) {
         baRange.addEventListener('input', (e) => {
           const val = e.target.value;
-          baOverlay.style.width = `${val}%`;
+          baOverlay.style.clipPath = `polygon(0 0, ${val}% 0, ${val}% 100%, 0 100%)`;
           baHandle.style.left = `${val}%`;
         });
       }
@@ -2232,8 +2207,6 @@
       const viewport = document.getElementById('sliderViewport');
 
       let currentIndex = 0;
-      let startX = 0;
-      let isDragging = false;
 
       function getVisibleCardsCount() {
         if (window.innerWidth <= 650) return 1;
@@ -2290,26 +2263,32 @@
       });
 
       viewport.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-        isDragging = true;
+        sliderStartX = e.touches[0].clientX;
+        isSliderDragging = true;
       }, { passive: true });
 
       viewport.addEventListener('touchend', (e) => {
-        if (!isDragging) return;
-        isDragging = false;
-        const diffX = e.changedTouches[0].clientX - startX;
+        if (!isSliderDragging) return;
+        isSliderDragging = false;
+        const diffX = e.changedTouches[0].clientX - sliderStartX;
         handleSwipe(diffX);
       }, { passive: true });
 
       viewport.addEventListener('mousedown', (e) => {
-        startX = e.clientX;
-        isDragging = true;
+        sliderStartX = e.clientX;
+        sliderDragDistance = 0;
+        isSliderDragging = true;
+      });
+
+      viewport.addEventListener('mousemove', (e) => {
+        if (!isSliderDragging) return;
+        sliderDragDistance = Math.abs(e.clientX - sliderStartX);
       });
 
       viewport.addEventListener('mouseup', (e) => {
-        if (!isDragging) return;
-        isDragging = false;
-        const diffX = e.clientX - startX;
+        if (!isSliderDragging) return;
+        isSliderDragging = false;
+        const diffX = e.clientX - sliderStartX;
         handleSwipe(diffX);
       });
 
@@ -2342,6 +2321,12 @@
           const phone = document.getElementById('phone').value.trim();
           const email = document.getElementById('email').value.trim();
           const message = document.getElementById('message').value.trim();
+          const statusEl = document.getElementById('formStatus');
+
+          if (statusEl) {
+            statusEl.style.display = 'block';
+            statusEl.textContent = 'Sending inquiry and preparing WhatsApp...';
+          }
 
           fetch("https://formsubmit.co/ajax/master.er.cks@outlook.com", {
             method: "POST",
@@ -2356,6 +2341,10 @@
           window.open(`https://wa.me/9779766188838?text=${whatsappMsg}`, '_blank');
 
           contactForm.reset();
+
+          if (statusEl) {
+            setTimeout(() => { statusEl.style.display = 'none'; }, 4000);
+          }
         });
       }
 
@@ -2431,7 +2420,7 @@
       document.getElementById('nbcToolsSuite').style.display = mode === 'nbc' ? 'block' : 'none';
     }
 
-    function switchSubTool(toolId) {
+    function switchSubTool(btnEl, toolId) {
       let parent;
       if (toolId.startsWith('int-')) parent = document.getElementById('interiorToolsSuite');
       else if (toolId.startsWith('civ-')) parent = document.getElementById('civilToolsSuite');
@@ -2442,7 +2431,7 @@
       
       const targetPanel = document.getElementById(`tool-${toolId}`);
       if (targetPanel) targetPanel.classList.add('active');
-      event.target.classList.add('active');
+      if (btnEl && btnEl.classList) btnEl.classList.add('active');
     }
 
     // ================= 1. INTERIOR DESIGN CALCULATION LOGIC =================
@@ -2528,8 +2517,7 @@
       document.getElementById('acBreakdown').textContent = `Calculated Cooling Load: ~${Math.round(btu).toLocaleString()} BTU/hr • Fast cooling during peak Birgunj summer (40°C+).`;
     }
 
-    // ================= 2. CIVIL & DEEP ESTIMATION LOGIC =================
-    // Tool: Plinth Area & Road Widening from Plot Size (Civil Concept Exact Replica)
+    // ================= 2. CIVIL & ESTIMATION LOGIC =================
     function calcPlinthArea() {
       const unit = document.getElementById('plinthUnit').value;
       const rawVal = parseFloat(document.getElementById('plinthAreaVal').value) || 0;
@@ -2539,16 +2527,14 @@
       const coveragePct = parseFloat(document.getElementById('plinthCoverage').value) || 70;
 
       let plotSqft = rawVal;
-      if (unit === 'terai') plotSqft = rawVal * 3645; // 1 Kattha = 3645 sqft
-      else if (unit === 'hills') plotSqft = rawVal * 342.25; // 1 Aana = 342.25 sqft
+      if (unit === 'terai') plotSqft = rawVal * 3645;
+      else if (unit === 'hills') plotSqft = rawVal * 342.25;
 
-      // Road widening deduction formula
       let roadDeductionSqft = 0;
       if (roadMuni > roadExist) {
         roadDeductionSqft = ((roadMuni - roadExist) / 2) * plotW;
       }
 
-      // Front Setback deduction (5ft)
       const setbackSqft = 5 * plotW;
       const netPlotSqft = Math.max(0, plotSqft - roadDeductionSqft - setbackSqft);
       const allowablePlinthSqft = Math.round(netPlotSqft * (coveragePct / 100));
@@ -2556,7 +2542,6 @@
 
       document.getElementById('plinthResultOut').textContent = `${allowablePlinthSqft.toLocaleString()} sq.ft (${allowablePlinthSqm} m²)`;
 
-      // BHK Recommender
       let bhk = "1BHK Unit";
       if (allowablePlinthSqft >= 500 && allowablePlinthSqft < 850) bhk = "2BHK (2 Bed, 1 Living, 1 Kitchen, 1 Bath)";
       else if (allowablePlinthSqft >= 850 && allowablePlinthSqft < 1300) bhk = "3BHK (3 Bed, 1 Living, 1 Kitchen/Dining, 2 Bath, 1 Staircase)";
@@ -2565,7 +2550,6 @@
       document.getElementById('plinthBreakdown').textContent = `Gross Area: ${Math.round(plotSqft).toLocaleString()} sq.ft • Road Widening Loss: ${Math.round(roadDeductionSqft)} sq.ft • Front Setback: ${setbackSqft} sq.ft • Recommended: ${bhk}.`;
     }
 
-    // Tool: Advanced Brickwork with Openings Deduction
     function calcAdvancedBrick() {
       const l = parseFloat(document.getElementById('brkAdvL').value) || 0;
       const h = parseFloat(document.getElementById('brkAdvH').value) || 0;
@@ -2573,14 +2557,13 @@
       const ratio = parseInt(document.getElementById('brkAdvRatio').value, 10) || 6;
 
       const grossArea = l * h;
-      // Parse sample deductions
-      const netArea = Math.max(0, grossArea - 60); // approx 60 sqft doors/windows deduction
+      const netArea = Math.max(0, grossArea - 60);
       const volCuft = netArea * (tInches / 12);
 
       const brickFactor = tInches === 4.5 ? 4.6 : 9.2;
       const brickCount = Math.ceil(netArea * brickFactor * 1.05);
 
-      const dryMortar = volCuft * 0.33; // +33% dry volume
+      const dryMortar = volCuft * 0.33;
       const cementBags = (dryMortar / (1 + ratio) / 1.25).toFixed(1);
       const sandCuft = Math.round((dryMortar / (1 + ratio)) * ratio);
 
@@ -2588,7 +2571,6 @@
       document.getElementById('brkAdvBreakdown').textContent = `Net Wall Area (Minus Openings): ${netArea} sq.ft • OPC/PPC Cement: ~${cementBags} Bags • River Sand: ~${sandCuft} cu.ft • 5% breakage included.`;
     }
 
-    // Tool: Nepal House Construction Cost Estimator
     function calcHouseCost() {
       const plinth = parseFloat(document.getElementById('housePlinth').value) || 0;
       const storeys = parseFloat(document.getElementById('houseStoreys').value) || 1;
@@ -2600,7 +2582,6 @@
 
       document.getElementById('houseCostOut').textContent = `Rs. ${lakhs} Lakhs (NPR)`;
 
-      // Material Quantities based on Nepal structural norms
       const cementBags = Math.round(totalBuiltup * 0.4);
       const steelTons = (totalBuiltup * 0.0038).toFixed(1);
       const bricks = Math.round(totalBuiltup * 18);
@@ -2632,7 +2613,6 @@
       document.getElementById('rccBreakdown').textContent = `Wet Volume: ${Math.round(wetVol)} cu.ft (Dry: ${Math.round(dryVol)} cu.ft) • Sand: ~${sandCuft} cu.ft • Aggregate (Gitti): ~${gittiCuft} cu.ft`;
     }
 
-    // Tool: Stirrup Cutting Length with 135° Hooks (NBC 205 Standard)
     function calcStirrupTie() {
       const b = parseFloat(document.getElementById('tieB').value) || 250;
       const d = parseFloat(document.getElementById('tieD').value) || 355;
@@ -2641,8 +2621,8 @@
 
       const coreA = b - 2 * cover;
       const coreB = d - 2 * cover;
-      const hook = Math.max(65, 10 * dia); // 135 degree hook length as per NBC 205
-      const totalLen = (2 * (coreA + coreB)) + (2 * hook) - (6 * dia); // minus bend deductions
+      const hook = Math.max(65, 10 * dia);
+      const totalLen = (2 * (coreA + coreB)) + (2 * hook) - (6 * dia);
 
       const totalMeters = (totalLen / 1000).toFixed(2);
       const weightPerTie = ((dia * dia / 162) * (totalLen / 1000)).toFixed(2);
@@ -2651,7 +2631,6 @@
       document.getElementById('tieBreakdown').textContent = `Core Size: ${coreA}×${coreB} mm • 135° Seismic Hook: 2×${hook} mm • Weight per Tie: ~${weightPerTie} kg.`;
     }
 
-    // Tool: Cadastral Trace Map Converter
     function calcTraceMap() {
       const scale = parseFloat(document.getElementById('traceScale').value) || 1200;
       const cm = parseFloat(document.getElementById('traceCm').value) || 0;
@@ -2663,7 +2642,7 @@
       document.getElementById('traceBreakdown').textContent = `Scale 1:${scale} ➔ 1 cm on Lalpurja map equals ${(scale/100).toFixed(1)} meters on ground.`;
     }
 
-    // ================= 3. NBC 205:2024 & MUNICIPAL SUITE LOGIC =================
+    // ================= 3. NBC 205:2024 & MUNICIPAL SUITE =================
     function calcPGA() {
       const pga = parseFloat(document.getElementById('pgaDistrict').value) || 0.35;
       document.getElementById('pgaResultOut').textContent = `PGA (Z) = ${pga}g`;
@@ -2672,7 +2651,6 @@
 
     function calcDetailing() {
       const storey = document.getElementById('detailStorey').value;
-      const sbc = document.getElementById('detailSBC').value;
 
       if (storey === "2") {
         document.getElementById('detailSummaryOut').textContent = "Column: 350×350 mm | Footing: 1.5×1.5 m";
@@ -2738,7 +2716,7 @@
               const price = r.c[3]?.v || '';
               const date = r.c[4]?.v || currentMonthYear;
               const tr = document.createElement('tr');
-              tr.innerHTML = `<td><strong>${item}</strong></td><td>${cat}</td><td>${unit}</td><td><span class="rate-pill">${price}</span></td><td>${date}</td>`;
+              tr.innerHTML = `<td><strong>${item}</strong></td><td>${cat}</td><td>${unit}</td><td><span class=\"rate-pill\">${price}</span></td><td>${date}</td>`;
               tbody.appendChild(tr);
             });
           }
@@ -2764,15 +2742,15 @@
               const card = document.createElement('article');
               card.className = 'article-card';
               card.innerHTML = `
-                <div class="article-img-wrap"><img src="${img}" alt="${title}" loading="lazy" /></div>
-                <div class="article-content">
+                <div class=\"article-img-wrap\"><img src=\"${img}\" alt=\"${title}\" width=\"400\" height=\"240\" loading=\"lazy\" /></div>
+                <div class=\"article-content\">
                   <div>
-                    <div class="article-meta"><span>${cat}</span><span>${date}</span></div>
-                    <h3>${title}</h3>
+                    <div class=\"article-meta\"><span>${cat}</span><span>${date}</span></div>
+                    <div class=\"item-title\">${title}</div>
                     <p>${summary}</p>
                   </div>
-                  <a href="https://wa.me/9779766188838?text=Hi%20Chetan,%20I%20read%20your%20article%20'${encodeURIComponent(title)}'%20and%20want%20to%20consult." target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; justify-content: center;">
-                    Consult on this Topic <i class="fa-brands fa-whatsapp"></i>
+                  <a href=\"https://wa.me/9779766188838?text=Hi%20Chetan,%20I%20read%20your%20article%20'${encodeURIComponent(title)}'%20and%20want%20to%20consult.\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-outline\" style=\"width: 100%; justify-content: center;\">
+                    Consult on this Topic <i class=\"fa-brands fa-whatsapp\"></i>
                   </a>
                 </div>`;
               container.appendChild(card);
@@ -2794,7 +2772,6 @@
             validRows.forEach(r => {
               const title = r.c[0]?.v || '';
               const platform = (r.c[1]?.v || 'Project').toLowerCase();
-              const cat = r.c[2]?.v || 'Architecture';
               const img = r.c[3]?.v || 'https://i.postimg.cc/SRvT1GYp/Modern-Luxuary-Living-room-Project1.jpg';
               const link = r.c[4]?.v || '#contact';
               const desc = r.c[5]?.v || '';
@@ -2807,14 +2784,14 @@
               const card = document.createElement('article');
               card.className = 'showcase-card';
               card.innerHTML = `
-                <div class="showcase-img-wrap">
-                  <img src="${img}" alt="${title}" loading="lazy" />
-                  <span class="platform-badge ${badgeClass}"><i class="${icon}"></i> ${platform}</span>
+                <div class=\"showcase-img-wrap\">
+                  <img src=\"${img}\" alt=\"${title}\" width=\"400\" height=\"260\" loading=\"lazy\" />
+                  <span class=\"platform-badge ${badgeClass}\"><i class=\"${icon}\"></i> ${platform}</span>
                 </div>
-                <div class="showcase-body">
-                  <div><h3>${title}</h3><p>${desc}</p></div>
-                  <a href="${link}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; justify-content: center;">
-                    ${btnText} <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <div class=\"showcase-body\">
+                  <div><div class=\"item-title\">${title}</div><p>${desc}</p></div>
+                  <a href=\"${link}\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-outline\" style=\"width: 100%; justify-content: center;\">
+                    ${btnText} <i class=\"fa-solid fa-arrow-up-right-from-square\"></i>
                   </a>
                 </div>`;
               container.appendChild(card);
@@ -2828,6 +2805,7 @@
 
     // Modal
     function openModal(title, category, desc, imgSrc, attribution) {
+      if (sliderDragDistance > 8) return;
       document.getElementById('modalTitle').textContent = title;
       document.getElementById('modalCategory').textContent = category;
       document.getElementById('modalDesc').textContent = desc;
