@@ -2,7 +2,11 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- iOS Viewport & Safe Area Optimization -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="format-detection" content="telephone=no" />
 
   <!-- ================= STRICT SEO META TAGS ================= -->
   <title>Chetan Kr. Sarraf | Interior Designer in Birgunj, Nepal</title>
@@ -17,8 +21,9 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://chetan-sarraf.github.io/chetan-interior/" />
 
-  <!-- Direct PNG Favicon -->
+  <!-- Favicon & Apple Touch Icon -->
   <link rel="icon" type="image/png" href="https://i.postimg.cc/k5x1yj6h/Favicon-01.png" />
+  <link rel="apple-touch-icon" href="https://i.postimg.cc/k5x1yj6h/Favicon-01.png" />
 
   <!-- Open Graph & Twitter Cards -->
   <meta property="og:title" content="Chetan Kr. Sarraf | Interior Designer in Birgunj, Nepal" />
@@ -106,7 +111,7 @@
   }
   </script>
 
-  <!-- Google Fonts: Syne (Readymag Avant-Garde Headings) + Plus Jakarta Sans + JetBrains Mono -->
+  <!-- Google Fonts: Syne + Plus Jakarta Sans + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -114,67 +119,52 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- ================= READYMAG-STYLE MODERN CSS ================= -->
+  <!-- ================= STYLES ================= -->
   <style>
-    /* ================= DUAL THEME TOKENS ================= */
     :root, [data-theme="light"] {
-      --bg-canvas: #f7f4ed;            /* Warm Irish Cream Linen */
-      --bg-surface: #ffffff;           /* Clean White Studio Surface */
-      --bg-surface-elevated: #ede9df;  /* Elevated Cream */
+      --bg-canvas: #f7f4ed;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #ede9df;
       --bg-surface-soft: #e5dfd3;
-      
-      --brand-navy: #0e273f;           /* Favicon Navy */
+      --brand-navy: #0e273f;
       --brand-navy-light: #163d63;
       --brand-navy-soft: rgba(14, 39, 63, 0.08);
-      
-      --brand-grey: #6f7a85;           /* Favicon Slate Grey */
+      --brand-grey: #6f7a85;
       --brand-grey-soft: rgba(111, 122, 133, 0.12);
-      
       --accent-azure: #1b5291;
-      
-      --text-main: #0c0f14;            /* Sharp Obsidian Black */
-      --text-muted: #576270;           /* Balanced Slate */
+      --text-main: #0c0f14;
+      --text-muted: #576270;
       --text-dark: #8c97a5;
-      
       --border-subtle: rgba(14, 39, 63, 0.09);
       --border-navy: rgba(14, 39, 63, 0.2);
       --border-focus: rgba(14, 39, 63, 0.4);
-      
       --watermark-filter: none;
       --watermark-opacity: 0.055;
-      
-      --nav-bg: rgba(247, 244, 237, 0.9);
+      --nav-bg: rgba(247, 244, 237, 0.94);
       --shadow-subtle: 0 14px 35px rgba(14, 39, 63, 0.06);
       --shadow-elevated: 0 24px 50px rgba(14, 39, 63, 0.12);
     }
 
     [data-theme="dark"] {
-      --bg-canvas: #090b0e;            /* Deep Obsidian */
-      --bg-surface: #10141b;           /* Slate Surface */
+      --bg-canvas: #090b0e;
+      --bg-surface: #10141b;
       --bg-surface-elevated: #161c26;
       --bg-surface-soft: #1d2533;
-      
       --brand-navy: #0e273f;
       --brand-navy-light: #18426b;
       --brand-navy-soft: rgba(14, 39, 63, 0.45);
-      
       --brand-grey: #8a96a3;
       --brand-grey-soft: rgba(111, 122, 133, 0.16);
-      
       --accent-azure: #2c72c4;
-      
-      --text-main: #f5f2ea;            /* Irish Cream Ivory */
+      --text-main: #f5f2ea;
       --text-muted: #9aa4b2;
       --text-dark: #5c6674;
-      
       --border-subtle: rgba(255, 255, 255, 0.08);
       --border-navy: rgba(24, 66, 107, 0.45);
       --border-focus: rgba(138, 150, 163, 0.45);
-      
       --watermark-filter: invert(1);
       --watermark-opacity: 0.07;
-      
-      --nav-bg: rgba(16, 20, 27, 0.92);
+      --nav-bg: rgba(16, 20, 27, 0.94);
       --shadow-subtle: 0 16px 40px rgba(0, 0, 0, 0.55);
       --shadow-elevated: 0 26px 60px rgba(0, 0, 0, 0.75);
     }
@@ -184,25 +174,26 @@
       --radius-md: 22px;
       --radius-lg: 32px;
       --radius-pill: 9999px;
-      
-      --font-display: 'Syne', sans-serif;
-      --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-display: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
-      
       --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body {
+      overflow-x: clip;
+      scroll-behavior: smooth;
+    }
     
     body {
       font-family: var(--font-sans);
       background-color: var(--bg-canvas);
       color: var(--text-main);
       line-height: 1.7;
-      overflow-x: hidden;
-      transition: background-color 0.4s ease, color 0.4s ease;
-      /* CAD Blueprint Technical Grid */
+      transition: background-color 0.35s ease, color 0.35s ease;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       background-image: 
         radial-gradient(var(--border-subtle) 1.2px, transparent 1.2px),
         linear-gradient(to right, var(--border-subtle) 1px, transparent 1px),
@@ -226,7 +217,7 @@
       transition: var(--transition);
     }
 
-    /* Readymag Typography Scale */
+    /* Typography Scale */
     h1, h2, h3, .brand-logo {
       font-family: var(--font-display);
       font-weight: 700;
@@ -254,7 +245,7 @@
     }
 
     .section-title {
-      font-size: 3.4rem;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
       line-height: 1.1;
       margin-bottom: 1.2rem;
       color: var(--text-main);
@@ -269,9 +260,7 @@
       text-decoration-color: var(--accent-azure);
       text-underline-offset: 6px;
     }
-    [data-theme="dark"] .section-title em {
-      color: #ffffff;
-    }
+    [data-theme="dark"] .section-title em { color: #ffffff; }
 
     .section-subtitle {
       font-size: 1.05rem;
@@ -281,56 +270,49 @@
       line-height: 1.8;
     }
 
-    .section { padding: 7rem 0; position: relative; }
+    .section { padding: clamp(4.5rem, 8vw, 7rem) 0; position: relative; }
     .text-center { text-align: center; }
     .text-center .tag-badge { margin-left: auto; margin-right: auto; }
 
-    /* PNG Logo in Header */
+    /* Logo in Header */
     .brand-logo {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      font-size: 1.2rem;
+      gap: 0.65rem;
+      font-size: 1.15rem;
       color: var(--text-main);
       letter-spacing: -0.02em;
     }
     .brand-logo-img {
-      width: 36px;
-      height: 36px;
-      object-fit: contain;
-      display: block;
-      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+      width: 34px; height: 34px; object-fit: contain; display: block;
     }
-    .brand-logo span {
-      color: var(--brand-grey);
-      font-weight: 600;
-    }
+    .brand-logo span { color: var(--brand-grey); font-weight: 600; }
 
-    /* Floating Navigation Capsule */
+    /* Navigation Capsule */
     .navbar-capsule {
       position: fixed;
-      top: 20px;
+      top: 16px;
       left: 50%;
       transform: translateX(-50%);
-      width: 92%;
-      max-width: 1120px;
+      width: 94%;
+      max-width: 1140px;
       background: var(--nav-bg);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid var(--border-navy);
       border-radius: var(--radius-pill);
       z-index: 9999;
-      padding: 0.6rem 1.4rem;
+      padding: 0.55rem 1.2rem;
       box-shadow: var(--shadow-subtle);
       transition: var(--transition);
     }
     .nav-container { display: flex; justify-content: space-between; align-items: center; }
-    .nav-links { display: flex; align-items: center; gap: 0.35rem; }
+    .nav-links { display: flex; align-items: center; gap: 0.25rem; }
     .nav-links a {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: var(--text-muted);
-      padding: 0.45rem 0.85rem;
+      padding: 0.45rem 0.75rem;
       border-radius: var(--radius-pill);
       letter-spacing: -0.01em;
       transition: var(--transition);
@@ -344,19 +326,15 @@
 
     /* Theme Switcher Button */
     .theme-toggle-btn {
-      width: 38px;
-      height: 38px;
+      width: 38px; height: 38px;
       border-radius: 50%;
       border: 1px solid var(--border-navy);
       background: var(--bg-surface);
       color: var(--text-main);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-size: 0.95rem;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 0.95rem;
       transition: var(--transition);
-      margin-left: 0.4rem;
+      margin-left: 0.35rem;
     }
     .theme-toggle-btn:hover {
       transform: scale(1.08);
@@ -370,20 +348,21 @@
       color: var(--text-main) !important;
     }
     .btn-nav-capsule:hover { background: var(--brand-navy) !important; color: #fff !important; }
-    .nav-toggle { display: none; background: none; border: none; font-size: 1.3rem; color: var(--text-main); cursor: pointer; }
+    .nav-toggle { display: none; background: none; border: none; font-size: 1.3rem; color: var(--text-main); cursor: pointer; padding: 0.4rem; }
 
-    /* Readymag Minimalist Buttons */
+    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 0.65rem;
-      padding: 0.95rem 2.2rem;
+      padding: 0.9rem 2rem;
       font-size: 0.86rem;
       font-weight: 700;
       letter-spacing: -0.01em;
       border-radius: var(--radius-pill);
       cursor: pointer;
       transition: var(--transition);
+      min-height: 48px;
     }
     .btn-primary {
       background: var(--brand-navy);
@@ -410,65 +389,60 @@
     /* Hero Section */
     .hero-section {
       min-height: 100vh;
+      min-height: 100dvh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 10.5rem 1.5rem 6.5rem;
+      padding: clamp(7.5rem, 15vw, 10.5rem) 1.5rem 5rem;
       position: relative;
     }
     .hero-texture {
-      bottom: -40px;
-      right: -80px;
-      width: 720px;
+      bottom: -30px;
+      right: -60px;
+      width: 700px;
       max-width: 80vw;
     }
     .hero-content { max-width: 980px; z-index: 2; position: relative; }
     .hero-title {
-      font-size: 4.8rem;
+      font-size: clamp(2.7rem, 7vw, 4.8rem);
       line-height: 1.05;
       margin-bottom: 1.5rem;
       color: var(--text-main);
       font-weight: 800;
     }
     .hero-description {
-      font-size: 1.18rem;
+      font-size: clamp(1rem, 2.5vw, 1.18rem);
       line-height: 1.85;
       color: var(--text-muted);
-      margin-bottom: 2.8rem;
+      margin-bottom: 2.6rem;
       max-width: 820px;
       margin-left: auto;
       margin-right: auto;
-      font-weight: 400;
     }
-    .hero-actions { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; }
+    .hero-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
     .hero-trust-bar {
-      margin-top: 4.5rem;
+      margin-top: 4rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 2.5rem;
+      gap: 1.8rem;
       color: var(--text-muted);
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       border-top: 1px solid var(--border-subtle);
-      padding-top: 2rem;
+      padding-top: 1.8rem;
       flex-wrap: wrap;
     }
     .hero-trust-bar span { display: flex; align-items: center; gap: 0.5rem; }
     .hero-trust-bar span i { color: var(--accent-azure); }
 
     /* About Section */
-    .about-texture {
-      top: 20px;
-      right: -40px;
-      width: 580px;
-      max-width: 60vw;
-    }
+    .about-texture { top: 20px; right: -40px; width: 560px; max-width: 60vw; }
     .grid-about-unboxed {
       display: grid;
       grid-template-columns: 1fr 1.25fr;
-      gap: 4.5rem;
+      gap: clamp(2.5rem, 5vw, 4.5rem);
       align-items: center;
     }
     .portrait-standalone-wrap {
@@ -479,20 +453,17 @@
     }
     .portrait-ambient-glow {
       position: absolute;
-      width: 400px;
-      height: 400px;
+      width: 360px; height: 360px;
       background: radial-gradient(circle, var(--brand-navy-soft) 0%, rgba(0,0,0,0) 70%);
       border-radius: 50%;
-      z-index: 1;
-      pointer-events: none;
+      z-index: 1; pointer-events: none;
     }
     .portrait-standalone-img {
       position: relative;
       z-index: 2;
       width: 100%;
-      max-width: 440px;
+      max-width: 420px;
       height: auto;
-      max-height: 540px;
       object-fit: cover;
       display: block;
       filter: drop-shadow(0 20px 30px rgba(14, 39, 63, 0.2));
@@ -504,10 +475,10 @@
       bottom: -15px;
       background: var(--bg-surface);
       border: 1px solid var(--border-navy);
-      padding: 0.6rem 1.4rem;
+      padding: 0.55rem 1.3rem;
       border-radius: var(--radius-pill);
       font-family: var(--font-mono);
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: var(--text-main);
@@ -519,40 +490,33 @@
     }
     .portrait-sub-label .live-dot { width: 7px; height: 7px; background: #25D366; border-radius: 50%; }
 
-    .about-text p { color: var(--text-muted); margin-bottom: 1.3rem; font-size: 1.05rem; font-weight: 400; }
+    .about-text p { color: var(--text-muted); margin-bottom: 1.25rem; font-size: 1.02rem; }
     .credentials-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.2rem;
-      margin: 2rem 0;
+      gap: 1rem;
+      margin: 1.8rem 0;
       border-top: 1px solid var(--border-subtle);
       border-bottom: 1px solid var(--border-subtle);
-      padding: 1.5rem 0;
+      padding: 1.4rem 0;
     }
-    .cred-stat h3 { font-size: 2.3rem; color: var(--text-main); line-height: 1; font-weight: 800; }
-    .cred-stat p { font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--brand-grey); margin-bottom: 0; margin-top: 0.4rem; }
+    .cred-stat h3 { font-size: clamp(1.8rem, 4vw, 2.3rem); color: var(--text-main); line-height: 1; font-weight: 800; }
+    .cred-stat p { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--brand-grey); margin-top: 0.35rem; }
 
-    .skills-cluster { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
+    .skills-cluster { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
     .skill-tag {
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
-      padding: 0.45rem 1rem;
-      font-size: 0.8rem;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.78rem;
       border-radius: var(--radius-pill);
       color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      display: flex; align-items: center; gap: 0.45rem;
     }
     .skill-tag span { color: var(--accent-azure); font-weight: 700; font-family: var(--font-mono); font-size: 0.72rem; }
 
     /* Before/After Transformation */
-    .trans-texture {
-      bottom: -60px;
-      left: -60px;
-      width: 600px;
-      max-width: 60vw;
-    }
+    .trans-texture { bottom: -60px; left: -60px; width: 600px; max-width: 60vw; }
     .before-after-container {
       max-width: 980px;
       margin: 3.5rem auto 0;
@@ -563,418 +527,436 @@
       box-shadow: var(--shadow-elevated);
       background: #000;
       user-select: none;
+      touch-action: pan-y;
     }
-    .ba-image-wrapper { position: relative; width: 100%; height: 520px; overflow: hidden; }
+    .ba-image-wrapper { position: relative; width: 100%; height: clamp(280px, 50vw, 520px); overflow: hidden; }
     .ba-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
     .ba-img-overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 50%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 2;
-      border-right: 2px solid #ffffff;
+      position: absolute; top: 0; left: 0; width: 50%; height: 100%;
+      overflow: hidden; z-index: 2; border-right: 2px solid #ffffff;
     }
-    .ba-img-overlay img { position: absolute; top: 0; left: 0; width: 980px; height: 520px; max-width: none; object-fit: cover; }
+    .ba-img-overlay img { position: absolute; top: 0; left: 0; width: 980px; height: 100%; max-width: none; object-fit: cover; }
     @media (max-width: 1024px) {
-      .ba-image-wrapper { height: 380px; }
-      .ba-img-overlay img { width: 100vw; height: 380px; }
+      .ba-img-overlay img { width: 100vw; }
     }
-    .ba-slider-range { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 10; }
+    .ba-slider-range { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 10; touch-action: pan-y; }
     .ba-handle {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 48px; height: 48px;
-      background: #ffffff;
-      color: var(--brand-navy);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem; pointer-events: none; z-index: 5;
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 44px; height: 44px; background: #ffffff; color: var(--brand-navy); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; font-size: 1rem; pointer-events: none; z-index: 5;
       box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     }
     .ba-badge {
-      position: absolute;
-      top: 20px;
-      padding: 0.4rem 1rem;
-      border-radius: var(--radius-pill);
-      background: rgba(14, 39, 63, 0.88);
-      backdrop-filter: blur(8px);
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      z-index: 6;
-      color: #ffffff;
-      border: 1px solid var(--border-subtle);
+      position: absolute; top: 16px; padding: 0.35rem 0.85rem; border-radius: var(--radius-pill);
+      background: rgba(14, 39, 63, 0.88); backdrop-filter: blur(8px); font-family: var(--font-mono);
+      font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; z-index: 6; color: #ffffff;
     }
-    .ba-badge-left { left: 20px; }
-    .ba-badge-right { right: 20px; }
+    .ba-badge-left { left: 16px; }
+    .ba-badge-right { right: 16px; }
 
     /* NPR Budget Calculator */
-    .estimator-texture {
-      top: -30px;
-      right: -40px;
-      width: 500px;
-    }
+    .estimator-texture { top: -30px; right: -40px; width: 500px; }
     .calculator-card {
       background: var(--bg-surface);
       border: 1px solid var(--border-navy);
       border-radius: var(--radius-lg);
-      padding: 4rem;
+      padding: clamp(2rem, 5vw, 4rem);
       max-width: 920px;
       margin: 3.5rem auto 0;
       box-shadow: var(--shadow-subtle);
-      position: relative;
-      z-index: 2;
+      position: relative; z-index: 2;
     }
-    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2.5rem; }
-    @media (max-width: 768px) {
-      .calc-grid { grid-template-columns: 1fr; }
-      .calculator-card { padding: 2rem; }
-    }
+    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+    @media (max-width: 768px) { .calc-grid { grid-template-columns: 1fr; } }
     .calc-group label {
-      display: block;
-      font-family: var(--font-mono);
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      color: var(--text-main);
-      letter-spacing: 0.08em;
-      margin-bottom: 0.6rem;
+      display: block; font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase;
+      color: var(--text-main); letter-spacing: 0.06em; margin-bottom: 0.5rem;
+    }
+    .calc-select, .form-group input, .form-group textarea {
+      font-size: 16px !important;
     }
     .calc-select {
-      width: 100%;
-      padding: 0.85rem 1.2rem;
-      background: var(--bg-surface-elevated);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      color: var(--text-main);
-      font-family: inherit;
-      font-size: 0.95rem;
-      outline: none;
+      width: 100%; padding: 0.85rem 1rem; background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-main); outline: none;
     }
     .calc-range-wrap {
-      grid-column: 1 / -1;
-      background: var(--bg-surface-elevated);
-      padding: 1.5rem;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border-subtle);
+      grid-column: 1 / -1; background: var(--bg-surface-elevated);
+      padding: 1.4rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);
     }
-    .calc-range-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-    .calc-range-slider { width: 100%; accent-color: var(--brand-navy); }
+    .calc-range-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; }
+    .calc-range-slider { width: 100%; accent-color: var(--brand-navy); height: 8px; }
     .calc-result-box {
-      background: var(--brand-navy-soft);
-      border: 1px solid var(--border-navy);
-      border-radius: var(--radius-md);
-      padding: 2rem;
-      text-align: center;
-      margin-top: 1.5rem;
+      background: var(--brand-navy-soft); border: 1px solid var(--border-navy);
+      border-radius: var(--radius-md); padding: 1.8rem; text-align: center; margin-top: 1.5rem;
     }
-    .calc-result-label { font-family: var(--font-mono); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--brand-grey); margin-bottom: 0.4rem; }
+    .calc-result-label { font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--brand-grey); margin-bottom: 0.4rem; }
     .calc-result-price {
-      font-family: var(--font-display);
-      font-size: 3.2rem;
-      color: var(--text-main);
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 1.2rem;
-      letter-spacing: -0.02em;
+      font-family: var(--font-display); font-size: clamp(2.2rem, 6vw, 3.2rem);
+      color: var(--text-main); font-weight: 800; line-height: 1.1; margin-bottom: 1rem;
     }
 
-    /* Services */
-    .services-texture {
-      bottom: -40px;
-      left: -80px;
-      width: 650px;
-      max-width: 70vw;
+    /* Live Material & Labour Rates Table */
+    .rates-table-wrap {
+      margin-top: 3.5rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-navy);
+      border-radius: var(--radius-lg);
+      overflow-x: auto;
+      box-shadow: var(--shadow-subtle);
+      -webkit-overflow-scrolling: touch;
     }
+    .rates-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+      min-width: 620px;
+    }
+    .rates-table th {
+      background: var(--brand-navy-soft);
+      padding: 1.2rem 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-main);
+      border-bottom: 1px solid var(--border-navy);
+    }
+    .rates-table td {
+      padding: 1.1rem 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+    }
+    .rates-table tr:hover td {
+      background: var(--brand-navy-soft);
+      color: var(--text-main);
+    }
+    .rate-pill {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--accent-azure);
+    }
+
+    /* Design Journal & Blog Cards */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+    .article-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition);
+      box-shadow: var(--shadow-subtle);
+      display: flex;
+      flex-direction: column;
+    }
+    .article-card:hover {
+      border-color: var(--border-navy);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-elevated);
+    }
+    .article-img-wrap {
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+      background: #10141b;
+    }
+    .article-img-wrap img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.6s ease;
+    }
+    .article-card:hover .article-img-wrap img {
+      transform: scale(1.06);
+    }
+    .article-content {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .article-meta {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--brand-grey);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.8rem;
+    }
+    .article-content h3 {
+      font-size: 1.45rem;
+      color: var(--text-main);
+      margin-bottom: 0.8rem;
+      line-height: 1.25;
+    }
+    .article-content p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.4rem;
+    }
+
+    /* Services & Process */
+    .services-texture { bottom: -40px; left: -80px; width: 650px; max-width: 70vw; }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 2rem; margin-top: 3.5rem; }
     .service-card {
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
-      padding: 2.6rem 2.2rem;
+      padding: 2.4rem 2rem;
       transition: var(--transition);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      z-index: 2;
-      box-shadow: var(--shadow-subtle);
+      display: flex; flex-direction: column; justify-content: space-between;
+      position: relative; z-index: 2; box-shadow: var(--shadow-subtle);
     }
-    .service-card:hover { border-color: var(--border-navy); transform: translateY(-6px); box-shadow: var(--shadow-elevated); }
-    .service-num { font-family: var(--font-mono); font-size: 0.8rem; color: var(--brand-grey); letter-spacing: 0.15em; margin-bottom: 1.2rem; }
-    .service-card h3 { font-size: 1.7rem; color: var(--text-main); margin-bottom: 1rem; font-weight: 700; }
-    .service-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.6rem; font-weight: 400; }
+    .service-card:hover { border-color: var(--border-navy); transform: translateY(-5px); box-shadow: var(--shadow-elevated); }
+    .service-num { font-family: var(--font-mono); font-size: 0.78rem; color: var(--brand-grey); letter-spacing: 0.12em; margin-bottom: 1.2rem; }
+    .service-card h3 { font-size: 1.6rem; color: var(--text-main); margin-bottom: 1rem; }
+    .service-card p { color: var(--text-muted); font-size: 0.94rem; line-height: 1.7; margin-bottom: 1.5rem; }
     .service-features { list-style: none; border-top: 1px solid var(--border-subtle); padding-top: 1.2rem; }
-    .service-features li { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem; }
+    .service-features li { font-size: 0.84rem; color: var(--text-muted); margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem; }
     .service-features li i { color: var(--accent-azure); font-size: 0.75rem; }
 
-    /* 4-Step Process */
     .process-section { background: var(--bg-surface-elevated); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
-    .process-texture {
-      top: -40px;
-      right: -60px;
-      width: 620px;
-    }
+    .process-texture { top: -40px; right: -60px; width: 620px; }
     .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 3.5rem; }
     .process-card {
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
-      padding: 2.4rem;
+      padding: 2.2rem;
       transition: var(--transition);
-      position: relative;
-      z-index: 2;
-      box-shadow: var(--shadow-subtle);
+      position: relative; z-index: 2; box-shadow: var(--shadow-subtle);
     }
-    .process-card:hover { border-color: var(--border-navy); transform: translateY(-5px); }
+    .process-card:hover { border-color: var(--border-navy); transform: translateY(-4px); }
     .process-step-num {
-      width: 48px; height: 48px; border-radius: 50%;
-      background: var(--brand-navy);
-      color: #ffffff;
-      font-family: var(--font-mono);
-      font-weight: 700; font-size: 1.1rem;
-      display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;
+      width: 44px; height: 44px; border-radius: 50%; background: var(--brand-navy);
+      color: #ffffff; font-family: var(--font-mono); font-weight: 700; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 1.3rem;
     }
-    .process-card h3 { font-size: 1.35rem; color: var(--text-main); margin-bottom: 0.8rem; font-weight: 700; }
-    .process-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; font-weight: 400; }
+    .process-card h3 { font-size: 1.3rem; color: var(--text-main); margin-bottom: 0.8rem; }
+    .process-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
 
     /* Timeline */
     .timeline-container {
-      max-width: 860px;
-      margin: 3.5rem auto 0;
-      position: relative;
-      border-left: 2px solid var(--border-navy);
-      padding-left: 2.8rem;
+      max-width: 860px; margin: 3.5rem auto 0; position: relative;
+      border-left: 2px solid var(--border-navy); padding-left: clamp(1.8rem, 4vw, 2.8rem);
     }
     .timeline-item {
-      position: relative;
-      margin-bottom: 3.5rem;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      padding: 2.4rem;
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-subtle);
-      transition: var(--transition);
+      position: relative; margin-bottom: 3.2rem; background: var(--bg-surface);
+      border: 1px solid var(--border-subtle); padding: 2.2rem; border-radius: var(--radius-md);
+      box-shadow: var(--shadow-subtle); transition: var(--transition);
     }
     .timeline-item:hover { border-color: var(--border-navy); transform: translateY(-4px); }
     .timeline-dot {
-      position: absolute;
-      left: calc(-2.8rem - 8px);
-      top: 32px;
-      width: 14px; height: 14px;
-      border-radius: 50%;
-      background: var(--brand-navy);
+      position: absolute; left: calc(-1.8rem - 8px); top: 32px;
+      width: 14px; height: 14px; border-radius: 50%; background: var(--brand-navy);
       box-shadow: 0 0 10px rgba(14, 39, 63, 0.4);
     }
-    .timeline-date {
-      font-family: var(--font-mono);
-      font-size: 0.76rem;
-      font-weight: 600;
-      color: var(--accent-azure);
-      letter-spacing: 0.08em;
-      margin-bottom: 0.4rem;
-      text-transform: uppercase;
+    @media (min-width: 768px) {
+      .timeline-dot { left: calc(-2.8rem - 8px); }
     }
-    .timeline-content h3 { font-size: 1.7rem; color: var(--text-main); margin-bottom: 0.2rem; font-weight: 700; }
-    .timeline-role { display: inline-block; font-style: italic; color: var(--brand-grey); margin-bottom: 1rem; font-size: 0.95rem; }
-    .timeline-content ul { list-style: disc; margin-left: 1.25rem; color: var(--text-muted); font-size: 0.94rem; }
-    .timeline-content li { margin-bottom: 0.5rem; }
+    .timeline-date {
+      font-family: var(--font-mono); font-size: 0.76rem; font-weight: 600;
+      color: var(--accent-azure); letter-spacing: 0.08em; margin-bottom: 0.4rem; text-transform: uppercase;
+    }
+    .timeline-content h3 { font-size: 1.6rem; color: var(--text-main); margin-bottom: 0.2rem; }
+    .timeline-role { display: inline-block; font-style: italic; color: var(--brand-grey); margin-bottom: 1rem; font-size: 0.92rem; }
+    .timeline-content ul { list-style: disc; margin-left: 1.25rem; color: var(--text-muted); font-size: 0.92rem; }
+    .timeline-content li { margin-bottom: 0.45rem; }
 
     /* Portfolio Carousel */
     .slider-section { background: var(--bg-surface-elevated); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
-    .slider-texture {
-      top: 20px;
-      left: -100px;
-      width: 800px;
-      max-width: 90vw;
-    }
-    .slider-controls-top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1.5rem; }
+    .slider-texture { top: 20px; left: -100px; width: 800px; max-width: 90vw; }
+    .slider-controls-top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.2rem; flex-wrap: wrap; gap: 1.5rem; }
     .slider-buttons { display: flex; gap: 0.8rem; }
     .slide-arrow-btn {
-      width: 52px; height: 52px;
-      border: 1px solid var(--border-navy);
-      background: var(--bg-surface);
-      color: var(--text-main);
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; font-size: 1.15rem; transition: var(--transition); border-radius: 50%;
+      width: 48px; height: 48px; border: 1px solid var(--border-navy); background: var(--bg-surface);
+      color: var(--text-main); display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 1.1rem; transition: var(--transition); border-radius: 50%;
     }
-    .slide-arrow-btn:hover { background: var(--brand-navy); color: #ffffff; transform: scale(1.05); }
-    .slider-viewport { overflow: hidden; width: 100%; position: relative; cursor: grab; user-select: none; padding: 10px 0; }
-    .slider-viewport:active { cursor: grabbing; }
-    .slider-track { display: flex; gap: 2rem; transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1); will-change: transform; }
+    .slide-arrow-btn:hover { background: var(--brand-navy); color: #ffffff; }
+    .slider-viewport { overflow: hidden; width: 100%; position: relative; cursor: grab; user-select: none; padding: 10px 0; touch-action: pan-y; }
+    .slider-track { display: flex; gap: 1.8rem; transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1); will-change: transform; }
     .slider-card {
-      min-width: calc(33.333% - 1.34rem);
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      transition: var(--transition);
-      position: relative;
-      box-shadow: var(--shadow-subtle);
+      min-width: calc(33.333% - 1.2rem); background: var(--bg-surface);
+      border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
+      overflow: hidden; transition: var(--transition); position: relative; box-shadow: var(--shadow-subtle);
     }
-    @media (max-width: 1024px) { .slider-card { min-width: calc(50% - 1rem); } }
+    @media (max-width: 1024px) { .slider-card { min-width: calc(50% - 0.9rem); } }
     @media (max-width: 650px) { .slider-card { min-width: 100%; } }
-    .slider-card:hover { border-color: var(--border-navy); transform: translateY(-6px); box-shadow: var(--shadow-elevated); }
-    .slide-img-box { position: relative; height: 300px; overflow: hidden; background: #161a22; }
+    .slider-card:hover { border-color: var(--border-navy); transform: translateY(-5px); box-shadow: var(--shadow-elevated); }
+    .slide-img-box { position: relative; height: 280px; overflow: hidden; background: #161a22; }
     .slide-img-box img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s ease; }
-    .slider-card:hover .slide-img-box img { transform: scale(1.06); }
+    .slider-card:hover .slide-img-box img { transform: scale(1.05); }
     .slide-overlay {
       position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(14, 39, 63, 0.65);
-      display: flex; align-items: center; justify-content: center; opacity: 0; transition: var(--transition);
+      background: rgba(14, 39, 63, 0.65); display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: var(--transition);
     }
     .slide-overlay span {
-      font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: #ffffff;
-      padding: 0.55rem 1.4rem; border-radius: var(--radius-pill); background: var(--brand-navy); font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: #ffffff;
+      padding: 0.5rem 1.3rem; border-radius: var(--radius-pill); background: var(--brand-navy); font-weight: 700;
     }
     .slider-card:hover .slide-overlay { opacity: 1; }
-    .slide-desc { padding: 2rem; }
+    .slide-desc { padding: 1.8rem; }
     .slide-tag { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-azure); font-weight: 600; }
-    .slide-desc h3 { font-size: 1.45rem; color: var(--text-main); margin: 0.4rem 0 0.6rem; font-weight: 700; }
-    .slide-desc p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.6; }
+    .slide-desc h3 { font-size: 1.35rem; color: var(--text-main); margin: 0.35rem 0 0.55rem; font-weight: 700; }
+    .slide-desc p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.9rem; line-height: 1.6; }
     .attribution-tag {
       font-size: 0.72rem; color: var(--brand-navy); background: var(--brand-navy-soft);
       border: 1px solid var(--border-navy); padding: 0.35rem 0.85rem; border-radius: var(--radius-pill);
       display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 600;
     }
     [data-theme="dark"] .attribution-tag { color: #f5f2ea; }
-    .slider-dots { display: flex; justify-content: center; gap: 0.6rem; margin-top: 2.5rem; }
+    .slider-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 2rem; }
     .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--border-navy); cursor: pointer; transition: var(--transition); }
     .dot.active { background: var(--brand-navy); width: 26px; border-radius: var(--radius-pill); }
 
-    /* FAQ Section */
-    .faq-container { max-width: 860px; margin: 3.5rem auto 0; display: flex; flex-direction: column; gap: 1.2rem; }
+    /* FAQ */
+    .faq-container { max-width: 860px; margin: 3.5rem auto 0; display: flex; flex-direction: column; gap: 1.1rem; }
     .faq-item { background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); overflow: hidden; transition: var(--transition); box-shadow: var(--shadow-subtle); }
     .faq-item:hover { border-color: var(--border-navy); }
     .faq-question {
-      padding: 1.6rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
-      font-size: 1.25rem; color: var(--text-main); font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em;
+      padding: 1.4rem 1.8rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      font-size: 1.2rem; color: var(--text-main); font-family: var(--font-display); font-weight: 700;
     }
     .faq-question i { color: var(--accent-azure); transition: transform 0.3s ease; }
     .faq-item.open .faq-question i { transform: rotate(180deg); }
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; padding: 0 2rem; }
-    .faq-item.open .faq-answer { padding-bottom: 1.6rem; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; color: var(--text-muted); font-size: 0.94rem; line-height: 1.8; padding: 0 1.8rem; }
+    .faq-item.open .faq-answer { padding-bottom: 1.5rem; }
 
     /* Social Section */
     .social-showcase-section { background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
-    .social-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 2rem; margin-top: 3.5rem; }
+    .social-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.8rem; margin-top: 3.5rem; }
     .social-card {
       background: var(--bg-canvas); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
-      padding: 2.2rem; transition: var(--transition); display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-subtle);
+      padding: 2rem; transition: var(--transition); display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-subtle);
     }
-    .social-card:hover { border-color: var(--border-navy); transform: translateY(-5px); box-shadow: var(--shadow-elevated); }
-    .social-card-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.4rem; }
+    .social-card:hover { border-color: var(--border-navy); transform: translateY(-4px); box-shadow: var(--shadow-elevated); }
+    .social-card-header { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1.2rem; }
     .social-card-header i {
-      font-size: 1.8rem; color: #ffffff; background: var(--brand-navy);
-      width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; border-radius: 50%;
+      font-size: 1.6rem; color: #ffffff; background: var(--brand-navy);
+      width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 50%;
     }
-    .social-card-header h3 { font-size: 1.25rem; color: var(--text-main); font-weight: 700; }
-    .social-card-header span { font-size: 0.8rem; color: var(--text-muted); }
-    .social-card p { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+    .social-card-header h3 { font-size: 1.2rem; color: var(--text-main); }
+    .social-card-header span { font-size: 0.78rem; color: var(--text-muted); }
+    .social-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.4rem; }
 
     /* Contact Section */
     .contact-card {
       background: var(--bg-surface); border: 1px solid var(--border-navy); border-radius: var(--radius-lg);
-      display: grid; grid-template-columns: 1.2fr 1.1fr; padding: 4.8rem; gap: 4rem; box-shadow: var(--shadow-subtle);
+      display: grid; grid-template-columns: 1.2fr 1.1fr; padding: clamp(2.5rem, 5vw, 4.5rem); gap: 3.5rem; box-shadow: var(--shadow-subtle);
     }
-    .contact-info h2 { font-size: 2.8rem; color: var(--text-main); margin-bottom: 1rem; font-weight: 800; }
-    .contact-info p { color: var(--text-muted); margin-bottom: 2.5rem; font-weight: 400; }
-    .contact-methods { display: flex; flex-direction: column; gap: 1.4rem; }
-    .method-item { display: flex; align-items: center; gap: 1.2rem; }
+    .contact-info h2 { font-size: clamp(2rem, 5vw, 2.7rem); color: var(--text-main); margin-bottom: 1rem; }
+    .contact-info p { color: var(--text-muted); margin-bottom: 2rem; }
+    .contact-methods { display: flex; flex-direction: column; gap: 1.2rem; }
+    .method-item { display: flex; align-items: center; gap: 1.1rem; }
     .method-item i {
       font-size: 1.2rem; color: #ffffff; background: var(--brand-navy);
-      width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 50%;
+      width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; border-radius: 50%;
     }
     .method-item span { display: block; font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--brand-grey); }
-    .method-item a, .method-item p { font-size: 1.02rem; color: var(--text-main); margin-bottom: 0; font-weight: 500; }
-    .contact-form { background: var(--bg-surface-elevated); padding: 3rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); }
-    .contact-form h3 { font-size: 1.7rem; color: var(--text-main); margin-bottom: 1.4rem; font-weight: 700; }
-    .form-group { margin-bottom: 1.3rem; }
+    .method-item a, .method-item p { font-size: 1rem; color: var(--text-main); margin-bottom: 0; font-weight: 500; }
+    .contact-form { background: var(--bg-surface-elevated); padding: clamp(1.8rem, 4vw, 2.8rem); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); }
+    .contact-form h3 { font-size: 1.55rem; color: var(--text-main); margin-bottom: 1.2rem; }
+    .form-group { margin-bottom: 1.2rem; }
     .form-group label {
-      display: block; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em;
+      display: block; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em;
       text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.4rem;
     }
     .form-group input, .form-group textarea {
-      width: 100%; padding: 0.95rem 1.2rem; background: var(--bg-surface); border: 1px solid var(--border-subtle);
-      color: var(--text-main); font-family: inherit; font-size: 0.95rem; border-radius: var(--radius-sm); transition: var(--transition);
+      width: 100%; padding: 0.9rem 1.1rem; background: var(--bg-surface); border: 1px solid var(--border-subtle);
+      color: var(--text-main); font-family: inherit; border-radius: var(--radius-sm); transition: var(--transition);
     }
     .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--brand-navy); box-shadow: 0 0 10px var(--brand-navy-soft); }
-    .btn-block { width: 100%; justify-content: center; margin-top: 0.6rem; }
+    .btn-block { width: 100%; justify-content: center; margin-top: 0.5rem; }
 
-    /* Floating Dock */
-    .floating-contact-bar { position: fixed; bottom: 25px; right: 25px; display: flex; flex-direction: column; gap: 12px; z-index: 9999; }
-    .float-btn {
-      width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem; color: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: var(--transition); position: relative;
+    /* Floating Dock - iOS Safe Area Support */
+    .floating-contact-bar {
+      position: fixed;
+      bottom: calc(20px + env(safe-area-inset-bottom));
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 9999;
     }
-    .float-btn:hover { transform: scale(1.12) translateY(-4px); }
+    .float-btn {
+      width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; color: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: var(--transition); position: relative;
+    }
+    .float-btn:hover { transform: scale(1.12) translateY(-3px); }
     .float-whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); animation: pulseGreen 2.5s infinite; }
     .float-facebook { background: linear-gradient(135deg, #1877F2, #0d5bbd); }
     .float-instagram { background: linear-gradient(135deg, #E1306C, #833AB4); }
     .float-linkedin { background: linear-gradient(135deg, #0A66C2, #004182); }
     .float-tooltip {
-      position: absolute; right: 65px; background: var(--bg-surface); border: 1px solid var(--border-navy);
-      color: var(--text-main); padding: 6px 14px; border-radius: var(--radius-pill); font-family: var(--font-mono); font-size: 0.74rem; white-space: nowrap;
+      position: absolute; right: 58px; background: var(--bg-surface); border: 1px solid var(--border-navy);
+      color: var(--text-main); padding: 5px 12px; border-radius: var(--radius-pill); font-family: var(--font-mono); font-size: 0.72rem; white-space: nowrap;
       pointer-events: none; opacity: 0; transition: var(--transition); box-shadow: var(--shadow-subtle);
     }
-    .float-btn:hover .float-tooltip { opacity: 1; right: 70px; }
+    .float-btn:hover .float-tooltip { opacity: 1; right: 64px; }
     @keyframes pulseGreen {
       0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
-      70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+      70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
     /* Modal */
     .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 10000; }
     .modal.open { display: block; }
-    .modal-backdrop { position: absolute; width: 100%; height: 100%; background: rgba(14, 20, 28, 0.85); backdrop-filter: blur(12px); }
+    .modal-backdrop { position: absolute; width: 100%; height: 100%; background: rgba(14, 20, 28, 0.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
     .modal-dialog {
-      position: relative; max-width: 960px; width: 92%; margin: 3.5% auto; background: var(--bg-surface);
+      position: relative; max-width: 960px; width: 92%; margin: 4% auto; background: var(--bg-surface);
       border: 1px solid var(--border-navy); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-elevated);
       animation: modalFade 0.3s ease;
     }
     @keyframes modalFade { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
     .modal-close {
-      position: absolute; top: 18px; right: 22px; font-size: 1.8rem; background: var(--bg-surface);
-      border: 1px solid var(--border-navy); width: 44px; height: 44px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center; color: var(--text-main); cursor: pointer; z-index: 10; transition: var(--transition);
+      position: absolute; top: 16px; right: 18px; font-size: 1.6rem; background: var(--bg-surface);
+      border: 1px solid var(--border-navy); width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; color: var(--text-main); cursor: pointer; z-index: 10;
     }
-    .modal-close:hover { background: var(--brand-navy); color: #ffffff; }
-    .modal-dialog img { width: 100%; max-height: 530px; object-fit: contain; background: #07090c; display: block; }
-    .modal-details { padding: 2.2rem; }
-    .modal-details h3 { font-size: 1.8rem; color: var(--text-main); margin: 0.4rem 0 0.8rem; font-weight: 700; }
-    .modal-details p { color: var(--text-muted); font-size: 0.96rem; line-height: 1.7; font-weight: 400; }
+    .modal-dialog img { width: 100%; max-height: 520px; object-fit: contain; background: #07090c; display: block; }
+    .modal-details { padding: 2rem; }
+    .modal-details h3 { font-size: 1.65rem; color: var(--text-main); margin: 0.35rem 0 0.7rem; font-weight: 700; }
+    .modal-details p { color: var(--text-muted); font-size: 0.94rem; line-height: 1.7; }
 
     /* Footer */
     .footer { border-top: 1px solid var(--border-subtle); padding: 3rem 0; background: var(--bg-surface); color: var(--text-muted); font-size: 0.9rem; }
     .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
-    .footer-social-links { display: flex; gap: 1.5rem; align-items: center; }
+    .footer-social-links { display: flex; gap: 1.2rem; align-items: center; }
     .footer-social-links a:hover { color: var(--brand-navy); }
 
+    /* Mobile Responsive */
     @media (max-width: 950px) {
-      .grid-about-unboxed, .contact-card { grid-template-columns: 1fr; padding: 2.5rem; gap: 3rem; }
-      .hero-title { font-size: 3rem; }
-      .section-title { font-size: 2.4rem; }
+      .grid-about-unboxed, .contact-card { grid-template-columns: 1fr; padding: 2rem; gap: 2.5rem; }
       .nav-toggle { display: block; }
       .nav-links {
-        position: absolute; top: 110%; left: 0; width: 100%; background: var(--bg-surface);
-        flex-direction: column; padding: 2rem; gap: 0.8rem; border: 1px solid var(--border-navy);
-        border-radius: var(--radius-md); box-shadow: var(--shadow-subtle); display: none;
+        position: absolute; top: 115%; left: 0; width: 100%; background: var(--bg-surface);
+        flex-direction: column; padding: 1.8rem; gap: 0.6rem; border: 1px solid var(--border-navy);
+        border-radius: var(--radius-md); box-shadow: var(--shadow-elevated); display: none;
       }
       .nav-links.active { display: flex; }
       .credentials-row { grid-template-columns: 1fr; }
+      .floating-contact-bar { right: 14px; }
+      .ba-badge { font-size: 0.64rem; padding: 0.3rem 0.65rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Floating Island Navigation with Theme Switcher -->
+  <!-- Floating Navigation Capsule -->
   <nav class="navbar-capsule" id="navbarCapsule">
     <div class="nav-container">
       <a href="#home" class="brand-logo">
-        <img src="https://i.postimg.cc/k5x1yj6h/Favicon-01.png" alt="Chetan Interiors Logo" class="brand-logo-img" width="36" height="36" />
+        <img src="https://i.postimg.cc/k5x1yj6h/Favicon-01.png" alt="Chetan Interiors Logo" class="brand-logo-img" width="34" height="34" />
         CHETAN <span>INTERIORS</span>
       </a>
       <div style="display: flex; align-items: center;">
@@ -986,7 +968,8 @@
           <a href="#about" class="nav-item">About</a>
           <a href="#transformation" class="nav-item">Transformation</a>
           <a href="#estimator" class="nav-item">Estimator</a>
-          <a href="#services" class="nav-item">Services</a>
+          <a href="#rates" class="nav-item">Market Rates</a>
+          <a href="#articles" class="nav-item">Journal</a>
           <a href="#portfolio" class="nav-item">Works</a>
           <a href="#faq" class="nav-item">FAQs</a>
           <a href="#contact" class="nav-item btn-nav-capsule">Consultation</a>
@@ -1035,7 +1018,7 @@
     </a>
   </div>
 
-  <!-- Hero Section with 08t.png Villa Wireframe Texture -->
+  <!-- Hero Section -->
   <header class="hero-section section-with-texture" id="home">
     <img src="https://i.postimg.cc/Y4RD8Sd9/08t.png" alt="" class="watermark-texture hero-texture" loading="lazy" />
     <div class="hero-content">
@@ -1052,14 +1035,14 @@
       </div>
       <div class="hero-trust-bar">
         <span><i class="fa-solid fa-location-dot"></i> Birgunj, Parsa, Nepal</span>
-        <span><i class="fa-solid fa-compass-drafting"></i> AutoCAD Technical Blueprints</span>
-        <span><i class="fa-solid fa-calculator"></i> BOQ Valuation &amp; Cost Control</span>
-        <span><i class="fa-solid fa-vr-cardboard"></i> 360° Interactive VR Tours</span>
+        <span><i class="fa-solid fa-compass-drafting"></i> AutoCAD Blueprints</span>
+        <span><i class="fa-solid fa-calculator"></i> BOQ Valuation</span>
+        <span><i class="fa-solid fa-vr-cardboard"></i> 360° VR Tours</span>
       </div>
     </div>
   </header>
 
-  <!-- About Section with 02t.png Draftsman Watermark -->
+  <!-- About Section -->
   <section class="section about-section section-with-texture" id="about">
     <img src="https://i.postimg.cc/PLyVKqSW/02t.png" alt="" class="watermark-texture about-texture" loading="lazy" />
     <div class="container grid-about-unboxed">
@@ -1069,10 +1052,10 @@
         <img src="https://i.postimg.cc/05wwzfcw/Profile-Pic.png" 
              alt="Chetan Kumar Sarraf - Interior Designer Birgunj" 
              class="portrait-standalone-img" 
-             width="440" height="540" />
+             width="420" height="520" />
         <div class="portrait-sub-label">
           <span class="live-dot"></span>
-          <span>Chetan Kr. Sarraf • Lead Designer &amp; Engineer</span>
+          <span>Chetan Kr. Sarraf • Lead Designer</span>
         </div>
       </div>
 
@@ -1121,7 +1104,7 @@
     </div>
   </section>
 
-  <!-- Before & After Transformation Slider with 04t.png CAD Floorplan Watermark -->
+  <!-- Before & After Transformation Slider -->
   <section class="section section-with-texture" id="transformation">
     <img src="https://i.postimg.cc/xk5pgd6L/04t.png" alt="" class="watermark-texture trans-texture" loading="lazy" />
     <div class="container">
@@ -1154,7 +1137,7 @@
     </div>
   </section>
 
-  <!-- Instant NPR Cost Estimator with 05t.png 3D Block Watermark -->
+  <!-- Instant NPR Cost Estimator -->
   <section class="section section-with-texture" id="estimator">
     <img src="https://i.postimg.cc/HJzv3L6V/05t.png" alt="" class="watermark-texture estimator-texture" loading="lazy" />
     <div class="container">
@@ -1202,7 +1185,7 @@
           <div class="calc-result-label">Estimated Investment Range (NPR)</div>
           <div class="calc-result-price" id="calcPrice">Rs. 24,500 – 35,000</div>
           <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem;">
-            *Estimates tailored to standard rates in Birgunj &amp; Parsa. Final quotes are confirmed after structural on-site measurement.
+            *Estimates tailored to standard rates in Birgunj &amp; Parsa. Final quotes confirmed on site.
           </p>
           <button type="button" class="btn btn-primary" id="btnSendQuoteWhatsapp">
             Send This Estimate to WhatsApp <i class="fa-brands fa-whatsapp"></i>
@@ -1212,7 +1195,127 @@
     </div>
   </section>
 
-  <!-- 4 Core Services with 01t.png Isometric City Watermark -->
+  <!-- ================= LIVE BIRGUNJ MATERIAL & LABOUR RATES ================= -->
+  <section class="section" id="rates">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="tag-badge">
+          <span class="dot"></span> Market Intelligence
+        </div>
+        <h2 class="section-title">Birgunj Civil &amp; <em>Interior Rates Index</em></h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Benchmark material and labour daily rates across Parsa &amp; Birgunj. Updated weekly based on local market assessments.</p>
+      </div>
+
+      <div class="rates-table-wrap">
+        <table class="rates-table" id="ratesTable">
+          <thead>
+            <tr>
+              <th>Material / Trade Item</th>
+              <th>Category</th>
+              <th>Billing Unit</th>
+              <th>Standard Rate (NPR)</th>
+              <th>Last Updated</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>OPC Cement (Shivam / Hetauda)</strong></td>
+              <td>Civil</td>
+              <td>50 kg Bag</td>
+              <td><span class="rate-pill">Rs. 720 – 770</span></td>
+              <td>Oct 2026</td>
+            </tr>
+            <tr>
+              <td><strong>TMT Steel Rebar (Fe 500 Grade)</strong></td>
+              <td>Civil</td>
+              <td>Per Kg</td>
+              <td><span class="rate-pill">Rs. 92 – 98</span></td>
+              <td>Oct 2026</td>
+            </tr>
+            <tr>
+              <td><strong>Local River Sand (Screened)</strong></td>
+              <td>Civil</td>
+              <td>Per Tipper (250 cu.ft)</td>
+              <td><span class="rate-pill">Rs. 18,500 – 21,000</span></td>
+              <td>Oct 2026</td>
+            </tr>
+            <tr>
+              <td><strong>1st Class Red Clay Bricks</strong></td>
+              <td>Civil</td>
+              <td>Per 1,000 Pcs</td>
+              <td><span class="rate-pill">Rs. 15,000 – 17,000</span></td>
+              <td>Oct 2026</td>
+            </tr>
+            <tr>
+              <td><strong>2×2 ft Vitrified Floor Tiles (Kajaria/Somany)</strong></td>
+              <td>Finishing</td>
+              <td>Per Sq. Ft.</td>
+              <td><span class="rate-pill">Rs. 95 – 145</span></td>
+              <td>Oct 2026</td>
+            </tr>
+            <tr>
+              <td><strong>BWP Marine Grade Plywood (18mm)</strong></td>
+              <td>Carpentry</td>
+              <td>Per Sq. Ft.</td>
+              <td><span class="rate-pill">Rs. 115 – 165</span></td>
+              <td>Oct 2026</td>
+            </tr>
+            <tr>
+              <td><strong>Skilled Mason / Carpenter Daily Wage</strong></td>
+              <td>Labour</td>
+              <td>Per Man-Day</td>
+              <td><span class="rate-pill">Rs. 1,000 – 1,200</span></td>
+              <td>Oct 2026</td>
+            </tr>
+            <tr>
+              <td><strong>Electrician / Plumber Daily Wage</strong></td>
+              <td>Labour</td>
+              <td>Per Man-Day</td>
+              <td><span class="rate-pill">Rs. 950 – 1,150</span></td>
+              <td>Oct 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DESIGN JOURNAL & BLOG (ARTICLES) ================= -->
+  <section class="section" id="articles">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="tag-badge">
+          <span class="dot"></span> Design Journal &amp; Field Notes
+        </div>
+        <h2 class="section-title">Insights for <em>Homeowners in Nepal</em></h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Practical building guidance, cost-control tips, and material comparisons from our active projects.</p>
+      </div>
+
+      <div class="articles-grid" id="articlesContainer">
+        <!-- Article 1 -->
+        <article class="article-card">
+          <div class="article-img-wrap">
+            <img src="https://i.postimg.cc/1XH29vcT/Modular-Kitchen-vs-Carpenters-Kitchen-in-Birgunj.jpg" alt="Modular Kitchen vs Carpenter Kitchen in Birgunj" loading="lazy" />
+          </div>
+          <div class="article-content">
+            <div>
+              <div class="article-meta">
+                <span>Kitchen Planning</span>
+                <span>Oct 2026</span>
+              </div>
+              <h3>Modular Kitchen vs Carpenter Kitchen in Birgunj</h3>
+              <p>Discover the true cost difference and durability of factory-made modular cabinets versus on-site carpentry in Nepal. When designing in the Terai region, moisture resistance and termite protection are critical factors.</p>
+            </div>
+            <a href="https://wa.me/9779766188838?text=Hi%20Chetan,%20I%20read%20your%20article%20about%20Modular%20Kitchens%20vs%20Carpenter%20Kitchens%20and%20would%20like%20guidance%20for%20my%20home." target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; justify-content: center;">
+              Discuss Kitchen Scope <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Core Services -->
   <section class="section section-with-texture" id="services">
     <img src="https://i.postimg.cc/cKhkTJFM/01t.png" alt="" class="watermark-texture services-texture" loading="lazy" />
     <div class="container">
@@ -1232,9 +1335,9 @@
             <p>The civil structure may build the house, but my design transforms it into a sanctuary. Custom living rooms, master bedroom suites, modular chef kitchens, and spa bathrooms designed for lifestyle, natural lighting, and comfort.</p>
           </div>
           <ul class="service-features">
-            <li><i class="fa-solid fa-check"></i> Bespoke Space Planning &amp; Zoning</li>
-            <li><i class="fa-solid fa-check"></i> Fluted Wood &amp; Acoustic Wall Panelling</li>
-            <li><i class="fa-solid fa-check"></i> Concealed Warm LED Architectural Coving</li>
+            <li><i class="fa-solid fa-check"></i> Space Planning &amp; Zoning</li>
+            <li><i class="fa-solid fa-check"></i> Acoustic &amp; Wood Panelling</li>
+            <li><i class="fa-solid fa-check"></i> Concealed Warm LED Coving</li>
           </ul>
         </div>
 
@@ -1245,9 +1348,9 @@
             <p>Designing high-traffic commercial environments across Birgunj and Nepal that captivate visitors and reinforce brand identity. Tailored retail outlets, cafes, restaurants, and experiential storefronts built for engagement.</p>
           </div>
           <ul class="service-features">
-            <li><i class="fa-solid fa-check"></i> Customer Flow &amp; Ergonomic Circulation</li>
-            <li><i class="fa-solid fa-check"></i> Durable Material &amp; Surface Specification</li>
-            <li><i class="fa-solid fa-check"></i> Ambient &amp; Task Lighting Architecture</li>
+            <li><i class="fa-solid fa-check"></i> Customer Flow &amp; Circulation</li>
+            <li><i class="fa-solid fa-check"></i> Durable Material Specification</li>
+            <li><i class="fa-solid fa-check"></i> Ambient &amp; Task Lighting</li>
           </ul>
         </div>
 
@@ -1259,7 +1362,7 @@
           </div>
           <ul class="service-features">
             <li><i class="fa-solid fa-check"></i> Collaborative Co-Working Clusters</li>
-            <li><i class="fa-solid fa-check"></i> Acoustic Glass Partitions &amp; Ceilings</li>
+            <li><i class="fa-solid fa-check"></i> Acoustic Glass Partitions</li>
             <li><i class="fa-solid fa-check"></i> Integrated Cable &amp; MEP Routing</li>
           </ul>
         </div>
@@ -1271,16 +1374,16 @@
             <p>Leveraging my civil engineering foundation to deliver contractor-ready 2D technical drawing sets. Ensuring plumbing, electrical schematics, false ceilings, and structural valuations avoid site errors and budget overruns.</p>
           </div>
           <ul class="service-features">
-            <li><i class="fa-solid fa-check"></i> 2D Electrical, MEP &amp; Sanitary Schematics</li>
+            <li><i class="fa-solid fa-check"></i> Electrical, MEP &amp; Sanitary Sets</li>
             <li><i class="fa-solid fa-check"></i> Detailed Bills of Quantities (BOQ)</li>
-            <li><i class="fa-solid fa-check"></i> Structural Soundness &amp; Site Valuation</li>
+            <li><i class="fa-solid fa-check"></i> Structural Soundness &amp; Valuation</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4-Step Process with 03t.png Facade Wireframe Watermark -->
+  <!-- 4-Step Process -->
   <section class="section process-section section-with-texture" id="process">
     <img src="https://i.postimg.cc/67cbzQMZ/03t.png" alt="" class="watermark-texture process-texture" loading="lazy" />
     <div class="container">
@@ -1296,7 +1399,7 @@
         <div class="process-card">
           <div class="process-step-num">01</div>
           <h3>Site Survey &amp; Requirement Analysis</h3>
-          <p>We meet to conduct an in-depth discussion on your functional requirements, aesthetic preferences, and budget limits. I inspect the site in Birgunj/Parsa, taking structural measurements and evaluating daylight and spatial flow.</p>
+          <p>We meet to discuss your functional requirements, aesthetic preferences, and budget limits. I inspect the site in Birgunj/Parsa, taking structural measurements and evaluating daylight and spatial flow.</p>
         </div>
 
         <div class="process-card">
@@ -1374,7 +1477,7 @@
     </div>
   </section>
 
-  <!-- Portfolio Section with 07t.png Parametric Ribbon Waves -->
+  <!-- Portfolio Section (With All 6 Projects) -->
   <section class="section slider-section section-with-texture" id="portfolio">
     <img src="https://i.postimg.cc/d76Nn050/07t.png" alt="" class="watermark-texture slider-texture" loading="lazy" />
     <div class="container">
@@ -1400,6 +1503,7 @@
       <div class="slider-viewport" id="sliderViewport">
         <div class="slider-track" id="sliderTrack">
 
+          <!-- 1: Living Room -->
           <article class="slider-card" onclick="openModal(
             'Modern Luxury Living Room Design', 
             'Residential Interior', 
@@ -1419,6 +1523,7 @@
             </div>
           </article>
 
+          <!-- 2: Master Bedroom -->
           <article class="slider-card" onclick="openModal(
             'Modern Master Bedroom 3D Visualization', 
             'Master Suite & 3D Render', 
@@ -1438,6 +1543,7 @@
             </div>
           </article>
 
+          <!-- 3: 2D Blueprint Layout -->
           <article class="slider-card" onclick="openModal(
             'Modern Bedroom 2D Architectural Layout', 
             'Technical Drafting & Planning', 
@@ -1457,6 +1563,7 @@
             </div>
           </article>
 
+          <!-- 4: Bathroom -->
           <article class="slider-card" onclick="openModal(
             'Modern Luxury Bathroom & Toilet Design', 
             'Sanitary & Wet Area Design', 
@@ -1472,6 +1579,46 @@
               <span class="slide-tag">SANITARY &amp; BATHROOM | 3D RENDER</span>
               <h3>Modern Bathroom &amp; Toilet</h3>
               <p>Wet/dry zoning with concealed plumbing lines, custom floating vanity, and ambient lighting.</p>
+              <span class="attribution-tag"><i class="fa-solid fa-building"></i> Scale and Spaces Private Limited</span>
+            </div>
+          </article>
+
+          <!-- 5: Restaurant Interior -->
+          <article class="slider-card" onclick="openModal(
+            'Restaurant & Hospitality Commercial Interior', 
+            'Commercial & Dining', 
+            'Acoustically planned dining environment with customized booths, ambient pendant zoning, high-traffic surface materials, and open circulation.', 
+            'https://i.postimg.cc/jn7G8bwV/Resturant-Office-Interior.png',
+            'Scale and Spaces Private Limited'
+          )">
+            <div class="slide-img-box">
+              <img src="https://i.postimg.cc/jn7G8bwV/Resturant-Office-Interior.png" alt="Restaurant Interior Design" loading="lazy" />
+              <div class="slide-overlay"><span>View High-Res</span></div>
+            </div>
+            <div class="slide-desc">
+              <span class="slide-tag">COMMERCIAL | RESTAURANT INTERIOR</span>
+              <h3>Hospitality &amp; Dining Interior</h3>
+              <p>Ergonomic table spacing, acoustic ceiling elements, and customized commercial lighting.</p>
+              <span class="attribution-tag"><i class="fa-solid fa-building"></i> Scale and Spaces Private Limited</span>
+            </div>
+          </article>
+
+          <!-- 6: School Office Interior -->
+          <article class="slider-card" onclick="openModal(
+            'School & Institutional Administration Office', 
+            'Institutional & Corporate', 
+            'Functional administrative space planned with organized filing cabinetry, executive staff stations, acoustic partition panels, and natural illumination.', 
+            'https://i.postimg.cc/dZyzWYkP/School-Office-Interior.png',
+            'Scale and Spaces Private Limited'
+          )">
+            <div class="slide-img-box">
+              <img src="https://i.postimg.cc/dZyzWYkP/School-Office-Interior.png" alt="School Office Interior" loading="lazy" />
+              <div class="slide-overlay"><span>View High-Res</span></div>
+            </div>
+            <div class="slide-desc">
+              <span class="slide-tag">INSTITUTIONAL | OFFICE INTERIOR</span>
+              <h3>School Administrative Workspace</h3>
+              <p>Zoned executive layout with integrated storage cabinetry and durable contract finishes.</p>
               <span class="attribution-tag"><i class="fa-solid fa-building"></i> Scale and Spaces Private Limited</span>
             </div>
           </article>
@@ -1739,7 +1886,7 @@
     </div>
   </footer>
 
-  <!-- ================= JAVASCRIPT & THEME SWITCHER ================= -->
+  <!-- ================= JAVASCRIPT ================= -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Light / Dark Theme Switcher with LocalStorage Memory
@@ -1924,7 +2071,7 @@
         if (currentIndex < 0) currentIndex = 0;
 
         const cardWidth = cards[0].offsetWidth;
-        const gap = 32;
+        const gap = 28;
         const moveAmount = (cardWidth + gap) * currentIndex;
         track.style.transform = `translateX(-${moveAmount}px)`;
 
@@ -1950,6 +2097,7 @@
         updateSliderPosition();
       });
 
+      // Touch events for iPhone/Android
       viewport.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX;
         isDragging = true;
